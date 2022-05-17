@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9173ed532e.js" crossorigin="anonymous"></script>
     <title>ITBANK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <main>
-        <header class="encabezado">
-            <nav class="navegacion">
-                <img src="imagenes/itbank.png" alt="logo">
-                <h1>Bienvenido, Martin</h1>     
-                <div>
+    <main class = "container">
+        <header>
+            <nav class="row">
+                <img class="col-3 border" src="" alt="logo">
+                <h1 class="col-6 border">Bienvenido, Martin</h1>     
+                <div class="col-3 border">
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVFJREFUSEvVleExBEEQRt9FQAoiQATIgAgQASJABIgAESACZEAEyIAIqKd6qub2Zmen7N4P/eu2dqdf99dfz81YcsyWnJ8+wCpwBOwCG1HEC3APXAGfrYWVAAfABSCkFCY/AW5aIF2Aya/j4ANwCTzF8zZwBmzF8150VOXkACt+i8oPKxUKOQ2Z1obkygHpoJWrfS3syk7Oo6veb3OAQ1wHdjJZ+g4q1yPgmc1aJTngOz5stW7T92MBXxW3/db7V4mc0R3wDChX0wzSkF0mLdgyZPdBKzcBtOk7sBLO0CGlSIV8xJZXt7o70NS6ibWiyZTBUAr9nyQZtGh3Bqlat9m27aQUDtb3wrSpv2/7NKpddsexcO6G8RpXgwmVJe2N77yX3P6FaPV86Wx+b/VCxgBS0v2MvtDJWMAgZApAFzJ3E08FSBCtPfdHNCWg6NT/D/gBeOVFGZeTouUAAAAASUVORK5CYII="/>
                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATNJREFUSEvtldFRAkEMhj860A6kArECtQNKwAqECoQK0AqkBKgAqACtRDuQ+Z2EkWVzu3Bzb+Zlb2ey/5dks7keHVuvY33OAYyAuQU0ARY1wdUAroBnYAzoW/YNvAJv9h2ySgCP2oVTIYGegGVEaAJI/N0Orizije0fgClwb3tBsiWLADfAzkoSHjbIi5WpnytXBFB0OqjIh4XLVFbKZGbAI/cI8AHcAo+AlyXiqFxrQGfuUqcI8GOOpSZwvdD/H3BRifSovi68g+u0VdM7kLg6YgB82lozcrzrtKrz9MJ/LQW4o8TVfgfHAkWBqZ3V2kftmgK83U5SrUgjW9oIUKHX6HLQTQH+7NsAtlbe7B20Ec6erR0FPvz+imSHW+0sykUjiP4RMs1+7YtWm0FRKHLoHLAHNsk6GUbrB0oAAAAASUVORK5CYII="/>
                     <span class="fa-solid fa-headset"></span>
@@ -22,31 +23,38 @@
                 </div>
             </nav>
         </header>
-        <section class="menu">
-            <ul>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Transacciones</a></li>
-                <li><a href="">Pagos</a></li>
-                <li><a href="">Tarjetas</a></li>
-                <li><a href="">Inversiones</a></li>
-                <li><a href="">Ayuda</a></li>
-            </ul>
-        </section>
-        <section class="center-divs">
-            <div>cuentas saldos etc</div>
-            <div>atajos</div>
-            <div>grafico</div>
-        </section>
-        <section>
-            <div class="movimientos_financiero"></div>
-            <div class="movimientos_del_mercado"></div>
-        </section>
-        <footer>
-            <p>&copy;</p>
-            <div class="footer-buttoms"></div>
-            <p></p>
-        </footer>
+        <div class="row">
+            <section class="col-3 border">
+                <ul>
+                    <li><a href="">Menu</a></li>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Transacciones</a></li>
+                    <li><a href="">Pagos</a></li>
+                    <li><a href="">Tarjetas</a></li>
+                    <li><a href="">Inversiones</a></li>
+                    <li><a href="">Ayuda</a></li>
+                </ul>
+            </section>
+            <section class="col-6 border">
+                    <div class="pb-5 border">cuentas saldos etc</div>
+                    <div class="pb-5 border">atajos</div>
+                    <div class="pb-5 border">grafico</div>
+            </section>
+            <section class="col-3 border">
+                    <div class="pb-5 border">Movimientos financiero</div>
+                    <div class="pb-5 border">Movimientos del mercado</div>
+            </section>
+        </div>
     </main>
+    <footer class="container">
+        <div class="row">
+            <div class="col-12 border">
+            <p>&copy;</p>
+                <div class="footer-buttoms"></div>
+                <p></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
