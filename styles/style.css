@@ -2,4 +2,56 @@ body {
     padding: 0;
     margin: 0;
     user-select: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.contenido {
+    margin-top: 20px;
+}
+
+.contenedor_menu {
+    height: 600px ;
+    padding-top: 60px;    
+}
+
+.Bandera{
+    width: 40px;
+}
+
+.historicos {
+    height: 250px;
+    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
+    mix-blend-mode: normal;
+    border-radius: 70px;
+}
+
+.h1 {
+    font-size: 36px;
+    line-height: 51px;
+    color: #051923;
+}
+
+.atajos {
+    display: none;
+    height: 100px;
+    background: rgba(0, 166, 251, 0.2);
+    mix-blend-mode: normal;
+    border-radius: 70px;
+}
+.balance {
+    margin-top: 30px;
+}
+
+.balance h3 {
+    font-weight: medium;
+    font-size: 48px;
+    line-height: 69px;
+    color: #02568A;
+}
+.balance h2 {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 46px;
+    color: #003554;
 }
