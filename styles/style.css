@@ -1,4 +1,4 @@
-body {
+* {               /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
     padding: 0;
     margin: 0;
     user-select: none;
@@ -6,13 +6,38 @@ body {
     font-weight: bold;
 }
 
-.contenido {
-    margin-top: 20px;
+.bienvenida{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0E0E52;
 }
 
-.contenedor_menu {
-    height: 600px ;
-    padding-top: 60px;    
+/*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
+
+.buscar input{
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    background-color: #0035541A;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+}
+
+.barra_iconos{
+    display: flex;
+    justify-content:space-around;
+}
+
+.iconos_nav{
+    padding-right: 20px;
+    padding-left: 10px;
+    color: #0E0E52;
+}
+
+.contenido {
+    margin-top: 50px;
 }
 
 .Bandera{
@@ -47,11 +72,56 @@ body {
     font-weight: medium;
     font-size: 48px;
     line-height: 69px;
-    color: #02568A;
+    color: #050DCA;
 }
-.balance h2 {
+
+.primera-sec h2 {
+    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 46px;
-    color: #003554;
+    color: #150578;
+}
+
+.primera-sec h4{
+    font-weight: bold;
+    font-size: 17px;
+    color: #150578;
+}
+
+.movimientos{
+    margin-top: 40px;
+}
+
+/*estilos para el menú*/
+
+.contenedor_menu {
+    height: 600px ;
+    padding-top: 60px;   
+}
+
+
+.contenedor_menu .menu li{
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.contenedor_menu .menu li i{
+    color: #777777;
+}
+
+.contenedor_menu .menu li a{
+    padding-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #777777;
+}
+
+.contenedor_menu .menu li a:hover{
+    color: #050DCA;
+}
+
+footer{
+    background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
+    mix-blend-mode: normal;
 }

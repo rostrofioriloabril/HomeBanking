@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8560224c99.js" crossorigin="anonymous"></script>
     <title>ITBANK</title>
+    <script src="https://kit.fontawesome.com/43c0c16911.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,38 +15,52 @@
 <body>
     <main class = "container-fluid contenido">
         <header>
+
             <nav class="row">
-                <img class="col-3" src="imagenes/itbank.png" alt="logo">
-                <h1 class="col-6">Bienvenido, Martin!</h1>     
-                <div class="col-3">
-                    <input type="search">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVFJREFUSEvVleExBEEQRt9FQAoiQATIgAgQASJABIgAESACZEAEyIAIqKd6qub2Zmen7N4P/eu2dqdf99dfz81YcsyWnJ8+wCpwBOwCG1HEC3APXAGfrYWVAAfABSCkFCY/AW5aIF2Aya/j4ANwCTzF8zZwBmzF8150VOXkACt+i8oPKxUKOQ2Z1obkygHpoJWrfS3syk7Oo6veb3OAQ1wHdjJZ+g4q1yPgmc1aJTngOz5stW7T92MBXxW3/db7V4mc0R3wDChX0wzSkF0mLdgyZPdBKzcBtOk7sBLO0CGlSIV8xJZXt7o70NS6ibWiyZTBUAr9nyQZtGh3Bqlat9m27aQUDtb3wrSpv2/7NKpddsexcO6G8RpXgwmVJe2N77yX3P6FaPV86Wx+b/VCxgBS0v2MvtDJWMAgZApAFzJ3E08FSBCtPfdHNCWg6NT/D/gBeOVFGZeTouUAAAAASUVORK5CYII="/>
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATNJREFUSEvtldFRAkEMhj860A6kArECtQNKwAqECoQK0AqkBKgAqACtRDuQ+Z2EkWVzu3Bzb+Zlb2ey/5dks7keHVuvY33OAYyAuQU0ARY1wdUAroBnYAzoW/YNvAJv9h2ySgCP2oVTIYGegGVEaAJI/N0Orizije0fgClwb3tBsiWLADfAzkoSHjbIi5WpnytXBFB0OqjIh4XLVFbKZGbAI/cI8AHcAo+AlyXiqFxrQGfuUqcI8GOOpSZwvdD/H3BRifSovi68g+u0VdM7kLg6YgB82lozcrzrtKrz9MJ/LQW4o8TVfgfHAkWBqZ3V2kftmgK83U5SrUgjW9oIUKHX6HLQTQH+7NsAtlbe7B20Ec6erR0FPvz+imSHW+0sykUjiP4RMs1+7YtWm0FRKHLoHLAHNsk6GUbrB0oAAAAASUVORK5CYII="/>
-                    <span class="fa-solid fa-headset"></span>
-                    <select name="Lenguaje" class="Bandera">
-                        <option value="Español" name="Lenguaje">
-                            <img src="">
-                        </option>
-                        <option value="English" name="Lenguaje" selected>
-                            <img src="imagenes/english.jpeg">
-                        </option>
-                        <option value="Portuguesse" name="Lenguaje">
-                            <img src="imagenes/port.jpg">
-                        </option>
-                    </select>
-                    <img src="" alt="">
+                <img class="col-2" src="imagenes/itbank.png" alt="logo">
+                <h1 class="col-4 bienvenida">¡Bienvenido, Martin!</h1>     
+                <div class="col-6 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
+                    
+                    <div class="buscar">
+                        <input class="lupita" type="search" placeholder="Buscar...">
+                        <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
+                    </div>
+
+                    <!--acá termina la barra de navegación-->
+
+                    <div class="iconos">
+                        <i class="fa-solid fa-bell iconos_nav"></i>
+                        <i class="fa-solid fa-user iconos_nav"></i>
+                        <select name="Lenguaje" class="Bandera iconos_nav">
+                            <option value="Español" name="Lenguaje">
+                                <img src="">
+                            </option>
+                            <option value="English" name="Lenguaje" selected>
+                                <img src="imagenes/english.jpeg">
+                            </option>
+                            <option value="Portuguesse" name="Lenguaje">
+                                <img src="imagenes/port.jpg">
+                            </option>
+                        </select>
+                        <i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i>
+                    </div>
                 </div>
+
             </nav>
+
+
         </header>
-        <div class="row">
+
+
+        <div class="row primera-sec"> <!--nombre a la clase para llamar a todos los h2 que hay dentro-->
             <section class="col-3 contenedor_menu" >
-                <ul>
-                    <li><i class="fa-solid fa-house"></i><a href="">Menu</a></li>
+                <ul class="menu">
+                    <!--<li><i class="fa-solid fa-house"></i><a href="">Menu</a></li>-->
                     <li><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
                     <li><i class="fa-solid fa-arrow-right-arrow-left"></i><a href="">Transacciones</a></li>
                     <li><i class="fa-solid fa-money-bill-wave"></i><a href="">Pagos</a></li>
                     <li><i class="fa-solid fa-credit-card"></i><a href="">Tarjetas</a></li>
-                    <li><i class="fa-solid fa-chart-line-up"></i><a href="">Inversiones</a></li>
+                    <li><i class="fa-solid fa-arrow-up-right-dots"></i><a href="">Inversiones</a></li>
                     <li><i class="fa-solid fa-headset"></i><a href="">Ayuda</a></li>
                 </ul>
             </section>
@@ -60,29 +74,30 @@
                         </h3>
                     </div>
                     <div class="pb-5 historicos">
-                        <h2>
-                            Historicos
-                        </h2>
+                        <h4>
+                            Histórico
+                        </h4>
                         <img src="" alt="">
                     </div>
                     <div class="pb-5 atajos">atajos</div>
             </section>
             <section class="col-3">
-                    <div class="pb-5">
-                        <h3>
+                    <div class="pb-5 movimientos">
+                        <h4>
                             Últimos Movimientos
-                        </h3>
+                        </h4>
                         <img src="" alt="">
                     </div>
                     <div class="pb-5">
-                        <h3>
+                        <h4>
                             Movimientos del mercado
-                        </h3>
+                        </h4>
                         <img src="" alt="">
                     </div>
             </section>
         </div>
     </main>
+
     <footer class="container-fluid">
         <div class="row">
             <div class="col-12 border">
@@ -92,6 +107,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
