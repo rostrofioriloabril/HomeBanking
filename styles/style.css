@@ -18,11 +18,22 @@
     font-weight: bold;
 }
 
+.logo{
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 0.7em;
+    color: #050DCA;
+}
+
 .bienvenida{
     text-align: center;
     font-size: 30px;
     font-weight: bold;
     color: #0E0E52;
+}
+
+header{
+    margin-top: 70px;
 }
 
 /*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
@@ -56,19 +67,16 @@
     width: 40px;
 }
 
-.historicos {
-    height: 280px;
-    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
-    mix-blend-mode: normal;
-    border-radius: 70px;
-}
-.movimientos, .mercado, .balance{
+
+.movimientos , .balance_contenido , .mercado , .tarjetas{
     margin-top: 30px;
     background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
     mix-blend-mode: normal;
     border-radius: 70px;
 }
-.sub-atajos{
+
+
+/*.sub-atajos{
     width: 100%;
 }
 .sub-atajo{
@@ -84,8 +92,10 @@
     font-size: 12px;
     text-align: center;
 }
+*/
+
 .mercado{
-    height: 175px;
+    height: 300px;
 }
 
 .h1 {
@@ -94,21 +104,32 @@
     color: #051923;
 }
 
+/*
 .atajos {
     height: 100px;
     mix-blend-mode: normal;
     border-radius: 70px;
+}*/
+
+.tarjetas{
+    padding-top: 90px;
+    height: 400px;
 }
 
+.balance_item{
+    padding-left: 50px;
+    color: #150578;
+}
+
+
 .balance h3 {
-    font-weight: medium;
+    font-weight: bold;
     font-size: 48px;
     line-height: 69px;
     color: #050DCA;
 }
 
 .primera-sec h2 {
-    font-family: 'Source Sans Pro', sans-serif;
     font-weight: bold;
     font-size: 24px;
     line-height: 46px;
@@ -117,15 +138,18 @@
 
 .primera-sec h4{
     font-weight: bold;
-    font-size: 17px;
+    font-size: 23px;
     color: #150578;
 }
 
 /* ultimos movimientos*/
 
+.contenedor_movimientos{
+    padding-top: 75px;
+}
+
 .movimientos{
-    margin-top: 40px;
-    height: 335px;
+    height: 600px;
 }
 .lista-movimientos{
     list-style: none;
@@ -215,6 +239,7 @@
     padding-left: 15px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 20px;
     color: #777777;
 }
 
@@ -225,4 +250,5 @@
 footer{
     background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
     mix-blend-mode: normal;
+    margin-top: 60px;
 }
