@@ -1,7 +1,21 @@
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Bold.ttf) format("truetype");
+    font-weight: bold;
+  } 
+
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Medium) format("truetype");
+    font-weight: medium;
+  } 
+
 *{
     margin: 0;
     padding: 0;
     user-select: none;
+    font-family: 'Brandon', sans-serif;
+    font-weight: bold;
 }
 html{
     overflow: hidden;
