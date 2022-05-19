@@ -9,32 +9,31 @@
 </head>
 <body>
     <main>
-        <header>
+        <section class="inicio">
             <img src="imagenes/itbank.png" alt="">
-        </header>
-        <section class="info">
-            <h2>¡Hola! Te damos la bienvenida</h2>
-            <img src="imagenes/bank.jpg" alt="">
+            <h2>¡Hola!</h2>
+            <h4>Gracias por elegir nuestro homebanking :)</h4>
+            <a href=""><h6>Conoce mas sobre nuestro homebanking</h6></a>
         </section>
-        <section class="form">
-            <h2>Ingresa aca</h2>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
-                <input type="text" name="" id="" placeholder="Ingresa tu Usuario" required>
-                <input type="password" name="" placeholder="Ingresa tu clave" required>
-                <div class="check">
-                    <input type="checkbox" checked ><label for="checkbox">Recordar datos?</label>
-                </div>
-                <button>Ingresar</button>
-                <div class="ayuda">
-                    <h4>Olvide mi clave/usuario</h4>
-                    <a href="">Recuperar clave y usuario</a>
-                    <h4>Crea tu cuenta </h4>
-                    <a href=""> Crea clave y usuario</a>
-                </div>
-                
-            </form>
-        </section>
+        <div class="form-container">
+            <section class="form">
+                <h2>Ingresa aqui</h2>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
+                    <input type="text" name="" id="" placeholder="Ingresa tu usuario" required>
+                    <input type="password" name="" placeholder="Ingresa tu clave" required>
+                    <div class="check">
+                        <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
+                    </div>
+                    <button>Ingresar</button>
+                    <div class="ayuda">
+                        <a href="" class="olvidar"><h4>Olvide mi clave/usuario</h4></a>
+                        <h4>¿No sos cliente?</h4>
+                        <a href=""><h5>Asociate aqui</h5></a>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
 </body>

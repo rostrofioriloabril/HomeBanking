@@ -5,105 +5,118 @@
 }
 html{
     overflow: hidden;
+    height: 100%;
 }
+body{
+    height: 100%;
+}
+/* MAIN */
 main{
     display: flex;
-    flex-wrap: wrap;
-
-    overflow: hidden; 
+    height: 100%;
 }
-header{
-    width: 65%;
-    height: 60px;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgb(0, 4, 75);
-    
-   
-}
-
-header img{
+.inicio img{
     margin-top: 15px;
     margin-left: 20px;
     width: 20%;
-    
-
 }
-.info{
+.inicio{
     width: 65%;
     height: 100%;
+}
+.inicio h2 {
+    margin: 20% 0% 5% 10%;
+    font-size: 40px;
+    color: rgb(0, 4, 75);
+}
+.inicio h4 {
+    margin: 0% 0% 2% 10%;
+    font-size: 22px;
+    color: rgb(0, 4, 75)
+}
+.inicio a{
+    color: #A5A5AA;
+}
+.inicio h6 {
+    margin-left: 10%;
+    color: #A5A5AA;
+    font-size: 14px;
+}
 
-    
+/* FORMULARIO */
+.form-container{
+    height: 100%;
+    width: 35%;
 }
-.info img {
-    width: 100%;
-    height: 101%;
-}
-.info h2 {
-    position: absolute;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-    margin-top: 15px;
-    margin-left: 20px;
-}
-h2{
-    margin-bottom: 10px;
-}
-
 .form{
     display: flex;
     flex-direction: column;
-    width: 35%;
-    padding-top: 50px;
+    padding-top: 100px;
     text-align: center;
-    height: 552px;
+    height: 100%;
     box-shadow: 1px -19px 20px black;
-    position: relative;
-    margin-top: -61px;
-    background-color: #fff;
+}
+.form h2{
+    margin-bottom: 5%;
 }
 .form input[type = "text"], .form input[type = "password"] {
     width: 70%;
-    height: 21px;
+    height: 35px;
+    border-radius: 15px;
     margin-bottom:5%;
     border-style: none;
-    border-bottom: 1px solid rgb(0, 4, 75);
+    background-color: #ECEFFB;
+    padding: 0 15px;
 }
 .form input[type = "text"]:first-child{
     margin-top: 10px;
 }
-.form input [type="checkbox"]{
-    display: block;
-}
 .check{
     margin-top: 10px;
-    margin-bottom: 20px;
-
+    margin-bottom: 30px;
+}
+.check input{
+    position: relative;
+    top: 4px;
+    height: 18px;
+    width: 18px;
 }
 label{
     margin-left: 5px;
-    
+    color: rgb(0, 4, 75);  
 }
 button{
     padding: 5px 15px;
-    border-radius: 10px;
+    width: 125px;
+    border-radius: 15px;
     border-style: none;
-    background-color: rgb(0, 4, 75);
-    color: #fff;
+    background-color: #ECEFFB;
+    color: rgb(0, 4, 75);
+    font-weight: bold;
 }
 .ayuda {
     margin-top: 30px;
 }
 .ayuda a{
-    text-decoration: none;
     color: rgb(0, 4, 75);
     cursor: pointer;
     font-weight: bold;
-    
     margin-bottom: 10px;
 }
 .ayuda h4{
     font-weight: lighter;
-    margin-top: 20px;
+    margin-top: 30px;
+    color: rgb(0, 4, 75);
+}
+.ayuda h5{
+    font-weight: lighter;
+}
+.ayuda .olvidar{
+    text-decoration: underline;
+}
+.ayuda a{
+    font-weight: 100;
+    text-decoration: none;
 }
 footer{
     background-color: aqua;
