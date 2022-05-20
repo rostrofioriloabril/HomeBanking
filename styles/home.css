@@ -39,9 +39,13 @@ main{
     height: 100%;
 }
 .inicio h2 {
-    margin: 20% 0% 5% 10%;
+    margin: 10% 0% 5% 10%;
     font-size: 40px;
     color: rgb(0, 4, 75);
+}
+.inicio .logo{
+    margin-top: 5%;
+    color: #050DCA;
 }
 .inicio h4 {
     margin: 0% 0% 2% 10%;
@@ -107,6 +111,7 @@ button{
     background-color: #ECEFFB;
     color: rgb(0, 4, 75);
     font-weight: bold;
+    font-size: 18px;
 }
 .ayuda {
     margin-top: 30px;
@@ -140,3 +145,168 @@ footer{
         display: none;
     }
 }
+
+/* BACKGROUND */
+.background{
+    position: absolute;
+    bottom: 0px;
+    height: 100%;
+    width: 65%;
+    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
+    z-index: -1;
+    
+}
+.figura{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 221px;
+    height: 300px;
+    background: linear-gradient(180deg, #050DCA 0%, rgba(120, 192, 224, 0) 100%);
+    left: 10px;
+    bottom: 0;
+    margin-left: 10%;
+}
+.figura1{
+    position: absolute;
+    clip-path: ellipse(25% 42% at 50% 97%);
+    width: 168px;
+    height: 243px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.8) 0%, rgba(120, 192, 224, 0) 100%);
+    display: inline-block;
+    left: 120px;
+    bottom: 50px;
+    margin-left: 10%;
+}
+.figura2{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 130px;
+    height: 188.04px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.7) 0%, rgba(120, 192, 224, 0) 100%);
+    display: inline-block;
+    left: 25px;
+    bottom: 80px;
+    margin-left: 10%;
+}
+.figura3{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 106px;
+    height: 153px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.7) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 105px;
+    bottom: 110px;
+    margin-left: 10%;
+}
+.figura4{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 93px;
+    height: 134.24px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.55) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 170px;
+    bottom: 130px;
+    margin-left: 10%;
+}
+.figura5{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 80px;
+    height: 115px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.5) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 90px;
+    bottom: 140px;
+    margin-left: 10%;
+}
+.figura6{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 68px;
+    height: 98.99px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.5) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 195px;
+    bottom: 160px;
+    margin-left: 10%;
+}
+.figura7{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 59px;
+    height: 85.89px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.45) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 155px;
+    bottom: 165px;
+    margin-left: 10%;
+}
+.figura8{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 53px;
+    height: 77px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.4) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 130px;
+    bottom: 175px;
+    margin-left: 10%;
+}
+.figura9{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 30px;
+    height: 43.85px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.3) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 160px;
+    bottom: 200px;
+    margin-left: 10%;
+}
+.figura10{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 45px;
+    height: 65.38px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.35) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 180px;
+    bottom: 185px;
+    margin-left: 10%;
+}
+.figura11{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 37px;
+    height: 53.75px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.32) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 220px;
+    bottom: 190px;
+    margin-left: 10%;
+}
+.figura12{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 20px;
+    height: 29.06px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.25) 0%, rgba(120, 192, 224, 0) 100%);
+    bottom: 205px;
+    left: 235px;
+    margin-left: 10%;
+}
+.figura13{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 15px;
+    height: 21.67px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.18) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 205px;
+    bottom: 208px;
+    margin-left: 10%;
+}
+.figura14{
+    clip-path: ellipse(25% 42% at 50% 97%);
+    position: absolute;
+    width: 18px;
+    height: 26px;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0.2) 0%, rgba(120, 192, 224, 0) 100%);
+    left: 177px;
+    bottom: 215px;
+    margin-left: 10%;
+}
+
+
