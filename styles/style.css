@@ -17,23 +17,25 @@
     font-family: 'Brandon', sans-serif;
     font-weight: bold;
 }
-
+.logo-container{
+    border-right: solid 1px #777777;
+    height: 100px;
+    padding-top: 50px;
+}
 .logo{
     font-size: 50px;
     font-weight: bold;
     padding-left: 0.7em;
     color: #050DCA;
+    position: fixed;
 }
 
 .bienvenida{
-    text-align: center;
+    padding-left: 4% !important;
     font-size: 30px;
     font-weight: bold;
     color: #0E0E52;
-}
-
-header{
-    margin-top: 70px;
+    margin-top: 56px !important;
 }
 
 /*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
@@ -51,16 +53,13 @@ header{
 .barra_iconos{
     display: flex;
     justify-content:space-around;
+    margin-top: 56px !important;
 }
 
 .iconos_nav{
     padding-right: 20px;
     padding-left: 10px;
     color: #0E0E52;
-}
-
-.contenido {
-    margin-top: 50px;
 }
 
 .Bandera{
@@ -92,8 +91,11 @@ header{
     font-size: 12px;
     text-align: center;
 }
-*/
-
+.atajos {
+    height: 100px;
+    mix-blend-mode: normal;
+    border-radius: 70px;
+}*/
 .mercado{
     height: 300px;
 }
@@ -103,13 +105,6 @@ header{
     line-height: 51px;
     color: #051923;
 }
-
-/*
-.atajos {
-    height: 100px;
-    mix-blend-mode: normal;
-    border-radius: 70px;
-}*/
 
 .tarjetas{
     padding-top: 90px;
@@ -216,14 +211,14 @@ header{
 }
 
 /*estilos para el menú*/
-
 .menu{
-    border-right: solid 1px rgba(120, 192, 224, 0.2);
     height: 100%;
+    position: fixed;
+    padding-right: 2rem;
 }
 .contenedor_menu {
-    height: 600px ;
-    padding-top: 60px;   
+    padding-top: 60px;  
+    border-right: solid 1px #777777; 
 }
 
 .contenedor_menu .menu li{
@@ -250,5 +245,4 @@ header{
 footer{
     background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
     mix-blend-mode: normal;
-    margin-top: 60px;
 }
