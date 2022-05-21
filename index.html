@@ -24,8 +24,8 @@
                 <div class="col-6 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
                     
                     <div class="buscar">
-                        <input class="lupita" type="search" placeholder="Buscar...">
                         <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
+                        <input class="lupita" type="search" placeholder="Buscar...">
                     </div>
 
                     <!--acá termina la barra de navegación-->
@@ -33,18 +33,12 @@
                     <div class="iconos">
                         <i class="fa-solid fa-bell iconos_nav"></i>
                         <i class="fa-solid fa-user iconos_nav"></i>
-                        <select name="Lenguaje" class="Bandera iconos_nav">
-                            <option value="Español" name="Lenguaje">
-                                <img src="">
-                            </option>
-                            <option value="English" name="Lenguaje" selected>
-                                <img src="imagenes/english.jpeg">
-                            </option>
-                            <option value="Portuguesse" name="Lenguaje">
-                                <img src="imagenes/port.jpg">
-                            </option>
+                        <select name="Lenguaje" class="bandera iconos_nav">
+                            <option value="ES" class="ES"></option>
+                            <option value="IN" class="IN"></option>
+                            <option value="BR" class="BR"></option>
                         </select>
-                        <i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i>
+                        <a href="home.html"><i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i></a>
                     </div>
                 </div>
 
@@ -65,6 +59,11 @@
                     <li><i class="fa-solid fa-arrow-up-right-dots"></i><a href="">Inversiones</a></li>
                     <li><i class="fa-solid fa-headset"></i><a href="">Ayuda</a></li>
                 </ul>
+                <div class="redes">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </section>
             <section class="col-7 balance">
                     <div class="pb-5 balance_contenido">
@@ -179,10 +178,12 @@
 
     <footer class="container-fluid">
         <div class="row">
-            <div class="col-12 border">
-            <p>&copy;</p>
-                <div class="footer-buttoms"></div>
-                <p></p>
+            <div class="col-12 border pie">
+                <p class="col-2 pie-1">&copy; itbank S.A.</p>
+                <p class="col-6 pie-2">Ultimo Acceso: 21/05/2002 - 20:37 hs</p>
+                <div class="footer-buttoms">
+                    <button>Boton de arrepentimiento</button>
+                </div>
             </div>
         </div>
     </footer>

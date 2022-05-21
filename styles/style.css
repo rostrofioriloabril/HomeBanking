@@ -24,20 +24,21 @@
     font-weight: bold;
 }
 .logo-container{
-    border-right: solid 1px #777777;
+    border-right: solid 2px #777777;
     height: 100px;
     padding-top: 50px;
+    min-width: 176px;
 }
 .logo{
     font-size: 50px;
     font-weight: bold;
-    padding-left: 0.7em;
+    padding-left: 1%;
     color: #050DCA;
     position: fixed;
 }
 
 .bienvenida{
-    padding-left: 4% !important;
+    padding-left: 6% !important;
     font-size: 30px;
     font-weight: bold;
     color: #0E0E52;
@@ -45,9 +46,12 @@
 }
 
 /*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
-
+.fa-magnifying-glass{
+    position: relative;
+    left: 50px;
+}
 .buscar input{
-    padding: 0 20px;
+    padding: 0 20px 0 35px;
     font-size: 18px;
     color: #000;
     background-color: #0035541A;
@@ -55,10 +59,12 @@
     border: 1px solid silver;
     border-radius: 30px;
 }
-
+.buscar{
+    margin-right: 3%;
+}
 .barra_iconos{
     display: flex;
-    justify-content:space-around;
+    justify-content: flex-end;
     margin-top: 56px !important;
 }
 
@@ -68,10 +74,17 @@
     color: #0E0E52;
 }
 
-.Bandera{
+.bandera{
     width: 40px;
 }
-
+.bandera option{
+    background-repeat:no-repeat;
+    background-position:bottom left;
+    padding-left:30px;
+}
+select.bandera option.ES{
+     background-image: url(/imagenes/english.jpeg);
+ }
 
 .movimientos , .balance_contenido , .mercado , .tarjetas{
     margin-top: 30px;
@@ -116,12 +129,13 @@
     padding-top: 90px;
     height: 400px;
 }
-
-.balance_item{
-    padding-left: 50px;
-    color: #150578;
+.balance{
+    padding-left: 4% !important;
 }
-
+.balance_item{
+    color: #150578;
+    padding-left: 3%;
+}
 
 .balance h3 {
     font-weight: bold;
@@ -180,7 +194,6 @@
     color:#150578; 
 }
 .movimiento{
-    width: 100%;
     height: 60px;
     margin-bottom: 5%;
     margin-left: 5%;
@@ -218,13 +231,13 @@
 
 /*estilos para el menú*/
 .menu{
-    height: 100%;
     position: fixed;
-    padding-right: 2rem;
+    padding-left: 1%;
 }
 .contenedor_menu {
     padding-top: 60px;  
-    border-right: solid 1px #777777; 
+    border-right: solid 2px #777777; 
+    min-width: 176px;
 }
 
 .contenedor_menu .menu li{
@@ -247,8 +260,50 @@
 .contenedor_menu .menu li a:hover{
     color: #050DCA;
 }
+.redes{
+    position: fixed;
+    bottom: 60px;
+    left: 2.75%;
+    width: 176px;
+}
+.redes i{
+    padding-right: 20%;
+    font-size: 22px;
+    color: #777777;
+}
+.redes i:hover{
+    color:#050DCA ;
+}
+
+/* FOOTER */
 
 footer{
     background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
     mix-blend-mode: normal;
+}
+.pie{
+    padding: 0 !important;
+}
+.pie p, .pie div{
+    padding-top: 1.2%;
+}
+.pie p{
+    display: inline-block; 
+}
+.pie-1{
+    text-align: center;
+}
+.pie-2{
+    padding-left: 4%;
+}
+.footer-buttoms{
+    display: inline-block;
+    padding-left: 13%;
+}
+.footer-buttoms button{
+    border-radius: 15px;
+    width: 120%;
+    color: #0E0E52;
+    background-color: rgba(68, 157, 209, 0.3);
+    border-style: none;
 }
