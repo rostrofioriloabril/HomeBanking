@@ -41,12 +41,14 @@ main{
     width: 20%;
 }
 .inicio{
+    background: linear-gradient(#fff 50%,#bde0f0);
     width: 65%;
     height: 100%;
+    
 }
 .inicio h2 {
-    margin: 10% 0% 5% 10%;
-    font-size: 40px;
+    margin: 6% 0% 2% 10%;
+    font-size: 45px;
     color: rgb(0, 4, 75);
 }
 .inicio .logo{
@@ -55,22 +57,25 @@ main{
 }
 .inicio h4 {
     margin: 0% 0% 2% 10%;
-    font-size: 22px;
+    font-size: 29px;
     color: rgb(0, 4, 75)
 }
 .inicio a{
-    color: #A5A5AA;
+    color: #8686a8;
 }
 .inicio h6 {
     margin-left: 10%;
-    color: #A5A5AA;
-    font-size: 14px;
+    color: #8686a8;
+    font-size: 18px;
 }
 
 /* FORMULARIO */
 .form-container{
     height: 100%;
     width: 35%;
+}
+.form-container .logo2 {
+    display: none;
 }
 .form{
     display: flex;
@@ -79,9 +84,19 @@ main{
     text-align: center;
     height: 100%;
     box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
 }
 .form h2{
     margin-bottom: 5%;
+    color: #0e0e52;
+    font-size: 30px;
+}
+.form input {
+    font-size: 20px;
+    text-align: center;
+}
+.form input::placeholder{
+    color: #bdc2d0;
 }
 .form input[type = "text"], .form input[type = "password"] {
     width: 70%;
@@ -105,11 +120,11 @@ main{
     height: 18px;
     width: 18px;
 }
-label{
+.form label{
     margin-left: 5px;
     color: rgb(0, 4, 75);  
 }
-button{
+form button{
     padding: 5px 15px;
     width: 125px;
     border-radius: 15px;
@@ -118,7 +133,16 @@ button{
     color: rgb(0, 4, 75);
     font-weight: bold;
     font-size: 18px;
+    cursor: pointer;
 }
+form button:hover{
+    box-sizing: 1px 1px 3px #000;
+}
+form button a {
+    text-decoration: none;
+    color:  #0e0e52 ;
+}
+
 .ayuda {
     margin-top: 30px;
 }
@@ -132,187 +156,248 @@ button{
     font-weight: lighter;
     margin-top: 30px;
     color: rgb(0, 4, 75);
+    font-size: 18px;
 }
 .ayuda h5{
     font-weight: lighter;
+    font-size: 17px;
+    color: #0e0e52;
 }
 .ayuda .olvidar{
     text-decoration: underline;
 }
 .ayuda a{
     font-weight: 100;
-    text-decoration: none;
+    font-size: 17px;
 }
 footer{
     background-color: aqua;
-}
-@media screen and (max-width:750px){
-    .info {
-        display: none;
-    }
 }
 
 /* BACKGROUND */
 .background{
     position: absolute;
     bottom: 0px;
-    height: 100%;
+    height: 50%;
     width: 65%;
-    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
-    z-index: -1;
+
+   
     
 }
 .figura{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(24% 42% at 50% 96%);
     position: absolute;
     width: 221px;
     height: 300px;
-    background: linear-gradient(180deg, #050DCA 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient( #0f19cc 46%, #bde0f0);
     left: 10px;
     bottom: 0;
     margin-left: 10%;
+    z-index: 90;
 }
 .figura1{
     position: absolute;
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(24% 43% at 52% 91%);
     width: 168px;
     height: 243px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.8) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient( #0f19cc 3%, #bde0f0);
     display: inline-block;
     left: 120px;
-    bottom: 50px;
+    bottom: 30px;
     margin-left: 10%;
+    z-index: 89;
+    
+
 }
 .figura2{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(25.5% 45% at 50% 95%);
     position: absolute;
     width: 130px;
     height: 188.04px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.7) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient(#0f19cc 9%,#0f19cc 4%, #bde0f0);
     display: inline-block;
     left: 25px;
-    bottom: 80px;
+    bottom: 70px;
     margin-left: 10%;
+    z-index: 87;
 }
 .figura3{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
     width: 106px;
     height: 153px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.7) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient( #0f19cc 6%, #cde7f3);
     left: 105px;
     bottom: 110px;
     margin-left: 10%;
+    z-index: 88;
 }
 .figura4{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(24% 42% at 60% 95%);
     position: absolute;
     width: 93px;
     height: 134.24px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.55) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient( #0f19cc 3%, #cde7f3);
     left: 170px;
-    bottom: 130px;
+    bottom: 120px;
     margin-left: 10%;
+    z-index: 86;
 }
 .figura5{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
     width: 80px;
     height: 115px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.5) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient(#0f19cc 5%, #cde7f3);
     left: 90px;
     bottom: 140px;
     margin-left: 10%;
+    z-index: 85;
 }
 .figura6{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(23% 42% at 50% 99%);
     position: absolute;
     width: 68px;
     height: 98.99px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.5) 0%, rgba(120, 192, 224, 0) 100%);
-    left: 195px;
+    background: linear-gradient(#0f19cc 3%, #cde7f3);
+    left: 201px;
     bottom: 160px;
     margin-left: 10%;
+    z-index: 83;
 }
 .figura7{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(28% 42% at 50% 80%);
     position: absolute;
     width: 59px;
-    height: 85.89px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.45) 0%, rgba(120, 192, 224, 0) 100%);
+    height: 90px;
+    background: linear-gradient(#0f19cc 4%, #cde7f3 80%);
     left: 155px;
-    bottom: 165px;
+    bottom: 140px;
     margin-left: 10%;
+    z-index: 84;
 }
 .figura8{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
     width: 53px;
     height: 77px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.4) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient(#0f19cc 5%, #cde7f3 90%);
     left: 130px;
-    bottom: 175px;
+    bottom: 170px;
     margin-left: 10%;
+
 }
 .figura9{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(26% 42% at 50% 97%);
     position: absolute;
     width: 30px;
     height: 43.85px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.3) 0%, rgba(120, 192, 224, 0) 100%);
-    left: 160px;
-    bottom: 200px;
+    background: linear-gradient(#0f19cc 1%, #e1eff8 82%);
+    left: 159px;
+    bottom: 190px;
     margin-left: 10%;
 }
 .figura10{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
     width: 45px;
-    height: 65.38px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.35) 0%, rgba(120, 192, 224, 0) 100%);
+    height: 68px;
+    background: linear-gradient(#0f19cc 1%, #e1eff8 84%);
     left: 180px;
-    bottom: 185px;
+    bottom: 178px;
     margin-left: 10%;
+    z-index: 83;
 }
 .figura11{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
     width: 37px;
     height: 53.75px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.32) 0%, rgba(120, 192, 224, 0) 100%);
+    background: linear-gradient(#0f19cc 1%, #e1eff8 );
     left: 220px;
     bottom: 190px;
     margin-left: 10%;
+    z-index: 82;
 }
+
 .figura12{
-    clip-path: ellipse(25% 42% at 50% 97%);
+    clip-path: ellipse(25% 42% at 50% 95%);
     position: absolute;
-    width: 20px;
-    height: 29.06px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.25) 0%, rgba(120, 192, 224, 0) 100%);
-    bottom: 205px;
-    left: 235px;
+    width: 30px;
+    height: 55px;
+    background: linear-gradient(#0f19cc 4%, #f2f9fc 80%);
+    left: 200px;
+    bottom: 189px;
     margin-left: 10%;
 }
 .figura13{
     clip-path: ellipse(25% 42% at 50% 97%);
     position: absolute;
-    width: 15px;
-    height: 21.67px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.18) 0%, rgba(120, 192, 224, 0) 100%);
-    left: 205px;
-    bottom: 208px;
+    width: 20px;
+    height: 26px;
+    background: linear-gradient(#0f19cc, #f2f9fc);
+    left: 180px;
+    bottom: 200px;
     margin-left: 10%;
 }
-.figura14{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 18px;
-    height: 26px;
-    background: linear-gradient(180deg, rgba(5, 13, 202, 0.2) 0%, rgba(120, 192, 224, 0) 100%);
-    left: 177px;
-    bottom: 215px;
-    margin-left: 10%;
+@media screen and (min-width:490px) and (max-width:582px){
+    .inicio {
+        width: 50%;
+    }
+    .form-container{
+        width: 50%;
+    }
+    .background{
+        margin-top: 1%;
+        width: 100%;
+        margin-left: -78px;
+    }
+    .form input {
+        font-size: 16px;
+    }
+    .info {
+        display: none;
+    }
+}
+@media screen and (min-width:100px) and (max-width:489px){
+    .inicio{
+        display: none;
+    }
+    .form-container {
+        
+        width: 100%;
+        text-align: center;
+    }
+    .form-container .logo2{
+        display: flex;
+        margin-top: 5%;
+        width: 100%;
+        height: 50px;
+        color: #050DCA;
+        text-align: center;
+        justify-content: center;
+        font-size: 50px;
+    }
+    .form {
+        width: 100%;
+        box-shadow: none;
+    }
+    .form h2 {
+        display: none;
+    }
+    .form input::placeholder{
+        color: #0e0e52;
+    }
+    .form button {
+        margin-top: 15px;
+        width: auto;
+        padding: 0;
+        padding: 6px 43px;
+    }
+    .check {
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
 }
 
 
