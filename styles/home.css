@@ -180,9 +180,6 @@ footer{
     bottom: 0px;
     height: 50%;
     width: 65%;
-
-   
-    
 }
 .figura{
     clip-path: ellipse(24% 42% at 50% 96%);
@@ -206,8 +203,6 @@ footer{
     bottom: 30px;
     margin-left: 10%;
     z-index: 89;
-    
-
 }
 .figura2{
     clip-path: ellipse(25.5% 45% at 50% 95%);
@@ -386,7 +381,8 @@ footer{
         display: none;
     }
     .form input::placeholder{
-        color: #0e0e52;
+        color: #bdc2d0;
+        font-size: 17px;
     }
     .form button {
         margin-top: 15px;
