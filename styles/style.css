@@ -385,7 +385,7 @@ footer{
     .barra_iconos{
         margin-top: 0;
         justify-content: flex-start;
-        gap: 3em;
+        gap: 1em;
     }
 
     .iconos_nav{
@@ -417,7 +417,7 @@ footer{
     }
 
     .buscar-mobile input{
-        width: 70%;
+        width: 85%;
         padding: 0 20px 0 35px;
         font-size: 18px;
         color: #000;
@@ -425,5 +425,23 @@ footer{
         outline: none;
         border: 1px solid silver;
         border-radius: 30px;
+    }
+    .balance{
+        padding-left: 0;
+        padding-top: 3em;
+    }
+    .balance_contenido{
+        padding-left: 0;
+        width: 100%;
+    }
+    .balance_item{
+        padding-left: 0;
+
+    }
+    .primera-sec{
+        width: 100%;
+    }
+    .contenido{
+        width: 100%;
     }
 }
