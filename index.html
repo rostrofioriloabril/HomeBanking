@@ -14,18 +14,20 @@
 </head>
 <body>
     <main class = "container-fluid contenido">
-        <header>
+        <header class="col-sm-12">
 
             <nav class="row">
-                <div class="col-2 logo-container">
+                <div class="col-lg-2 logo-container">
                     <h2 class="logo">itbank</h2>
                 </div>
-                <h1 class="col-4 bienvenida">¡Bienvenido, Martin!</h1>     
-                <div class="col-6 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
-                    
+                <h1 class="col-lg-4 bienvenida">¡Bienvenido, Martin!</h1>   
+
+                <div class="col-lg-6 col-sm-12 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
+                    <h1 class="bienvenida-mobile">¡Bienvenido, Martin!</h1>
+
                     <div class="buscar">
                         <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
-                        <input class="lupita" type="search" placeholder="Buscar...">
+                        <input type="search" placeholder="Buscar...">
                     </div>
 
                     <!--acá termina la barra de navegación-->
@@ -47,9 +49,14 @@
 
         </header>
 
+        <div class="buscar-mobile">
+            <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
+            <input class="lupita" type="search" placeholder="Buscar...">
+        </div>
+
 
         <div class="row primera-sec"> <!--nombre a la clase para llamar a todos los h2 que hay dentro-->
-            <section class="col-2 contenedor_menu" >
+            <section class="col-2 contenedor_menu">
                 <ul class="menu">
                     <!--<li><i class="fa-solid fa-house"></i><a href="">Menu</a></li>-->
                     <li><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
@@ -65,7 +72,7 @@
                     <a href=""><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </section>
-            <section class="col-7 balance">
+            <section class="col-6 balance">
                     <div class="pb-5 balance_contenido">
                         <h2 class="balance_item">
                             CUENTA:
@@ -77,7 +84,7 @@
                         <h4 class="balance_item">
                             Histórico
                         </h4>
-                        <img src="imagenes/gráfico.png" alt="gráfico del balance" width="100%">
+                        <img src="imagenes/gráfico.png" alt="gráfico del balance" width="90%">
                     </div>
 <!--                    <div class="pb-5 atajos">
                         <h4>Atajos</h4>
@@ -105,13 +112,12 @@
                     <div class="tarjetas">
                         <h4>Tarjetas</h4>
                         <br>
-                        <br>
-                        <br>
+                        <a href="#"><img src="imagenes/tarjeta 1.png" alt="tarjeta de débito"></a>
                     </div>
 
             </section>
 
-            <section class="col-3">
+            <section class="col-4 sec-movimientos">
                     <div class="movimientos">
                         <h4>Últimos Movimientos</h4>
                         <ul class="lista-movimientos">
@@ -170,7 +176,7 @@
                         <h4>
                             Movimientos del mercado
                         </h4>
-                        <img src="" alt="">
+                        <img src="imagenes/olas.png" alt="gráfico de movimientos del mercado">
                     </div>
             </section>
         </div>
