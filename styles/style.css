@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Brandon";
-    src: url(fonts/BrandonGrotesque-Medium) format("truetype");
+    src: url(fonts/BrandonGrotesque-Medium.ttf) format("truetype");
     font-weight: medium;
   } 
 
@@ -23,15 +23,17 @@
     font-family: 'Brandon', sans-serif;
     font-weight: bold;
 }
+
 .logo-container{
     border-right: solid 2px #777777;
     height: 100px;
     padding-top: 50px;
     min-width: 176px;
 }
+
 .logo{
     font-size: 50px;
-    font-weight: bold;
+    font-weight: 500;
     padding-left: .7em;
     color: #050DCA;
     position: fixed;
@@ -50,6 +52,7 @@
     position: relative;
     left: 50px;
 }
+
 .buscar input{
     padding: 0 20px 0 35px;
     font-size: 18px;
@@ -312,9 +315,10 @@ select.bandera option.ES{
     color: #777777;
 }
 
-.contenedor_menu .menu li a:hover{
+.contenedor_menu .iconos_menu :hover{
     color: #050DCA;
 }
+
 .redes{
     position: fixed;
     bottom: 60px;
@@ -384,9 +388,10 @@ footer{
 
 @media (max-width: 576px) {
     .principal{
-        background: #050DCABF 75%;
         color: #FFFFFF;
         height: 7em;
+        background: rgba(5, 13, 202, 0.75);
+        clip-path: ellipse(61% 92% at 49% 0%);
     }
 
     .logo-container{
@@ -403,11 +408,11 @@ footer{
         margin-left: 0;
         padding-right: 3em;
         padding-left: 1em;
-        font-size: 21px;
+        font-size: 21px; 
     }
 
     .barra_iconos{
-        margin-top: 0;
+        margin-top: 32px !important;
         justify-content: flex-start;
     }
 

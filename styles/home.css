@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: "Brandon";
-    src: url(fonts/BrandonGrotesque-Medium) format("truetype");
+    src: url(fonts/BrandonGrotesque-Medium.tff) format("truetype");
     font-weight: medium;
   } 
 
@@ -50,6 +50,8 @@ main{
     margin: 6% 0% 2% 10%;
     font-size: 45px;
     color: rgb(0, 4, 75);
+    font-weight: 500;
+
 }
 .inicio .logo{
     margin-top: 5%;
@@ -341,6 +343,7 @@ footer{
     }
     .form-container{
         width: 50%;
+
     }
     .background{
         margin-top: 1%;
@@ -362,6 +365,9 @@ footer{
         
         width: 100%;
         text-align: center;
+        background: linear-gradient(180deg, rgba(5, 13, 202, 0) 0%, rgba(5, 13, 202, 0.05) 53.96%, rgba(120, 192, 224, 0.2) 100%);
+        mix-blend-mode: normal;
+        
     }
     .form-container .logo2{
         display: flex;
