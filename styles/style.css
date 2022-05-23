@@ -181,7 +181,28 @@ select.bandera option.ES{
     color: #150578;
     padding-left: 3%;
 }
-
+h2.balance_item, h3.balance_item{
+    display: inline-block;
+}
+.balance-fila-1 i{
+    color: #050DCA;
+    opacity: .6;
+    font-size: 16px;
+    float: right;
+    margin-top: 15px;
+}
+a.balance_item{
+    float: right;
+    margin-top: 25px;
+    text-decoration: none;
+    background: rgba(5, 130, 202, 0.2);
+    mix-blend-mode: normal;
+    border-radius: 10px;
+    width: 65px;
+}
+a.balance_item i{
+    margin-left: 4px;
+}
 .balance h3 {
     font-weight: bold;
     font-size: 40px;
@@ -370,11 +391,9 @@ footer{
     background-color: rgba(68, 157, 209, 0.3);
     border-style: none;
 }
-
 .atajos{
     display: none;
 }
-
 .historico-mobile{
     display: none;
 }
@@ -406,19 +425,26 @@ footer{
         display: inline;
         text-align: left;
         margin-left: 0;
-        padding-right: 3em;
         padding-left: 1em;
         font-size: 21px; 
+        max-width: 20%;
     }
-
+    .iconos{
+        display: inline-block;
+        width: 60%;
+    }
+    .iconos i {
+        float: right;
+        color: white;
+    }
     .barra_iconos{
+        display: inline-block;
+        padding-left: 0 !important;
         margin-top: 32px !important;
-        justify-content: flex-start;
     }
 
     .iconos_nav{
-        color: #FFFFFF;
-        padding-right: 10px;
+        color: #0E0E52;
         padding-left: 0;
         padding-top: 0;
     }
@@ -426,6 +452,7 @@ footer{
     .lupita{
         width: 6em;
         color: #051923;
+        border: none;
     }
 
     .buscar{
@@ -443,9 +470,25 @@ footer{
     .buscar-mobile{
         display: inline-block;
         padding-top: 2em;
-        padding-left: 2em;
+        width: 100%;
     }
-
+    .balance-fila-1, .balance-fila-2{
+        height: 50%;
+        width: 90%;
+    }
+    h2.balance_item{
+        display: inline-block;
+        margin-left: -50%;
+        margin-top: 20px;
+    }
+    h3.balance_item{
+        display: inline-block;
+        margin-left: -20%;
+        font-size: 30px;
+    }
+    .balance-fila-1 i{
+        margin-top: 30px;
+    }
     .buscar-mobile input{
         width: 85%;
         padding: 0 20px 0 35px;
@@ -453,7 +496,6 @@ footer{
         color: #000;
         background-color: #0035541A;
         outline: none;
-        border: 1px solid silver;
         border-radius: 30px;
     }
     .balance{
@@ -487,26 +529,23 @@ footer{
     .primera-sec{
         width: 100%;
     }
-
-
-
     .tarjetas{
         background: #FFFFFF;
         width: 100%;
         padding-left: 0;
-        margin-top: 5em;
-        height: 250px;
+        margin-top: 3em;
+        height: auto;
     }
 
     .tarjetas img{
         width: 15em;
         height: 9em;
-        margin-top: 16px;
         padding-left: 0;
+        margin: 0;
     }
 
     .sec-movimientos{
-        padding-top: 1em;
+        padding: 3em 3em 1.5em 3em!important;
     }
 
     .movimientos{
@@ -514,17 +553,30 @@ footer{
         width: 100%;
         padding-right: 0;
         background: #FFFFFF;
+        margin: 0 !important;
     }
-
+    .movimientos h4{
+        padding: 0;
+        text-align: center;
+        margin-bottom: 8%;
+    }
+    .movimientos li{
+        width: 300px;
+        margin-left: 20%;
+    }
+    .lista-movimientos{
+        padding: 0;
+    }
     .primera-sec h2 {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 24px;
         line-height: 46px;
         color: #150578;
     }
 
     .mercado{
-        display: none;
+        width: 100%;
+        margin-left: 3%;
     }
 
     footer{
@@ -547,10 +599,50 @@ footer{
     .atajos{
         display: inline;
         margin-top: 3em;
+        width: 100%;
+        margin-left: 6%;
     }
-
+    .sub-atajos a{
+        display: inline-block;
+        max-width: 25%;
+        text-decoration: none;
+        margin-right: 3%;
+        background-color: #449DD11A;
+        border-radius: 10px;
+        padding: 4px;
+        color:#050DCA;
+    }
+    .sub-atajos a p{
+        margin-bottom: 0;
+        text-align: center;
+    }
     .historico{
         display: none;
     }
 
+}
+
+@media screen and (max-width:495px){
+    .bienvenida-mobile{
+        padding-right: 0;
+        padding-left: 2%;
+    }
+    .iconos{
+        width: 55%;
+    }
+    .movimientos li{
+        margin-left: 10%;
+        width: 200px;
+    }
+}
+@media screen and (max-width:413px){
+    .iconos{
+        width: 45%;
+    }
+    h3.balance_item{
+        margin-left: -9%;
+    }
+    .movimientos li{
+        margin-left: 8%;
+    }
 }
