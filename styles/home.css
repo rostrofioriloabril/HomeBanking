@@ -183,7 +183,16 @@ footer{
     height: 50%;
     width: 65%;
 }
-.figura{
+
+.background .montañas{
+    position: absolute;
+    bottom: 0px;
+    height: 85%;
+    width: 50%;
+}
+
+
+/*.figura{
     clip-path: ellipse(24% 42% at 50% 96%);
     position: absolute;
     width: 221px;
@@ -336,7 +345,8 @@ footer{
     left: 180px;
     bottom: 200px;
     margin-left: 10%;
-}
+}*/
+
 @media screen and (min-width:490px) and (max-width:582px){
     .inicio {
         width: 50%;
