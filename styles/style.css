@@ -34,7 +34,6 @@
 .logo{
     font-size: 50px;
     font-weight: 500;
-    padding-left: .7em;
     color: #050DCA;
     position: fixed;
 }
@@ -98,7 +97,7 @@ select.bandera option.ES{
     background-image: url(/imagenes/english.jpeg);
 }
 
-.movimientos , .balance_contenido , .tarjetas{
+.movimientos , .balance_contenido{
     margin-top: 30px;
     background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
     mix-blend-mode: normal;
@@ -155,16 +154,16 @@ select.bandera option.ES{
 
 .tarjetas{
     width: 90%;
-    padding-left: 3em;
     margin-top: 5em;
     height: 400px;
+    text-align: center;
 }
 
 .tarjetas img{
-    width: 28em;
+
+    max-width: 440px;
     height: 15em;
     margin-top: 35px;
-    padding-left: 3em;
 }
 
 .balance{
@@ -310,7 +309,7 @@ a.balance_item i{
 /*estilos para el menú*/
 .menu{
     position: fixed;
-    padding-left: 1%;
+    padding-left: 0%;
 }
 .contenedor_menu {
     padding-top: 60px;  
@@ -321,7 +320,7 @@ a.balance_item i{
 .contenedor_menu .menu li{
     list-style: none;
     padding-bottom: 40px;
-    padding-left: 1.5em;
+    padding-left:.5em;
 }
 
 .contenedor_menu .menu li i{
@@ -397,12 +396,59 @@ footer{
 .historico-mobile{
     display: none;
 }
-
+@media  screen and (max-width: 1400px) {
+    .bienvenida{
+        font-size: 24px;
+    }
+}
 @media screen and (min-width: 577px) and (max-width: 1100px){
+    .bienvenida{
+        padding-left: 15px !important;
+        max-width: 300px !important;
+    }
+    .buscar input{
+        width: 150px;
+    }
+    .sec-movimientos{
+        max-width: 30% !important;
+    }
+    .movimientos{
+        padding-right: 0;
+    }
+    .movimientos h4{
+        padding-left: 0;
+    }
+    .lista-movimientos{
+        padding-left: 0;
+    }
+    .lista-movimientos-icono i{
+        font-size: 18px;
+    }
+    .lista-movimientos-info{
+        width: 165px;
+    }
+    .lista-movimientos-info h5{
+        font-size: 16px;
+        right: 0px;
+    }
+    .tarjetas img{
+        width: 100%;
+    }
+    .balance{
+        padding-left: 1em !important;
+        width: 45% !important;
+    }
+    .pie-2{
+        max-width: 350px;
+    }
+    .footer-buttoms{
+        padding-left: 0;
+    }
     .principal{
         display: flex !important;
         flex-wrap: nowrap !important;
     }
+
 }
 
 @media (max-width: 576px) {
@@ -545,7 +591,7 @@ footer{
     }
 
     .sec-movimientos{
-        padding: 3em 3em 1.5em 3em!important;
+        margin-left: 20%;
     }
 
     .movimientos{
@@ -559,6 +605,7 @@ footer{
         padding: 0;
         text-align: center;
         margin-bottom: 8%;
+        width: 225px;
     }
     .movimientos li{
         width: 300px;
@@ -575,8 +622,7 @@ footer{
     }
 
     .mercado{
-        width: 100%;
-        margin-left: 3%;
+        width: 300px;
     }
 
     footer{
@@ -629,6 +675,9 @@ footer{
     }
     .iconos{
         width: 55%;
+    }
+    .sec-movimientos{
+        margin-left: 10%;
     }
     .movimientos li{
         margin-left: 10%;
