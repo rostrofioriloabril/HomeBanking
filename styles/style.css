@@ -300,10 +300,10 @@ a.balance_item i{
     right: 10px;
 }
 .positivo{
-    color: green;
+    color: #005418;
 }
 .negativo{
-    color: red;
+    color: #540000;
 }
 
 /*estilos para el menú*/
