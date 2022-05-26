@@ -414,6 +414,7 @@ footer{
     }
     .movimientos{
         padding-right: 0;
+        width: 100%;
     }
     .movimientos h4{
         padding-left: 0;
@@ -423,9 +424,11 @@ footer{
     }
     .lista-movimientos-icono i{
         font-size: 18px;
+        left: 9px;
+        top: 9px;
     }
     .lista-movimientos-info{
-        width: 165px;
+        width: 18%;
     }
     .lista-movimientos-info h5{
         font-size: 16px;
@@ -436,7 +439,10 @@ footer{
     }
     .balance{
         padding-left: 1em !important;
-        width: 45% !important;
+        width: 50% !important;
+    }
+    .mercado{
+        width: 100%;
     }
     .pie-2{
         max-width: 350px;
@@ -444,13 +450,16 @@ footer{
     .footer-buttoms{
         padding-left: 0;
     }
+    .barra_iconos{
+        justify-content: flex-start;
+        width: 450px !important;
+    }
     .principal{
         display: flex !important;
         flex-wrap: nowrap !important;
     }
 
 }
-
 @media (max-width: 576px) {
     .principal{
         color: #FFFFFF;
