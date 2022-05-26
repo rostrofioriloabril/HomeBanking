@@ -58,7 +58,7 @@ main{
     color: #050DCA;
 }
 .inicio h4 {
-    margin: 0% 0% 2% 10%;
+    margin: 0% 5% 2% 10%;
     font-size: 29px;
     color: rgb(0, 4, 75)
 }
@@ -72,6 +72,12 @@ main{
 }
 
 /* FORMULARIO */
+.asociate, .recupera{
+    display: none;
+}
+.asociate .form{
+    padding-top: 5%;
+}
 .form-container{
     height: 100%;
     width: 35%;
@@ -191,162 +197,6 @@ footer{
     width: 50%;
 }
 
-
-/*.figura{
-    clip-path: ellipse(24% 42% at 50% 96%);
-    position: absolute;
-    width: 221px;
-    height: 300px;
-    background: linear-gradient( #0f19cc 46%, #bde0f0);
-    left: 10px;
-    bottom: 0;
-    margin-left: 10%;
-    z-index: 90;
-}
-.figura1{
-    position: absolute;
-    clip-path: ellipse(24% 43% at 52% 91%);
-    width: 168px;
-    height: 243px;
-    background: linear-gradient( #0f19cc 3%, #bde0f0);
-    display: inline-block;
-    left: 120px;
-    bottom: 30px;
-    margin-left: 10%;
-    z-index: 89;
-}
-.figura2{
-    clip-path: ellipse(25.5% 45% at 50% 95%);
-    position: absolute;
-    width: 130px;
-    height: 188.04px;
-    background: linear-gradient(#0f19cc 9%,#0f19cc 4%, #bde0f0);
-    display: inline-block;
-    left: 25px;
-    bottom: 70px;
-    margin-left: 10%;
-    z-index: 87;
-}
-.figura3{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 106px;
-    height: 153px;
-    background: linear-gradient( #0f19cc 6%, #cde7f3);
-    left: 105px;
-    bottom: 110px;
-    margin-left: 10%;
-    z-index: 88;
-}
-.figura4{
-    clip-path: ellipse(24% 42% at 60% 95%);
-    position: absolute;
-    width: 93px;
-    height: 134.24px;
-    background: linear-gradient( #0f19cc 3%, #cde7f3);
-    left: 170px;
-    bottom: 120px;
-    margin-left: 10%;
-    z-index: 86;
-}
-.figura5{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 80px;
-    height: 115px;
-    background: linear-gradient(#0f19cc 5%, #cde7f3);
-    left: 90px;
-    bottom: 140px;
-    margin-left: 10%;
-    z-index: 85;
-}
-.figura6{
-    clip-path: ellipse(23% 42% at 50% 99%);
-    position: absolute;
-    width: 68px;
-    height: 98.99px;
-    background: linear-gradient(#0f19cc 3%, #cde7f3);
-    left: 201px;
-    bottom: 160px;
-    margin-left: 10%;
-    z-index: 83;
-}
-.figura7{
-    clip-path: ellipse(28% 42% at 50% 80%);
-    position: absolute;
-    width: 59px;
-    height: 90px;
-    background: linear-gradient(#0f19cc 4%, #cde7f3 80%);
-    left: 155px;
-    bottom: 140px;
-    margin-left: 10%;
-    z-index: 84;
-}
-.figura8{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 53px;
-    height: 77px;
-    background: linear-gradient(#0f19cc 5%, #cde7f3 90%);
-    left: 130px;
-    bottom: 170px;
-    margin-left: 10%;
-
-}
-.figura9{
-    clip-path: ellipse(26% 42% at 50% 97%);
-    position: absolute;
-    width: 30px;
-    height: 43.85px;
-    background: linear-gradient(#0f19cc 1%, #e1eff8 82%);
-    left: 159px;
-    bottom: 190px;
-    margin-left: 10%;
-}
-.figura10{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 45px;
-    height: 68px;
-    background: linear-gradient(#0f19cc 1%, #e1eff8 84%);
-    left: 180px;
-    bottom: 178px;
-    margin-left: 10%;
-    z-index: 83;
-}
-.figura11{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 37px;
-    height: 53.75px;
-    background: linear-gradient(#0f19cc 1%, #e1eff8 );
-    left: 220px;
-    bottom: 190px;
-    margin-left: 10%;
-    z-index: 82;
-}
-
-.figura12{
-    clip-path: ellipse(25% 42% at 50% 95%);
-    position: absolute;
-    width: 30px;
-    height: 55px;
-    background: linear-gradient(#0f19cc 4%, #f2f9fc 80%);
-    left: 200px;
-    bottom: 189px;
-    margin-left: 10%;
-}
-.figura13{
-    clip-path: ellipse(25% 42% at 50% 97%);
-    position: absolute;
-    width: 20px;
-    height: 26px;
-    background: linear-gradient(#0f19cc, #f2f9fc);
-    left: 180px;
-    bottom: 200px;
-    margin-left: 10%;
-}*/
-
 @media screen and (min-width:490px) and (max-width:582px){
     .inicio {
         width: 50%;
@@ -381,7 +231,8 @@ footer{
     }
     .form-container .logo2{
         display: flex;
-        margin-top: 5%;
+        margin-top: 4%;
+        margin-bottom: 2%;
         width: 100%;
         height: 50px;
         color: #050DCA;
@@ -405,9 +256,19 @@ footer{
         width: auto;
         padding: 0;
         padding: 6px 43px;
+        background: rgba(5, 13, 202, 0.1);
+        margin-top: 5%;
     }
     .check {
-        margin-bottom: 5%;
-        margin-top: 5%;
+        margin-top: 2.5%;
+    }
+    .asociate .check, .asociate .ayuda h4{
+        margin-top: 0;
+    }
+    .asociate .ayuda{
+        margin-top: 2.5%;
+    }
+    .asociate .check{
+        margin-bottom: 10px;
     }
 }
