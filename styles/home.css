@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: "Brandon";
     src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
     font-weight: bolder;
@@ -15,7 +15,7 @@
     src: url(fonts/BrandonGrotesque-Medium.tff) format("truetype");
     font-weight: medium;
   } 
-
+*/
 *{
     margin: 0;
     padding: 0;
@@ -72,15 +72,11 @@ main{
 }
 
 /* FORMULARIO */
-.asociate, .recupera{
-    display: none;
-}
-.asociate .form{
-    padding-top: 5%;
-}
+
 .form-container{
     height: 100%;
     width: 35%;
+    
 }
 .form-container .logo2 {
     display: none;
@@ -88,9 +84,10 @@ main{
 .form{
     display: flex;
     flex-direction: column;
-    padding-top: 100px;
+    padding-top: 0;
     text-align: center;
     height: 100%;
+    justify-content: center;
     box-shadow: 1px -19px 20px black;
     margin-top: -15px;
 }
@@ -165,19 +162,80 @@ form button a {
     margin-top: 30px;
     color: rgb(0, 4, 75);
     font-size: 18px;
+  
 }
 .ayuda h5{
     font-weight: lighter;
     font-size: 17px;
     color: #0e0e52;
 }
-.ayuda .olvidar{
-    text-decoration: underline;
-}
 .ayuda a{
     font-weight: 100;
     font-size: 17px;
 }
+
+/*-----------------CONTAINER 2 ----------------------------*/
+.asociate{
+    height: 100%;
+    width: 35%;
+    display: none;
+}
+.asociate .logo2{
+    display: none;
+}
+.asociate .form{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
+}
+.asociate .form h2{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.asociate .ayuda{
+    margin-top: -5px;
+}
+/*-------------CONTAINER 3-----------------*/
+.recupera {
+    height: 100%;
+    width: 35%;
+    display: none;
+}
+.recupera .logo2{
+    display: none;
+}
+.recupera .form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     background-color: aqua;
 }
@@ -201,7 +259,7 @@ footer{
     .inicio {
         width: 50%;
     }
-    .form-container{
+    .form-container, .form-container2, .form-container3{
         width: 50%;
 
     }
@@ -221,7 +279,7 @@ footer{
     .inicio{
         display: none;
     }
-    .form-container {
+    .form-container, .form-container2, .form-container3{
         
         width: 100%;
         text-align: center;
@@ -229,15 +287,17 @@ footer{
         mix-blend-mode: normal;
         
     }
-    .form-container .logo2{
+    .form-container .logo2, .asociate .logo2, .recupera .logo2{
         display: flex;
-        margin-top: 4%;
+        margin-top: 8%;
         margin-bottom: 2%;
         width: 100%;
         height: 50px;
         color: #050DCA;
         text-align: center;
+        background-color: #fff;
         justify-content: center;
+        position: absolute;
         font-size: 50px;
     }
     .form {
