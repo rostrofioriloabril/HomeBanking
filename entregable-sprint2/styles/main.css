@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: Helvetica;
 }
 /*HEADER*/
 header{
@@ -12,16 +13,20 @@ header{
 }
 h1, h3{
     color: white;
-    padding-top: 50px;
+    padding-top: 40px;
+    font-size: 350%;
 }
 h3{
-    padding-top: 10px;
+    padding-top: 30px;
+    font-size: 150%;
 }
 
 /*INGRESOS*/
 .ingresos{
-    margin-left: 10%;
-    margin-top: 15%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .ingresos input{
     display: block;
@@ -44,9 +49,15 @@ h3{
 }
 
 /*EGRESOS*/
+
+.egresos {
+    text-align: center;
+}
+
 ul{
-    padding-left: 10%;
-    margin-top: 10%;
+    margin-top: 5%;
+    display: inline-block; 
+	text-align: left; 
 }
 li:hover{
     text-decoration: line-through;
