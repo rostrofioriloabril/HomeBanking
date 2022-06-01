@@ -200,6 +200,10 @@ form button a {
 .asociate .ayuda{
     margin-top: -5px;
 }
+.asociate .container-btn{
+    display: block;
+    text-align: center;
+}
 /*-------------CONTAINER 3-----------------*/
 .recupera {
     height: 100%;

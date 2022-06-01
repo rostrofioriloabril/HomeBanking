@@ -6,7 +6,6 @@ var nuevoCliente = document.getElementById('nuevo1');
 
 //--------------------CONTAINER 2-------------------------//
 var containerAsociate = document.getElementById('container_2');
-
 var registro = document.getElementById('registro')
 var iniciarSesion = document.getElementById('inicia');
 
@@ -45,7 +44,6 @@ meOlvide.addEventListener('click', datosOlvidados);
 
 iniciarSesion.addEventListener('click', iniciarSesionFunction);
 registro.addEventListener('click',nuevoRegistro);
-
 
 
 function iniciarSesionFunction (event){
