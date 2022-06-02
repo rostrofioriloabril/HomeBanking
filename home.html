@@ -22,10 +22,10 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Ingresa aqui</h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu usuario" required>
-                    <input type="password" name="" placeholder="Ingresa tu clave" required>
+                <form action="" method="post">
+                    <input type="text" name="dni" id="dni" placeholder="Ingresa tu DNI" required>
+                    <input type="text" name="user" id="user" placeholder="Ingresa tu usuario" required>
+                    <input type="password" name="clave" id="clave" placeholder="Ingresa tu clave" required>
                     <div class="check">
                         <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
                     </div>
@@ -35,6 +35,7 @@
                         <h4>¿No sos cliente?</h4>
                         <h5>Asociate <a href="" id="nuevo1">aqui</h5></a>
                     </div>
+                    <div id="error"></div>
                 </form>
             </section>
         </div>
@@ -71,10 +72,10 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Recupera tus datos</h2>
-                <form action="">
+                <form action="" method="post">
                     <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
                     <input type="text" name="" id="" placeholder="Ingresa tu nuevo usuario" required>
-                    <input type="password" name="" placeholder="Ingresa tu nueva clave" required>
+                    <input type="password" name="" id="" placeholder="Ingresa tu nueva clave" required>
                     <div class="check">
                         <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
                     </div>

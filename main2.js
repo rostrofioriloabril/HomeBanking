@@ -56,5 +56,35 @@ btnIngresar.addEventListener('click',iniciarSesionFunction);
 nuevoCliente2.addEventListener('click',  nuevoRegistro);
 
 
+//------------ formulario | validación
+
+var dni = document.getElementById('dni');
+var user = document.getElementById('user');
+var clave = document.getElementById('clave');
+var error = document.getElementById('error');
+error.style.color = 'red';
+
+function enviarFormulario(){
+    console.log('Enviando mensaje...')
+
+    var mensajesError = [];
+
+    if(dni.value === null || dni.value === ''){
+        mensajesError.push('Ingresa tu DNI <br>');
+    }
+    
+    if(user.value === null || user.value === ''){
+        mensajesError.push('Ingresa tu usuario <br>');
+    }
+
+    if(clave.value === null || clave.value === ''){
+        mensajesError.push('Ingresa tu clave');
+    }
+
+    error.innerHTML = mensajesError.join(' ');
+
+    return false;
+}
+
 
 
