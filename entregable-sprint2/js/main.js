@@ -1,33 +1,52 @@
 (function(){
-    var lista = document.getElementById('lista'),
+    let lista = document.getElementById('lista'),
         nombreInput = document.getElementById('nombreInput'),
-        dineroInput = document.getElementById('dineroInput');
-        btnNuevaPersona = document.getElementById('btn-agregar');
-        resultado = document.getElementById('resultado');
-        dineroTotal=''
+        dineroInput = document.getElementById('dineroInput'),
+        btnNuevaPersona = document.getElementById('btn-agregar'),
+        resultado = document.getElementById('resultado'),
+        total= document.getElementById('total'),
+        labelDinero= document.getElementById('labelDinero'),
+        labelNombre= document.getElementById('labelNombre'),
+        gastoTotal=0,
+        contadorPersonas = 0;
     
-    var agregarPersona = function(){
-        var nombre = nombreInput.value,
+
+    let agregarPersona = function(){
+        let nombre = nombreInput.value,
             dinero = dineroInput.value;
-        if(dineroInput.value==='' && nombreInput.value!=''){
+        if(dinero<0){
             dinero=0
-        };
-        if(nombreInput.value==='' && dineroInput.value!=''){
-            nombre= 'X'
-        };
-        var nuevaPersona = document.createElement('li'),
+        }
+
+        let nuevaPersona = document.createElement('li'),
             contenido = document.createTextNode(nombre+': $'+dinero),
             icono = document.createElement('i');
+
         icono.className+="fa-solid fa-xmark";
 
+        if(dinero===''  && nombre!=''){
+            nuevaPersona='';
+            dineroInput.style.border=('1px solid red');
+        }
+        else if(dinero!=''  && nombre===''){
+            nuevaPersona='';
+            nombreInput.style.border=('1px solid red');
+        }
+        else if(dinero===''  && nombre===''){
+            nuevaPersona=''
+        }
+        else{
+            nombreInput.style.border=('1px solid black');
+            dineroInput.style.border=('1px solid black');
+        };
 
-        if (nombre==='' && dinero===''){
-            nombreInput.setAttribute('placeholder', 'Agregar un nombre valido');
-            nombre.className = 'Error';
+        if (nuevaPersona !=''){
+            contadorPersonas++;
+            gastoTotal += parseFloat(dinero)
+        };
 
-            dineroInput.setAttribute('placeholder', 'Agregar un valor valido');
-            dinero.className = 'Error';
-            return false;
+        if(contadorPersonas!=0 && dinero!=0){
+            resultado.style.display=('flex')
         };
 
         lista.appendChild(nuevaPersona);
@@ -39,21 +58,24 @@
         dineroInput.value = '';
 
         for(var i=0; i<=lista.children.length -1; i++){
-            lista.children[i].addEventListener('click', function(){
-                this.parentNode.removeChild(this);
+            icono.addEventListener('click', function(){
+                nuevaPersona.remove();
+                contadorPersonas-=1;
+                gastoTotal-=parseFloat(dinero)
+                if(contadorPersonas==0){
+                    resultado.style.display=('none')
+                }
             });
         }
+        gastoTotalFormateado=(gastoTotal/contadorPersonas).toFixed(2)
+        total.textContent= ('Total: $' +gastoTotal.toFixed(2));
+        totalDividido.textContent= ('Cada uno debe poner: $'+ gastoTotalFormateado);
     }
-
-        var comprobarInput = function(){
-            nombreInput.className ='';
-            nombreInput.setAttribute('placeholder','Agrega un nombre');
-
-            dineroInput.className ='';
-            dineroInput.setAttribute('placeholder','Agrega un valor');
-        };
-    
-        btnNuevaPersona.addEventListener('click', agregarPersona);
-        nombreInput.addEventListener('click', comprobarInput);
-        dineroInput.addEventListener('click', comprobarInput);
+    btnNuevaPersona.addEventListener('click', agregarPersona);
 }())
+
+
+
+
+
+
