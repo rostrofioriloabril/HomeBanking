@@ -16,7 +16,9 @@
             nombre= 'X'
         };
         var nuevaPersona = document.createElement('li'),
-            contenido = document.createTextNode(nombre+': $'+dinero);
+            contenido = document.createTextNode(nombre+': $'+dinero),
+            icono = document.createElement('i');
+        icono.className+="fa-solid fa-xmark";
 
 
         if (nombre==='' && dinero===''){
@@ -30,6 +32,7 @@
 
         lista.appendChild(nuevaPersona);
         nuevaPersona.appendChild(contenido);
+        nuevaPersona.appendChild(icono);
 
 
         nombreInput.value = '';
