@@ -396,25 +396,71 @@ footer{
 .historico-mobile{
     display: none;
 }
+
+/*Responsive Tablet*/
 @media  screen and (max-width: 1400px) {
+    
+    .logo-container{
+        height: 100px;
+        padding-top: 50px;
+        min-width: 188px;
+        position: relative;
+    }
+
     .bienvenida{
         font-size: 24px;
     }
 }
-@media screen and (min-width: 577px) and (max-width: 1100px){
-    .bienvenida{
-        padding-left: 15px !important;
-        max-width: 300px !important;
+@media screen and (min-width: 703px) and (max-width: 1100px){
+    
+    .logo-container{
+        height: 100px;
+        padding-top: 50px;
+        min-width: 188px;
+        position: relative;
     }
+
+    .primera-sec{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .bienvenida{
+        padding-left: 10px !important;
+        padding-top: 2em;
+        padding-right: 0 !important;
+        margin-top: 1em !important;
+        max-width: 300px !important;
+        font-size: 20px;
+    }
+
+    .contenedor_menu {
+        padding-top: 60px;  
+        border-right: solid 2px #777777; 
+        min-width: 176px;
+    }
+
+    .balance{
+        margin-left: 6em;
+        width: 500px;
+    }
+
+    .buscar{
+        margin-right: 0 !important;
+    }
+
     .buscar input{
         width: 150px;
     }
+    
     .sec-movimientos{
         max-width: 30% !important;
+        margin-left: 20em !important;
     }
     .movimientos{
         padding-right: 0;
         width: 100%;
+        background: #FFFFFF;
     }
     .movimientos h4{
         padding-left: 0;
@@ -428,7 +474,7 @@ footer{
         top: 9px;
     }
     .lista-movimientos-info{
-        width: 18%;
+        width: 26%;
     }
     .lista-movimientos-info h5{
         font-size: 16px;
@@ -439,10 +485,14 @@ footer{
     }
     .balance{
         padding-left: 1em !important;
-        width: 50% !important;
+        width: 60% !important;
+        margin-left: 6em;
     }
     .mercado{
-        width: 100%;
+        width: 20em !important;
+    }
+    .mercado img{
+        width: 20em !important;
     }
     .pie-2{
         max-width: 350px;
@@ -452,20 +502,258 @@ footer{
     }
     .barra_iconos{
         justify-content: flex-start;
-        width: 450px !important;
+        width: 70% !important;
     }
     .principal{
         display: flex !important;
         flex-wrap: nowrap !important;
+        width: 90%;
     }
 
 }
-@media (max-width: 576px) {
+
+@media screen and (min-width: 577px) and (max-width: 703px) {
     .principal{
         color: #FFFFFF;
         height: 7em;
         background: rgba(5, 13, 202, 0.75);
         clip-path: ellipse(61% 92% at 49% 0%);
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .contenido{
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .logo-container{
+        display: none;
+    }
+
+    .bienvenida{
+        display: none;
+    }
+
+    .bienvenida-mobile{
+        display: inline;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 1em;
+        font-size: 21px; 
+        max-width: 20%;
+    }
+
+    .iconos{
+        display: inline-block;
+        width: 60%;
+    }
+    .iconos i {
+        float: right;
+        color: white;
+    }
+    .barra_iconos{
+        display: inline-block;
+        padding-left: 0 !important;
+        margin-top: 32px !important;
+        width: 100% !important;
+    }
+
+    .iconos_nav{
+        color: #0E0E52;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .lupita{
+        width: 6em;
+        color: #051923;
+        border: none;
+    }
+
+    .buscar{
+        display: none;
+    }
+
+    .bandera{
+        display: none;
+    }
+
+    .contenedor_menu{
+        display: none;
+    }
+
+    .buscar-mobile{
+        display: inline-block;
+        padding-top: 2em;
+        width: 100%;
+    }
+
+    .balance-fila-1, .balance-fila-2{
+        height: 50%;
+        width: 90%;
+    }
+    h2.balance_item{
+        display: inline-block;
+        margin-left: -50%;
+        margin-top: 20px;
+    }
+    h3.balance_item{
+        display: inline-block;
+        margin-left: -20%;
+        font-size: 30px;
+    }
+    .balance-fila-1 i{
+        margin-top: 30px;
+    }
+    .buscar-mobile input{
+        width: 85%;
+        padding: 0 20px 0 35px;
+        font-size: 18px;
+        color: #000;
+        background-color: #0035541A;
+        outline: none;
+        border-radius: 30px;
+    }
+    .balance{
+        margin-left: 0;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        text-align: center;
+        align-items: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+
+    .balance_contenido{
+        padding:0 !important;
+        padding-bottom: 0 !important;
+        width: 100%;
+        align-content: center;
+        background: #449DD11A;
+        overflow-x: visible;
+    }
+
+    .balance_contenido img{
+        display: none;
+    }
+
+    .balance_item{
+        padding-left: 0;
+    }
+    .primera-sec{
+        width: 100% !important;
+    }
+    .tarjetas{
+        background: #FFFFFF;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 3em;
+        height: auto;
+    }
+
+    .tarjetas img{
+        width: 20em;
+        height: 11em;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .sec-movimientos{
+        width: 100% !important;
+        padding-left: 10em !important;
+    }
+
+    .movimientos{
+        height: 500px;
+        width: 100%;
+        padding-right: 0;
+        background: #FFFFFF;
+        margin: 0 !important;
+    }
+    .movimientos h4{
+        padding: 0;
+        text-align: center;
+        margin-bottom: 8%;
+        width: 225px;
+    }
+    .movimientos li{
+        width: 500px;
+        margin: 0;
+    }
+    .lista-movimientos{
+        padding: 0;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .primera-sec h2 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 46px;
+        color: #150578;
+    }
+
+    .mercado{
+        width: 300px;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .menu-mobile{
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #050DCABF 75%;
+    }
+
+    .menu-mobile a{
+        color: #FFFFFF;
+        font-size: 27px;
+    }
+
+    .atajos{
+        display: inline;
+        margin-top: 3em;
+        width: 100%;
+        margin-left: 6%;
+    }
+    .sub-atajos a{
+        display: inline-block;
+        max-width: 30%;
+        text-decoration: none;
+        margin-right: 3%;
+        background-color: #449DD11A;
+        border-radius: 10px;
+        padding: 4px;
+        color:#050DCA;
+    }
+    .sub-atajos a p{
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .historico{
+        display: none;
+    }
+}
+
+/*Responsive Mobile*/
+@media (max-width: 577px) {
+    .principal{
+        color: #FFFFFF;
+        height: 7em;
+        background: rgba(5, 13, 202, 0.75);
+        clip-path: ellipse(61% 92% at 49% 0%);
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    .contenido{
+        padding: 0 !important;
     }
 
     .logo-container{
@@ -677,7 +965,7 @@ footer{
 
 }
 
-@media screen and (max-width:495px){
+@media screen and (max-width:500px){
     .bienvenida-mobile{
         padding-right: 0;
         padding-left: 2%;
@@ -693,6 +981,7 @@ footer{
         width: 200px;
     }
 }
+
 @media screen and (max-width:413px){
     .iconos{
         width: 45%;
