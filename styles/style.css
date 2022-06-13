@@ -16,7 +16,7 @@
     font-weight: medium;
   } 
 
-* {               /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
+* { /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
     padding: 0;
     margin: 0;
     user-select: none;
@@ -25,9 +25,8 @@
 }
 
 .logo-container{
-    border-right: solid 2px #777777;
     height: 100px;
-    padding-top: 50px;
+    padding-top: 35px;
     min-width: 176px;
 }
 
@@ -103,29 +102,6 @@ select.bandera option.ES{
     mix-blend-mode: normal;
     border-radius: 70px;
 }
-
-
-/*.sub-atajos{
-    width: 100%;
-}
-.sub-atajo{
-    margin-top: 10px;
-    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
-    mix-blend-mode: normal;
-    border-radius: 70px;
-    display: inline-block;
-    width: 23%;
-    margin-right: 1%;
-}
-.sub-atajo p{
-    font-size: 12px;
-    text-align: center;
-}
-.atajos {
-    height: 100px;
-    mix-blend-mode: normal;
-    border-radius: 70px;
-}*/
 .mercado{
     height: 330px;
     width: 85%;
@@ -313,7 +289,6 @@ a.balance_item i{
 }
 .contenedor_menu {
     padding-top: 60px;  
-    border-right: solid 2px #777777; 
     min-width: 176px;
 }
 
@@ -401,8 +376,6 @@ footer{
 @media  screen and (max-width: 1400px) {
     
     .logo-container{
-        height: 100px;
-        padding-top: 50px;
         min-width: 188px;
         position: relative;
     }
@@ -412,14 +385,9 @@ footer{
     }
 }
 @media screen and (min-width: 703px) and (max-width: 1100px){
-    
-    .logo-container{
-        height: 100px;
-        padding-top: 50px;
-        min-width: 188px;
-        position: relative;
+    .principal{
+        justify-content: space-around;
     }
-
     .primera-sec{
         width: 100% !important;
         margin: 0 !important;
@@ -430,13 +398,12 @@ footer{
         padding-top: 2em;
         padding-right: 0 !important;
         margin-top: 1em !important;
-        max-width: 300px !important;
+        max-width: 175px !important;
         font-size: 20px;
     }
 
     .contenedor_menu {
         padding-top: 60px;  
-        border-right: solid 2px #777777; 
         min-width: 176px;
     }
 
@@ -502,12 +469,11 @@ footer{
     }
     .barra_iconos{
         justify-content: flex-start;
-        width: 70% !important;
+        width: auto !important;
+        padding: 0 !important;
     }
-    .principal{
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        width: 90%;
+    .iconos .iconos_nav {
+        padding-right: 5px;
     }
 
 }
@@ -526,15 +492,6 @@ footer{
         width: 100%;
         padding: 0 !important;
     }
-
-    .logo-container{
-        display: none;
-    }
-
-    .bienvenida{
-        display: none;
-    }
-
     .bienvenida-mobile{
         display: inline;
         text-align: left;
@@ -570,19 +527,9 @@ footer{
         color: #051923;
         border: none;
     }
-
-    .buscar{
+    .buscar, .bandera, .contenedor_menu, .logo-container, .bienvenida{
         display: none;
     }
-
-    .bandera{
-        display: none;
-    }
-
-    .contenedor_menu{
-        display: none;
-    }
-
     .buscar-mobile{
         display: inline-block;
         padding-top: 2em;
@@ -756,14 +703,6 @@ footer{
         padding: 0 !important;
     }
 
-    .logo-container{
-        display: none;
-    }
-
-    .bienvenida{
-        display: none;
-    }
-
     .bienvenida-mobile{
         display: inline;
         text-align: left;
@@ -797,19 +736,9 @@ footer{
         color: #051923;
         border: none;
     }
-
-    .buscar{
+    .buscar, .bandera,.contenedor_menu, .logo-container, .bienvenida{
         display: none;
     }
-
-    .bandera{
-        display: none;
-    }
-
-    .contenedor_menu{
-        display: none;
-    }
-
     .buscar-mobile{
         display: inline-block;
         padding-top: 2em;
