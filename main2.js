@@ -1,29 +1,23 @@
 ///--------------------CONTAINER 1-------------------------//
-var containerPrincipal = document.getElementById('container_1');
-var meOlvide = document.getElementById('olvidar');
-var nuevoCliente = document.getElementById('nuevo1');
+let containerPrincipal = document.getElementById('container_1'),
+    meOlvide = document.getElementById('olvidar'),
+    nuevoCliente = document.getElementById('nuevo1');
 
 
 //--------------------CONTAINER 2-------------------------//
-var containerAsociate = document.getElementById('container_2');
-var registro = document.getElementById('registro')
-var iniciarSesion = document.getElementById('inicia');
+let containerAsociate = document.getElementById('container_2'),
+    registro = document.getElementById('registro'),
+    iniciarSesion = document.getElementById('inicia');
 
 
 //--------------------CONTAINER 3-------------------------//
-var containerRecupera = document.getElementById('container_3');
-var btnIngresar = document.getElementById('ingresar');
-var nuevoCliente2 = document.getElementById('nuevo2');
+let containerRecupera = document.getElementById('container_3'),
+    btnIngresar = document.getElementById('ingresar'),
+    nuevoCliente2 = document.getElementById('nuevo2');
 
 
 
-
-
-
-
-
-
-//-------------FUNCIONES Y BOTONES------//
+//-------------Cambiar Ingresar/registrarse/recuperar ------//
 
 function nuevoRegistro(event){
     event.preventDefault();
@@ -56,35 +50,65 @@ btnIngresar.addEventListener('click',iniciarSesionFunction);
 nuevoCliente2.addEventListener('click',  nuevoRegistro);
 
 
-//------------ formulario | validación
+//------------ formulario | validación ------------
 
-var dni = document.getElementById('dni');
-var user = document.getElementById('user');
-var clave = document.getElementById('clave');
-var error = document.getElementById('error');
-error.style.color = 'red';
-
-function enviarFormulario(){
-    console.log('Enviando mensaje...')
-
-    var mensajesError = [];
-
-    if(dni.value === null || dni.value === ''){
-        mensajesError.push('Ingresa tu DNI <br>');
-    }
+let dniInput = document.getElementsByClassName('dni'),
+    userInput = document.getElementsByClassName('user'),
+    passwordInput = document.getElementsByClassName('password'),
+    passwordRepeatInput = document.getElementsByClassName('passwordRepeat'),
+    nameInput = document.getElementsByClassName('name'),
+    lastNameInput = document.getElementsByClassName('lastName'),
+    ingresar = document.getElementsByClassName('btn-ingresar'),
+    dni = dniInput.value,
+    user = userInput.value,
+    password = passwordInput.value,
+    passwordRepeat = passwordRepeatInput.value,
+    name = nameInput.value,
+    lastName = lastNameInput.value;
     
-    if(user.value === null || user.value === ''){
-        mensajesError.push('Ingresa tu usuario <br>');
-    }
 
-    if(clave.value === null || clave.value === ''){
-        mensajesError.push('Ingresa tu clave');
-    }
-
-    error.innerHTML = mensajesError.join(' ');
-
-    return false;
+function validarIngreso(){
+    validarDni(dni);
+    validarUser(user);
+    validarPassword(password);
 }
+function validarRegistro(){
+    validarName(name);
+    validarDni(dni);
+    validarUser(user);
+    validarPassword(password);
+}
+function validarDni(dni){
+    if(dni.length<8 || dni.length>8){
+        dniInput.style.border=('1px solid red !important');
+    }
+}
+function validarUser(user){
+    if(user.length<8){
+        userInput.style.border=('1px solid red !important');
+    }
+}
+function validarPassword(password){
+    if(password.length<8){
+        passwordInput.style.border=('1px solid red !important');
+    }
+    if (passwordRepeat!=''){
+        if(password!=passwordRepeat){
+            passwordInput.style.border=('1px solid red !important');
+            passwordRepeatInput.style.border=('1px solid red !important');
+        }
+    }
+}
+function validarName(name){
+    const letras = new RegExp("^[a-zA-Z ]+$");
+    return letras.test(name);
+}
+
+ingresar.addEventListener('click', validarIngreso);
+
+
+
+
 
 
 
