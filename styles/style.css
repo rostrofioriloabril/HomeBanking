@@ -64,14 +64,9 @@
     margin-right: 3%;
 }
 
-.buscar-mobile{
+.buscar-mobile, .bienvenida-mobile{
     display: none;
 }
-
-.bienvenida-mobile{
-    display: none;
-}
-
 .barra_iconos{
     display: flex;
     justify-content: flex-end;
@@ -136,7 +131,6 @@ select.bandera option.ES{
 }
 
 .tarjetas img{
-
     max-width: 440px;
     height: 15em;
     margin-top: 35px;
@@ -313,22 +307,6 @@ a.balance_item i{
 .contenedor_menu .iconos_menu :hover{
     color: #050DCA;
 }
-
-.redes{
-    position: fixed;
-    bottom: 60px;
-    left: 2.75%;
-    width: 176px;
-}
-.redes i{
-    padding-right: 20%;
-    font-size: 22px;
-    color: #777777;
-}
-.redes i:hover{
-    color:#050DCA ;
-}
-
 .menu-mobile{
     display: none;
 }
@@ -527,7 +505,7 @@ footer{
         color: #051923;
         border: none;
     }
-    .buscar, .bandera, .contenedor_menu, .logo-container, .bienvenida{
+    .buscar, .bandera, .contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
         display: none;
     }
     .buscar-mobile{
@@ -581,10 +559,6 @@ footer{
         align-content: center;
         background: #449DD11A;
         overflow-x: visible;
-    }
-
-    .balance_contenido img{
-        display: none;
     }
 
     .balance_item{
@@ -646,10 +620,6 @@ footer{
         width: 300px;
     }
 
-    footer{
-        display: none;
-    }
-
     .menu-mobile{
         height: 75px;
         display: flex;
@@ -682,9 +652,6 @@ footer{
     .sub-atajos a p{
         margin-bottom: 0;
         text-align: center;
-    }
-    .historico{
-        display: none;
     }
 }
 
@@ -736,7 +703,7 @@ footer{
         color: #051923;
         border: none;
     }
-    .buscar, .bandera,.contenedor_menu, .logo-container, .bienvenida{
+    .buscar, .bandera,.contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
         display: none;
     }
     .buscar-mobile{
@@ -789,10 +756,6 @@ footer{
         align-content: center;
         background: #449DD11A;
         overflow-x: visible;
-    }
-
-    .balance_contenido img{
-        display: none;
     }
 
     .balance_item{
@@ -851,10 +814,6 @@ footer{
         width: 300px;
     }
 
-    footer{
-        display: none;
-    }
-
     .menu-mobile{
         height: 75px;
         display: flex;
@@ -888,10 +847,6 @@ footer{
         margin-bottom: 0;
         text-align: center;
     }
-    .historico{
-        display: none;
-    }
-
 }
 
 @media screen and (max-width:500px){
