@@ -32,7 +32,7 @@
     height: 100px;
     padding-top: 35px;
     min-width: 176px;
-    border-right: solid 2px #777777; 
+/*    border-right: solid 2px #777777; */
 }
 
 .logo-container .logo {
@@ -459,7 +459,7 @@ a.balance_item i{
 }
 .contenedor_menu {
     padding-top: 20px;  
-    border-right: solid 2px #777777; 
+/*    border-right: solid 2px #777777; */
     min-width: 176px;
 }
 
@@ -530,6 +530,76 @@ footer{
 .historico-mobile{
     display: none;
 }
+
+/*Cotización del Dólar*/
+
+.sec-dolar{
+    text-align: center;
+    padding-top: 2em;
+    margin-left: 10em !important; 
+    margin-bottom: 100px;
+}
+
+.sec-dolar h3{
+    font-size: 34px;
+    color: #150578;
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+#list-group{
+    display: grid;
+    grid-template-columns: repeat(3, 17em);
+    grid-template-rows: repeat(3, 10em);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 4em;
+}
+
+#list-group .list-group-item{
+    padding: 10px;
+    margin-left: 1em;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(42, 156, 238, 0.2) 100%, rgba(68, 157, 209, 0) 30%);
+    mix-blend-mode: normal;
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+#list-group .list-group-item:hover{
+    transform: scale(1.2);
+    transition: all .3s;
+}
+
+#list-group .list-group-item h4{
+    background: #0E0E52;
+    color: #fff;
+    border-radius: 7px;
+}
+
+.div-compra-venta{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-compra-venta h6{
+    font-size: 16px;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.div-precios-dolar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-precios-dolar p{
+    padding-right: .5em;
+    font-size: 1.5em;
+    color: #0E0E52;
+}
+
 
 /*Responsive Tablet*/
 @media  screen and (max-width: 1400px) {
@@ -887,15 +957,11 @@ footer{
     .buscar, .bandera,.contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
         display: none;
     }
-<<<<<<< HEAD
-
 
     .contenedor_menu{
         display: none;
     }
 
-=======
->>>>>>> 46d6a439b06ade574dc4c72ecd226c3a192972ae
     .buscar-mobile{
         display: inline-block;
         padding-top: 2em;
