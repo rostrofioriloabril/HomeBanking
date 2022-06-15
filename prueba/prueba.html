@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="prueba.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITBANK</title>
     <script src="https://kit.fontawesome.com/43c0c16911.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Anek+Telugu:wght@200;300&family=Inter:wght@200;400&family=Source+Sans+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main class = "container-fluid contenido">
-        <header class="col-sm-12">
+
+        <header class="encabezado">
+
             <nav class="row principal">
                 <div class="col-2 logo-container">
                     <h2 class="logo">itbank</h2>
                 </div>
-                <h1 class="col-4 col-lg-3 bienvenida">¡Bienvenido, Martin!</h1>   
+                <div class="bienvenida">
+                    <h1 class="bienvenida">¡Bienvenido, Martin!</h1>   
+                </div>
 
-                <div class="col-lg-6 col-sm-12 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
-                    <h1 class="bienvenida-mobile">¡Bienvenido, Martin!</h1>
+                <div class="barraIconos"> <!--agregué la clase para alinearlos a la derecha-->
+                    <!-----------
+                        <h1 class="bienvenida-mobile">¡Bienvenido, Martin!</h1>
+                        
+                    -->  
 
                     <div class="buscar">
-                     <!---------
                         <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
-                    -->
-                        <input type="search" placeholder="&#128270;Buscar..." >
+                        <input type="search" placeholder="Buscar...">
                     </div>
 
                     <!--acá termina la barra de navegación-->
@@ -39,28 +42,27 @@
 
 
                         <!----------SELECTOR DE IDIOMA------------->
-                        <form action="" class="selector-form">
-                            <div class="select" id="select" style="background-image: url(imagenes/esp.jpg); background-repeat:no-repeat;background-size:100% 100%; background-origin: border-box;">
-                                <div class="contenido-select">
-            
-                                </div>
+                        <form action="">
+                            <div class="select" id="select" style="background-image: url(../imagenes/esp.jpg);">
                                 
+                                <div class="contenido-select">
+                                </div>
                             </div>
             
                             <div class="opciones" id="opciones">
                                 <a href="#" class="opcion">
                                     <div class="contenido-opcion">
-                                        <img src="imagenes/english.jpeg">
+                                        <img src="../imagenes/english.jpeg">
                                     </div>
                                 </a>
                                 <a href="#" class="opcion">
                                     <div class="contenido-opcion">
-                                        <img src="imagenes/esp.jpg">
+                                        <img src="../imagenes/esp.jpg">
                                     </div>
                                 </a>
                                 <a href="#" class="opcion">
                                     <div class="contenido-opcion">
-                                        <img src="imagenes/port.jpg">
+                                        <img src="../imagenes/port.jpg">
                                         
                                     </div>
                                 </a>
@@ -75,7 +77,7 @@
 
 
 
-                        <a href="home.html" class="salida" id="salida"><i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i></a>
+                        <a href="home.html"><i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i></a>
                     </div>
                 </div>
 
@@ -83,15 +85,14 @@
 
 
         </header>
-
-
+        <main class = "contenido">
         <div class="buscar-mobile">
             <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
             <input class="lupita" type="search" placeholder="Buscar...">
         </div>
 
-        <div class="row primera-sec">
-             <!--nombre a la clase para llamar a todos los h2 que hay dentro--> 
+
+        <div class="row primera-sec"> <!--nombre a la clase para llamar a todos los h2 que hay dentro-->
             <section class="col-2 contenedor_menu">
                 <ul class="menu">
                     <!--<li><i class="fa-solid fa-house"></i><a href="">Menu</a></li>-->
@@ -146,24 +147,6 @@
                         </div>
                     </div>
 
-                    <div class="acceso-rapido">
-                        <a href="#" class="rapido">
-                            <img src="imagenes/Group-2.jpg">
-
-                        </a>
-                        <a href="#" class="rapido">
-                            <img src="imagenes/Group-3.jpg">
-
-                        </a>
-                        <a href="#" class="rapido">
-                            <img src="imagenes/Group-4.jpg">
-
-                        </a>
-                        <a href="app-de-gastos/index.html" class="rapido">
-                            <img src="imagenes/Group-5.jpg">
-
-                        </a>
-                    </div>
 
                     <div class="tarjetas">
                         <h5>
@@ -250,8 +233,8 @@
         </div>
 
 
-    <footer>
-        <div class="row pies">
+    <footer class="container-fluid">
+        <div class="row">
             <div class="col-12 border pie">
                 <p class="col-2 pie-1">&copy; itbank S.A.</p>
                 <p class="col-6 pie-2">Ultimo Acceso: 21/05/2002 - 20:37 hs</p>

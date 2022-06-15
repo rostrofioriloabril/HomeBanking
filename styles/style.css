@@ -22,20 +22,26 @@
     user-select: none;
     font-family: 'Brandon', sans-serif;
     font-weight: bold;
+    box-sizing: border-box;
 }
-
+.row {
+    width: 100%;
+}
 .logo-container{
-    border-right: solid 2px #777777;
-    height: 100px;
-    padding-top: 50px;
+    height: 90px;
+    padding-top: 27px;
+    margin-bottom: 20px;
     min-width: 176px;
+    border-right: solid 2px #777777; 
 }
 
-.logo{
-    font-size: 50px;
+.logo-container .logo {
+    font-size: 55px !important;
     font-weight: 500;
     color: #050DCA;
     position: fixed;
+    padding-left: 1%;
+  
 }
 
 .bienvenida{
@@ -62,9 +68,14 @@
     border-radius: 30px;
 }
 .buscar{
-    margin-right: 3%;
+    margin-right: 15%;
 }
-
+.buscar i {
+    width: auto;
+    margin: 0 50%;
+    margin-left: 54%;
+    margin-top: 7px;
+}
 .buscar-mobile{
     display: none;
 }
@@ -75,28 +86,164 @@
 
 .barra_iconos{
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: nowrap;
     margin-top: 56px !important;
+    justify-content: right;
 }
 
+/*
 .iconos_nav{
     padding-right: 20px;
     padding-left: 10px;
     color: #0E0E52;
-}
-
-.bandera{
     width: 40px;
 }
-.bandera option{
+ option{
     background-repeat:no-repeat;
-    background-position:bottom left;
-    padding-left:30px;
-}
-select.bandera option.ES{
-    background-image: url(/imagenes/english.jpeg);
+    width: 80%;
 }
 
+.bandera option div {
+    width: 100%;
+    height: 100%;
+}
+.bandera option .es {
+background-image: url(../imagenes/esp.jpg);
+background-size: 100% 100%;
+}
+
+
+select.bandera option.ES{
+    background-image: url(/imagenes/english.jpeg);
+}*/
+
+
+
+/*         ESTILOS DEL SELECT             */
+
+a {
+	text-decoration: none;
+}
+
+
+.select {
+	width: 40px;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: .2s ease all;
+	margin-bottom: 0px;
+	position: relative;
+	z-index: 200;
+    height: 30px;
+	border: 2px solid transparent;
+    margin-top: -9px;
+    margin-left: 5px;
+    margin-right: 50px;
+    position: relative;
+}
+
+.select.active,
+.select:hover {
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+	border: 2px solid #213f8f;
+}
+
+.select.active:before {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	position: relative;
+}
+
+
+
+
+.opciones {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+	max-height: 400px;
+	width: 165px;
+    display: none;
+}
+
+.opciones.active {
+	display:flex;
+	animation: fadeIn .3s forwards;
+    margin-left: 5px;
+    margin-top: -32px;
+    justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateX(0) scale(.5);
+	}
+	to {
+		transform: translateX(-200) scale(1);
+	}
+}
+
+.contenido-opcion {
+	width: 100%;
+	transition: .2s ease all;
+    box-sizing: border-box;
+}
+
+.opciones .contenido-opcion {
+	padding: 2px 1px;
+}
+
+.contenido-opcion img {
+	width: 100%;
+	height: 29px;
+	
+    border-radius: 6px;
+}
+
+.opciones .contenido-opcion:hover {
+	background: #213F8F;
+}
+
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion {
+	color: #fff;
+}
+.opciones .opcion {
+    width: 25%;
+}
+
+
+
+.iconos{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 22%;
+    margin-top: 7px;
+}
+.iconos i {
+    margin: 0px 10px;
+}
+.iconos i:last-child{
+    margin: 0px;
+}
+.salida {
+    margin-top: -2px;
+}
+
+.selector-form {
+    width: 60px;
+}
+
+
+
+
+/*----------------------------------------------------*/
 .movimientos , .balance_contenido{
     margin-top: 30px;
     background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
@@ -146,6 +293,31 @@ select.bandera option.ES{
     padding-left: 2em;
 }
 
+
+/*-----------------SECCION DE ACCESOS RAPIDOS-----------------------*/
+.acceso-rapido{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    margin-top: 3em;
+
+}
+.acceso-rapido .rapido {
+    width: 25%;
+}
+.acceso-rapido .rapido img {
+    width: 100%;
+
+    height: 100%;
+}
+
+
+
+
+
+/*-----------------SECCION DE TARJETAS-----------------------*/
 .h1 {
     font-size: 36px;
     line-height: 51px;
@@ -154,7 +326,7 @@ select.bandera option.ES{
 
 .tarjetas{
     width: 90%;
-    margin-top: 5em;
+    margin-top: 3em;
     height: 400px;
     text-align: center;
 }
@@ -167,8 +339,8 @@ select.bandera option.ES{
 }
 
 .balance{
-    padding-left: 4em !important;
-    padding-top: 4em;
+    padding-left: 3em !important;
+    padding-top: 3em;
 }
 
 .balance_contenido{
@@ -309,17 +481,17 @@ a.balance_item i{
 /*estilos para el menú*/
 .menu{
     position: fixed;
-    padding-left: 0%;
+    padding-left: 0.5%;
 }
 .contenedor_menu {
-    padding-top: 60px;  
+    padding-top: 20px;  
     border-right: solid 2px #777777; 
     min-width: 176px;
 }
 
 .contenedor_menu .menu li{
     list-style: none;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     padding-left:.5em;
 }
 
@@ -363,6 +535,8 @@ a.balance_item i{
 footer{
     background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
     mix-blend-mode: normal;
+    width:100%;
+    height:54px;
 }
 .pie{
     padding: 0 !important;
@@ -372,6 +546,8 @@ footer{
 }
 .pie p{
     display: inline-block; 
+    font-weight: bold;
+    color: #0E0E52;
 }
 .pie-1{
     text-align: center;
@@ -514,9 +690,6 @@ footer{
         display: none;
     }
 
-    .bandera{
-        display: none;
-    }
 
     .contenedor_menu{
         display: none;

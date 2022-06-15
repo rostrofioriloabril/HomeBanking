@@ -18,12 +18,6 @@ var nuevoCliente2 = document.getElementById('nuevo2');
 
 
 
-
-
-
-
-
-
 //-------------FUNCIONES Y BOTONES------//
 
 function nuevoRegistro(event){
