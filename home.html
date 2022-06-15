@@ -22,14 +22,14 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Ingresa aqui</h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu usuario" required>
-                    <input type="password" name="" placeholder="Ingresa tu clave" required>
+                <form action="" method="post">
+                    <input type="number" name="dni" class="dni" placeholder="Ingresa tu DNI" required>
+                    <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required>
+                    <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required>
                     <div class="check">
                         <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
                     </div>
-                    <button><a href="index.html">Ingresar</a></button>
+                    <input type="button" value="Enviar" class="btn-ingresar">
                     <div class="ayuda">
                         <a href="" id="olvidar"><h4>Olvide mi clave/usuario</h4></a>
                         <h4>¿No sos cliente?</h4>
@@ -47,19 +47,15 @@
             <section class="form">
                 <h2>Asociate aqui</h2>
                 <form action="">
-                    <input type="text" name="" id="" placeholder="Ingresa tu Nombre" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu Apellido" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
-                   <!----------
-                <input type="text" name="" id="" placeholder="Ingresa tu direccion" required> -->
-                    <input type="text" name="" id="" placeholder="Ingresa tu usuario" required>
-                    <input type="password" name="" placeholder="Ingresa tu clave" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu clave nuevamente" required>
-                  <!------
-                 <div class="check">
-                        <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
-                    </div>--> 
-                    <button>Registrarse</button>
+                    <input type="text" name="name" class="name" placeholder="Ingresa tu Nombre" required>
+                    <input type="text" name="lastName" class="lastName" placeholder="Ingresa tu Apellido" required>
+                    <input type="text" name="dni" class="dni" placeholder="Ingresa tu DNI" required>
+                    <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required>
+                    <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required>
+                    <input type="text" name="passwordRepeat" class="passwordRepeat" placeholder="Ingresa tu clave nuevamente" required>
+                    <div class="container-btn">
+                        <input type="button" value="Enviar" class="btn-registrarse">
+                    </div>
                     <div class="ayuda">
                         <h4>¿Ya sos cliente?</h4>
                         <h5>Ingresa <a href="" id="inicia">aqui</h5></a>
@@ -71,14 +67,14 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Recupera tus datos</h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Ingresa tu DNI" required>
-                    <input type="text" name="" id="" placeholder="Ingresa tu nuevo usuario" required>
-                    <input type="password" name="" placeholder="Ingresa tu nueva clave" required>
+                <form action="" method="post">
+                    <input type="text" name="dni" class="dni" placeholder="Ingresa tu DNI" required>
+                    <input type="text" name="user" class="user" placeholder="Ingresa tu nuevo usuario" required>
+                    <input type="password" name="password" class="password" placeholder="Ingresa tu nueva clave" required>
                     <div class="check">
                         <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
                     </div>
-                    <button><a href="index.html">Ingresar</a></button>
+                    <input type="button" value="Enviar" class="btn-recuperar">
                     <div class="ayuda">
                         <h4>¿No sos cliente?</h4>
                         <h5>Asociate <a href="" id="nuevo2">aqui</h5></a>

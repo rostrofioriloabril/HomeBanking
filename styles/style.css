@@ -16,7 +16,7 @@
     font-weight: medium;
   } 
 
-* {               /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
+* { /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
     padding: 0;
     margin: 0;
     user-select: none;
@@ -24,13 +24,13 @@
     font-weight: bold;
     box-sizing: border-box;
 }
+
 .row {
     width: 100%;
 }
 .logo-container{
-    height: 90px;
-    padding-top: 27px;
-    margin-bottom: 20px;
+    height: 100px;
+    padding-top: 35px;
     min-width: 176px;
     border-right: solid 2px #777777; 
 }
@@ -50,6 +50,9 @@
     font-weight: bold;
     color: #0E0E52;
     margin-top: 56px !important;
+}
+.bienvenida-mobile{
+    display: none;
 }
 
 /*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
@@ -79,11 +82,6 @@
 .buscar-mobile{
     display: none;
 }
-
-.bienvenida-mobile{
-    display: none;
-}
-
 .barra_iconos{
     display: flex;
     flex-wrap: nowrap;
@@ -250,29 +248,6 @@ a {
     mix-blend-mode: normal;
     border-radius: 70px;
 }
-
-
-/*.sub-atajos{
-    width: 100%;
-}
-.sub-atajo{
-    margin-top: 10px;
-    background: linear-gradient(180deg, rgba(0, 166, 251, 0) 41.98%, rgba(42, 156, 238, 0.2) 100%);
-    mix-blend-mode: normal;
-    border-radius: 70px;
-    display: inline-block;
-    width: 23%;
-    margin-right: 1%;
-}
-.sub-atajo p{
-    font-size: 12px;
-    text-align: center;
-}
-.atajos {
-    height: 100px;
-    mix-blend-mode: normal;
-    border-radius: 70px;
-}*/
 .mercado{
     height: 330px;
     width: 85%;
@@ -332,7 +307,6 @@ a {
 }
 
 .tarjetas img{
-
     max-width: 440px;
     height: 15em;
     margin-top: 35px;
@@ -510,22 +484,6 @@ a.balance_item i{
 .contenedor_menu .iconos_menu :hover{
     color: #050DCA;
 }
-
-.redes{
-    position: fixed;
-    bottom: 60px;
-    left: 2.75%;
-    width: 176px;
-}
-.redes i{
-    padding-right: 20%;
-    font-size: 22px;
-    color: #777777;
-}
-.redes i:hover{
-    color:#050DCA ;
-}
-
 .menu-mobile{
     display: none;
 }
@@ -572,25 +530,63 @@ footer{
 .historico-mobile{
     display: none;
 }
+
+/*Responsive Tablet*/
 @media  screen and (max-width: 1400px) {
+    
+    .logo-container{
+        min-width: 188px;
+        position: relative;
+    }
+
     .bienvenida{
         font-size: 24px;
     }
 }
-@media screen and (min-width: 577px) and (max-width: 1100px){
-    .bienvenida{
-        padding-left: 15px !important;
-        max-width: 300px !important;
+@media screen and (min-width: 703px) and (max-width: 1100px){
+    .principal{
+        justify-content: space-around;
     }
+    .primera-sec{
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .bienvenida{
+        padding-left: 10px !important;
+        padding-top: 2em;
+        padding-right: 0 !important;
+        margin-top: 1em !important;
+        max-width: 175px !important;
+        font-size: 20px;
+    }
+
+    .contenedor_menu {
+        padding-top: 60px;  
+        min-width: 176px;
+    }
+
+    .balance{
+        margin-left: 6em;
+        width: 500px;
+    }
+
+    .buscar{
+        margin-right: 0 !important;
+    }
+
     .buscar input{
         width: 150px;
     }
+    
     .sec-movimientos{
         max-width: 30% !important;
+        margin-left: 20em !important;
     }
     .movimientos{
         padding-right: 0;
         width: 100%;
+        background: #FFFFFF;
     }
     .movimientos h4{
         padding-left: 0;
@@ -604,7 +600,7 @@ footer{
         top: 9px;
     }
     .lista-movimientos-info{
-        width: 18%;
+        width: 26%;
     }
     .lista-movimientos-info h5{
         font-size: 16px;
@@ -615,10 +611,14 @@ footer{
     }
     .balance{
         padding-left: 1em !important;
-        width: 50% !important;
+        width: 60% !important;
+        margin-left: 6em;
     }
     .mercado{
-        width: 100%;
+        width: 20em !important;
+    }
+    .mercado img{
+        width: 20em !important;
     }
     .pie-2{
         max-width: 350px;
@@ -628,28 +628,227 @@ footer{
     }
     .barra_iconos{
         justify-content: flex-start;
-        width: 450px !important;
+        width: auto !important;
+        padding: 0 !important;
     }
-    .principal{
-        display: flex !important;
-        flex-wrap: nowrap !important;
+    .iconos .iconos_nav {
+        padding-right: 5px;
     }
 
 }
-@media (max-width: 576px) {
+
+@media screen and (min-width: 577px) and (max-width: 703px) {
     .principal{
         color: #FFFFFF;
         height: 7em;
         background: rgba(5, 13, 202, 0.75);
         clip-path: ellipse(61% 92% at 49% 0%);
+        margin: 0 !important;
+        width: 100% !important;
     }
 
-    .logo-container{
-        display: none;
+    .contenido{
+        width: 100%;
+        padding: 0 !important;
+    }
+    .bienvenida-mobile{
+        display: inline;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 1em;
+        font-size: 21px; 
+        max-width: 20%;
     }
 
-    .bienvenida{
+    .iconos{
+        display: inline-block;
+        width: 60%;
+    }
+    .iconos i {
+        float: right;
+        color: white;
+    }
+    .barra_iconos{
+        display: inline-block;
+        padding-left: 0 !important;
+        margin-top: 32px !important;
+        width: 100% !important;
+    }
+
+    .iconos_nav{
+        color: #0E0E52;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .lupita{
+        width: 6em;
+        color: #051923;
+        border: none;
+    }
+    .buscar, .bandera, .contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
         display: none;
+    }
+    .buscar-mobile{
+        display: inline-block;
+        padding-top: 2em;
+        width: 100%;
+    }
+
+    .balance-fila-1, .balance-fila-2{
+        height: 50%;
+        width: 90%;
+    }
+    h2.balance_item{
+        display: inline-block;
+        margin-left: -50%;
+        margin-top: 20px;
+    }
+    h3.balance_item{
+        display: inline-block;
+        margin-left: -20%;
+        font-size: 30px;
+    }
+    .balance-fila-1 i{
+        margin-top: 30px;
+    }
+    .buscar-mobile input{
+        width: 85%;
+        padding: 0 20px 0 35px;
+        font-size: 18px;
+        color: #000;
+        background-color: #0035541A;
+        outline: none;
+        border-radius: 30px;
+    }
+    .balance{
+        margin-left: 0;
+        padding: 0 !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center !important;
+        text-align: center;
+        align-items: center !important;
+        margin: 0;
+        width: 100% !important;
+    }
+
+    .balance_contenido{
+        padding:0 !important;
+        padding-bottom: 0 !important;
+        width: 100%;
+        align-content: center;
+        background: #449DD11A;
+        overflow-x: visible;
+    }
+
+    .balance_item{
+        padding-left: 0;
+    }
+    .primera-sec{
+        width: 100% !important;
+    }
+    .tarjetas{
+        background: #FFFFFF;
+        width: 100%;
+        padding-left: 0;
+        margin-top: 3em;
+        height: auto;
+    }
+
+    .tarjetas img{
+        width: 20em;
+        height: 11em;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .sec-movimientos{
+        width: 100% !important;
+        padding-left: 10em !important;
+    }
+
+    .movimientos{
+        height: 500px;
+        width: 100%;
+        padding-right: 0;
+        background: #FFFFFF;
+        margin: 0 !important;
+    }
+    .movimientos h4{
+        padding: 0;
+        text-align: center;
+        margin-bottom: 8%;
+        width: 225px;
+    }
+    .movimientos li{
+        width: 500px;
+        margin: 0;
+    }
+    .lista-movimientos{
+        padding: 0;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    .primera-sec h2 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 46px;
+        color: #150578;
+    }
+
+    .mercado{
+        width: 300px;
+    }
+
+    .menu-mobile{
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #050DCABF 75%;
+    }
+
+    .menu-mobile a{
+        color: #FFFFFF;
+        font-size: 27px;
+    }
+
+    .atajos{
+        display: inline;
+        margin-top: 3em;
+        width: 100%;
+        margin-left: 6%;
+    }
+    .sub-atajos a{
+        display: inline-block;
+        max-width: 30%;
+        text-decoration: none;
+        margin-right: 3%;
+        background-color: #449DD11A;
+        border-radius: 10px;
+        padding: 4px;
+        color:#050DCA;
+    }
+    .sub-atajos a p{
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+/*Responsive Mobile*/
+@media (max-width: 577px) {
+    .principal{
+        color: #FFFFFF;
+        height: 7em;
+        background: rgba(5, 13, 202, 0.75);
+        clip-path: ellipse(61% 92% at 49% 0%);
+        margin: 0 !important;
+        width: 100%;
+    }
+
+    .contenido{
+        padding: 0 !important;
     }
 
     .bienvenida-mobile{
@@ -685,16 +884,18 @@ footer{
         color: #051923;
         border: none;
     }
-
-    .buscar{
+    .buscar, .bandera,.contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
         display: none;
     }
+<<<<<<< HEAD
 
 
     .contenedor_menu{
         display: none;
     }
 
+=======
+>>>>>>> 46d6a439b06ade574dc4c72ecd226c3a192972ae
     .buscar-mobile{
         display: inline-block;
         padding-top: 2em;
@@ -745,10 +946,6 @@ footer{
         align-content: center;
         background: #449DD11A;
         overflow-x: visible;
-    }
-
-    .balance_contenido img{
-        display: none;
     }
 
     .balance_item{
@@ -807,10 +1004,6 @@ footer{
         width: 300px;
     }
 
-    footer{
-        display: none;
-    }
-
     .menu-mobile{
         height: 75px;
         display: flex;
@@ -844,13 +1037,9 @@ footer{
         margin-bottom: 0;
         text-align: center;
     }
-    .historico{
-        display: none;
-    }
-
 }
 
-@media screen and (max-width:495px){
+@media screen and (max-width:500px){
     .bienvenida-mobile{
         padding-right: 0;
         padding-left: 2%;
@@ -866,6 +1055,7 @@ footer{
         width: 200px;
     }
 }
+
 @media screen and (max-width:413px){
     .iconos{
         width: 45%;
