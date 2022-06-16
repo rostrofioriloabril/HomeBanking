@@ -4,21 +4,39 @@
     font-family: Helvetica;
 }
 /*HEADER*/
+main {
+    height: 100%;
+    background: linear-gradient(180deg, rgba(5, 13, 202, 0) 0%, rgba(5, 13, 202, 0.05) 53.96%, rgba(120, 192, 224, 0.2) 100%);
+    padding-bottom: 150px;
+}
+
 header{
     width: 100%;
-    height: 160px;
-    background-color: blue;
+    height: 190px;
+    background: rgba(5, 13, 202, 0.75);
     text-align: center;
-    opacity: .7;
+   
 }
+
 h1, h3{
     color: white;
     padding-top: 15px;
     font-size: 350%;
 }
+h1 {
+    padding-top: 50px;
+}
 h3{
     padding-top: 30px;
     font-size: 150%;
+}
+header h4{
+    padding-left: 20px;
+    position: absolute;
+    color:white;
+    top: 25px;
+    font-size: 20px;
+
 }
 
 /*INGRESOS*/
@@ -61,12 +79,16 @@ h3{
 }
 #btn-agregar{
     padding: 0;
-    height: 40px;
-    width: 70px;
-    background-color: red;
-    color: white;
-    border: 4px solid pink;
-    border-radius: 5px;
+    width: 180px;
+    height: 42px;
+    background: rgba(5, 13, 202, 0.1);
+    
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 46px;
+    color: #0E0E52;
+    border: none;
+    border-radius: 70px;
 }
 
 /*EGRESOS*/
@@ -110,4 +132,40 @@ li i:hover{
     width: 300px;
     color: black;
     margin-bottom: 2%;
+}
+
+/* FOOTER */
+
+footer{
+    background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
+    mix-blend-mode: normal;
+    width:100%;
+    height:54px;
+    position: absolute;
+    bottom: 0px;
+}
+.pie{
+    padding: 0 !important;
+    margin-left: 50px;
+}
+.pie p, .pie div{
+    padding-top: 1.2%;
+}
+.pie p{
+    display: inline-block; 
+    font-weight: bold;
+    color: #0E0E52;
+}
+.pie-1{
+    text-align: center;
+}
+.pie-2{
+    padding-left: 4%;
+}
+
+.atajos{
+    display: none;
+}
+.historico-mobile{
+    display: none;
 }

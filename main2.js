@@ -105,9 +105,17 @@ function validarName(name){
 }
 
 ingresar.addEventListener('click', validarIngreso);
+ 
+/* ESCONDER Y MOSTRAR BALANCE 
+let hideInfoButton: document.getElementById("hideInfo");
+let balanceInfo: document.getElementsByClassName("balance_item");
 
-
-
+function hideBalance (){
+    balanceInfo.innerHTML= "XX.XXX;XX"
+}
+ 
+hideInfoButton.addEventListener("click", hideBalance);
+*///
 
 
 
