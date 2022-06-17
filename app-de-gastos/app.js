@@ -16,6 +16,9 @@
             dinero=''
             dineroInput.style.border=('1px solid red');
         }
+        else if(dinero=='-0'){
+            dinero=0
+        }
 
         let nuevaPersona = document.createElement('li'),
             contenido = document.createTextNode(nombre+': $'+dinero),
@@ -26,10 +29,12 @@
         if(dinero===''  && nombre!=''){
             nuevaPersona='';
             dineroInput.style.border=('1px solid red');
+            nombreInput.style.border=('1px solid black');
         }
         else if(dinero!=''  && nombre===''){
             nuevaPersona='';
             nombreInput.style.border=('1px solid red');
+            dineroInput.style.border=('1px solid black');
         }
         else if(dinero===''  && nombre===''){
             nuevaPersona='';

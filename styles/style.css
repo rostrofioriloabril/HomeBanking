@@ -82,6 +82,9 @@
     margin-top: 56px !important;
     justify-content: right;
 }
+.iconos_nav{
+    color: #000;
+}
 
 /*
 .iconos_nav{
@@ -116,7 +119,6 @@ select.bandera option.ES{
 a {
 	text-decoration: none;
 }
-
 
 .select {
 	width: 40px;
