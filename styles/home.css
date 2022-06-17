@@ -1,7 +1,7 @@
-/*@font-face {
+@font-face {
     font-family: "Brandon";
     src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
-    font-weight: bolder;
+    font-weight: 900;
   } 
   
 @font-face {
@@ -10,12 +10,6 @@
     font-weight: bold;
   } 
 
-@font-face {
-    font-family: "Brandon";
-    src: url(fonts/BrandonGrotesque-Medium.tff) format("truetype");
-    font-weight: medium;
-  } 
-*/
 *{
     margin: 0;
     padding: 0;
@@ -56,6 +50,8 @@ main{
 .inicio .logo{
     margin-top: 5%;
     color: #050DCA;
+    font-weight: 900;
+    font-size: 64px;
 }
 .inicio h4 {
     margin: 0% 5% 2% 10%;

@@ -1,19 +1,13 @@
 @font-face {
     font-family: "Brandon";
     src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
-    font-weight: bolder;
+    font-weight: 900;
   } 
 
 @font-face {
     font-family: "Brandon";
     src: url(fonts/BrandonGrotesque-Bold.ttf) format("truetype");
     font-weight: bold;
-  } 
-
-@font-face {
-    font-family: "Brandon";
-    src: url(fonts/BrandonGrotesque-Medium.ttf) format("truetype");
-    font-weight: medium;
   } 
 
 * { /*puse un "asterisco" en vez de "body" y así tomó la fuente en todo el doc ------*/
@@ -37,11 +31,11 @@
 
 .logo-container .logo {
     font-size: 55px !important;
-    font-weight: 500;
+    font-weight: 900;
     color: #050DCA;
     position: fixed;
     padding-left: 1%;
-  
+    
 }
 
 .bienvenida{
