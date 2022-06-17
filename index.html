@@ -87,7 +87,8 @@
                     <li class="iconos_menu"><i class="fa-solid fa-gear"></i><a href="">Preferencias</a></li>
                 </ul>
             </section>
-            <section class="col-lg-6 balance col-sm-6" >
+
+            <section class="col-lg-6 col-sm-6 balance">
                     <div class="col-sm-6 balance_contenido">
                         <div class="balance-fila-1">
                             <h2 class="balance_item">Balance</h2>
@@ -131,12 +132,31 @@
                         </a>
                     </div>
 
-                    <div class="tarjetas">
+                    <div id="carouselExampleControls" class="carousel slide carousel-dark tarjetas" data-bs-ride="carousel">
                         <h5>
                             Mis Tarjetas
                         </h5>
-                        <a href="#"><img src="vectores/Tarjeta1.svg" alt="tarjeta visa"></a>
-                        <a href="#"><img src="vectores/Tarjeta2.svg" alt="tarjeta amex"></a>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="#"><img src="vectores/Tarjeta1.svg" class="d-block w-100" alt="tarjeta visa"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="vectores/Tarjeta2.svg" class="d-block w-100" alt="tarjeta amex"></a> 
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
                     </div>
 
             </section>
@@ -200,7 +220,7 @@
                         <h4>
                             Mis Inversiones
                         </h4>
-                        <img src="vectores/olas.svg" alt="gráfico de inversiones">
+                        <img src="vectores/olas.svg" alt="gráfico de inversiones" width="100%" height="100%">
                     </div>
             </section>
         </div>
