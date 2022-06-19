@@ -211,7 +211,7 @@ a {
 
 .contenedor_menu .menu li{
     list-style: none;
-    padding: 0 0 25px .5em;
+    padding: .7em 0 25px .5em;
     color: #777777;
 }
 
@@ -225,7 +225,7 @@ a {
 .contenedor_menu .iconos_menu :hover{
     color: #050DCA;
 }
-.menu-mobile{
+#fixmenu{
     display: none;
 }
 
@@ -309,9 +309,8 @@ a.balance_item i{
 }
 
 .tarjetas img{
-    max-width: 440px;
     height: 15em;
-    margin: 15px 0 0 15%;
+    margin: 15px 0 0 0;
 }
 
 .tarjetas h5{
@@ -336,16 +335,16 @@ a.balance_item i{
 
 .lista-movimientos-icono{
     display: inline-block;
-    position: absolute;
     width: 40px;
     height: 40px;
+    position: absolute;
     margin-top: 10px;
     background-color: #E4E6F1;
     border-radius: 50%;
+    z-index: 400;
 }
 .lista-movimientos-info{
     display: inline-block;
-    position: absolute;
     width: 13em;
     margin: .5% 0 0 50px;
 }
@@ -354,6 +353,7 @@ a.balance_item i{
     top: 8px;
     left: 6px;
     font-size: 24px;
+    z-index: 400;
 }
 .movimiento{
     height: 60px;
@@ -372,12 +372,14 @@ a.balance_item i{
     opacity: .8;
     position: relative;
     bottom: 8px;
+    z-index: 300;
 }
 .lista-movimientos-info h5{
     position: relative;
     bottom: 14px;
     float: right;
     right: 10px;
+    z-index: 200;
 }
 .positivo{
     color: #005418;
@@ -446,14 +448,11 @@ footer{
     padding-top: 2em;
     margin: 0 0 100px 10em !important;
 }
-
 .sec-dolar h3{
     font-size: 34px;
     color: #150578;
-    font-weight: bold;
     padding-bottom: 1em;
 }
-
 #list-group{
     display: grid;
     grid-template-columns: repeat(3, 17em);
@@ -461,8 +460,8 @@ footer{
     justify-content: center;
     align-items: center;
     grid-gap: 4em;
+    padding-right: 7em;
 }
-
 #list-group .list-group-item{
     padding: 10px;
     margin-left: 1em;
@@ -507,7 +506,7 @@ footer{
 
 /*Responsive Tablet*/
 
-@media screen and (min-width: 769px) and (max-width: 1100px){
+@media screen and (min-width: 768px) and (max-width: 1100px){
 /*----nav----*/
     .principal{
         justify-content: space-around;
@@ -561,6 +560,24 @@ footer{
 /*---mis inversiones---*/
     .mercado{
         width: 20em !important;
+    }
+
+/*cotización del dólar*/
+    .sec-dolar{
+        text-align: center;
+        padding-top: 2em;
+        margin: 0!important;
+    }
+    #list-group{
+        grid-template-columns: repeat(2, 17em);
+        grid-template-rows: repeat(5, 10em);
+        justify-content:right;
+        padding-right: 2em;
+        text-align: center;
+    }
+    #list-group .list-group-item{
+        margin-left: 0;
+        width: 100%;
     }
 
 /*--footer--*/
@@ -684,31 +701,28 @@ footer{
     }
 
     .tarjetas{
-        background: #FFFFFF;
         width: 100%;
-        padding-left: 0;
-        margin-top: 3em;
-        height: auto;
+        height: 300px;
+        margin-top: 4em !important;
     }
-
     .tarjetas img{
-        width: 20em;
-        height: 11em;
-        padding-left: 0;
-        margin: 0;
+        width: 17em;
+        height: 13em;
+        padding: 1.5em 0 0 0;
+        margin: 0 !important;
     }
 
     .sec-movimientos{
-        width: 100% !important;
-        padding-left: 10em !important;
+        padding-left: 4em !important;
     }
-
     .movimientos{
-        height: 500px;
+        height: 26em;
+        width: 80%;
         width: 100%;
-        padding-right: 0;
         background: #FFFFFF;
-        margin: 0 !important;
+        padding-right: 0;
+        text-align: center;
+        margin: 3em 0 0 0 !important;
     }
     .movimientos h4{
         padding: 0;
@@ -717,161 +731,62 @@ footer{
         width: 225px;
     }
     .movimientos li{
-        width: 500px;
+        width: 13% !important;
         margin: 0;
     }
     .lista-movimientos{
         padding: 0;
         margin: 0 !important;
-        width: 100% !important;
+        width: 17em !important;
     }
 
     .mercado{
         width: 300px;
     }
 
-    .menu-mobile{
-        height: 75px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background: #050DCABF 75%;
+    #fixmenu{
+        padding: 0;
+        height: 5em;
+        display: block;
+        background: #050DCABF;
+        position: fixed !important;
+        bottom: 0;
     }
-
-    .menu-mobile a{
+    .menu-fixed{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 !important;
+    }
+    .menu-fixed a{
+        display: block;
         color: #FFFFFF;
         font-size: 27px;
+        padding: 10px .5em 0 .5em;
+        text-decoration: none;
     }
+
     .acceso-rapido .rapido img {
         width: 90%;
         height: 90%;
+    }
 
+    .sec-dolar{
+        text-align: center;
+        padding-top: 2em;
+        margin: 0!important;
     }
-    .acceso-rapido{
-        padding-left: 25px;
+    #list-group{
+        grid-template-columns: repeat(1, 17em);
+        grid-template-rows: repeat(9, 10em);
+        justify-content:center;
+        padding: 0;
+        margin-bottom: 10em;
     }
-}
-
-/*Responsive Mobile*/
-@media (max-width: 577px) {
-
-
-    .balance-fila-1, .balance-fila-2{
-        height: 50%;
-        width: 90%;
-    }
-    h2.balance_item{
-        display: inline-block;
-        margin-left: -50%;
-        margin-top: 20px;
-    }
-    h3.balance_item{
-        display: inline-block;
-        margin-left: -20%;
-        font-size: 30px;
-    }
-    .balance-fila-1 i{
-        margin-top: 30px;
-    }
-    .buscar-mobile input{
-        width: 85%;
-        padding: 0 20px 0 35px;
-        font-size: 18px;
-        color: #000;
-        background-color: #0035541A;
-        outline: none;
-        border-radius: 30px;
-    }
-    .balance{
+    #list-group .list-group-item{
         margin-left: 0;
-        padding: 0 !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center !important;
-        text-align: center;
-        align-items: center !important;
-        margin-left: 2% !important;
-        margin-right: 1% !important;
-    }
-
-    .balance_contenido{
-        padding:0 !important;
-        padding-bottom: 0 !important;
         width: 100%;
-        align-content: center;
-        background: #449DD11A;
-        overflow-x: visible;
-    }
-
-    .balance_item{
-        padding-left: 0;
-    }
-    .primera-sec{
-        width: 100%;
-    }
-    .tarjetas{
-        background: #FFFFFF;
-        width: 100%;
-        padding-left: 0;
-        margin-top: 3em;
-        height: auto;
-    }
-
-    .tarjetas img{
-        width: 15em;
-        height: 9em;
-        padding-left: 0;
-        margin: 0;
-    }
-
-    .sec-movimientos{
-        margin-left: 20%;
-    }
-
-    .movimientos{
-        height: 550px;
-        width: 100%;
-        padding-right: 0;
-        background: #FFFFFF;
-        margin: 0 !important;
-    }
-    .movimientos h4{
-        padding: 0;
-        text-align: center;
-        margin-bottom: 8%;
-        width: 225px;
-    }
-    .movimientos li{
-        width: 300px;
-        margin-left: 20%;
-    }
-    .lista-movimientos{
-        padding: 0;
-    }
-
-    .mercado{
-        width: 300px;
-    }
-
-    .menu-mobile{
-        height: 75px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        background: #050DCABF 75%;
-    }
-
-    .menu-mobile a{
-        color: #FFFFFF;
-        font-size: 27px;
-    }
-
-    .acceso-rapido .rapido img {
-        width: 90%;
-    
-        height: 90%;
-    }
-    .acceso-rapido{
-        padding-left: 5px;
     }
 }
