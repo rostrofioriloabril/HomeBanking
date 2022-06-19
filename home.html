@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/home.css">
-    <title>boceto</title>
+    <link rel="icon" href="imagenes/favicon.png">
+    <title>ITBANK</title>
 </head>
 <body>
     <main>
@@ -22,14 +23,15 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Ingresa aqui</h2>
-                <form action="" method="post">
-                    <input type="number" name="dni" class="dni" placeholder="Ingresa tu DNI" required>
-                    <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required>
-                    <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required>
+                <form action="home.html" method="post" class="formulario-ingreso">
+                    <input type="number" name="dni" class="dni"  placeholder="Ingresa tu DNI" required id="uno">
+                    <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required id="uno" maxlength="10">
+                    <input type="password" name="password" class="password" maxlength="12" id="uno" placeholder="Ingresa tu clave" required >
                     <div class="check">
                         <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
                     </div>
                     <input type="button" value="Enviar" class="btn-ingresar">
+
                     <div class="ayuda">
                         <a href="" id="olvidar"><h4>Olvide mi clave/usuario</h4></a>
                         <h4>¿No sos cliente?</h4>
@@ -46,13 +48,13 @@
             <h2 class="logo2">itbank</h2>
             <section class="form">
                 <h2>Asociate aqui</h2>
-                <form action="">
+                <form action="" class="form-registro">
                     <input type="text" name="name" class="name" placeholder="Ingresa tu Nombre" required>
                     <input type="text" name="lastName" class="lastName" placeholder="Ingresa tu Apellido" required>
                     <input type="text" name="dni" class="dni" placeholder="Ingresa tu DNI" required>
                     <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required>
                     <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required>
-                    <input type="text" name="passwordRepeat" class="passwordRepeat" placeholder="Ingresa tu clave nuevamente" required>
+                    <input type="password" name="passwordRepeat" class="passwordRepeat" placeholder="Ingresa tu clave nuevamente" required>
                     <div class="container-btn">
                         <input type="button" value="Enviar" class="btn-registrarse">
                     </div>
@@ -84,5 +86,6 @@
         </div>
     </main>
     <script src="main2.js"></script>
+    <script src="inicio.js"></script>
 </body>
 </html>
