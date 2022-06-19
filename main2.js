@@ -93,14 +93,14 @@ function validarRegistro(){
 
 function validarDni(){
     for(var i = 0; i < dni.length;i++){
-        if((documento.value == dni[i]) || (documento.value.length == 8)){
+        if((documento.value == dni[i]) || (documento.value.length == 8) || (documento.value.length == 7)){
             console.log("dni correcto")
             documento.style.border='none'
             return codigo1 = true;
         }else{
         documento.value="";
-        documento.placeholder= 'dni incorrecto';
-        documento.style.border='1px solid rgb(0, 4, 75)'
+        documento.placeholder= 'Debe contener 7/8 numeros';
+        documento.style.border='1px solid red'
         documento.style.fontSize='15px';
         return codigo1 = false;
         }
@@ -112,8 +112,8 @@ function validarDni(){
 function validarUser(){
     if(usuario.value.length<8){
         userInput.value="";
-        userInput.placeholder='el usuario no es correcto';
-        userInput.style.border='1px solid rgb(0, 4, 75)'
+        userInput.placeholder='Minimo 8 caracteres';
+        userInput.style.border='1px solid red'
         userInput.style.fontSize='15px';
         console.log("usuario incorrecto")
         return codigo2= false;
@@ -134,8 +134,8 @@ function validarPassword(){
     for(var i = 0; i < password.length;i++){
     if(contrasenhia.value.length<5){
         contrasenhia.value="";
-        contrasenhia.placeholder='contraseña incorrecta';
-        contrasenhia.style.border='1px solid rgb(0, 4, 75)'
+        contrasenhia.placeholder='Debe contener 5 caracteres';
+        contrasenhia.style.border='1px solid red'
         contrasenhia.style.fontSize='15px';
         console.log("usuario incorrecto")
         return codigo3 = false;
@@ -148,8 +148,6 @@ function validarPassword(){
     }
 return codigo3;
 }
-
-
 
 
 
@@ -199,9 +197,9 @@ function validarNombre(){
                 nombre.pop();
         }else{
             nameUsuario.value="";
-            nameUsuario.placeholder='el nombre es incorrecto';
+            nameUsuario.placeholder='El nombre es incorrecto';
             nameUsuario.style.fontSize='20px';
-            nameUsuario.style.border='1px solid rgb(0, 4, 75)';
+            nameUsuario.style.border='1px solid red';
             
         }
 }
@@ -221,7 +219,7 @@ function validarApellido(){
         valorApellido.value = "";
         valorApellido.placeholder = 'el apellido es incorrecto';
         valorApellido.style.fontSize = '20px';
-        valorApellido.style.border = '1px solid rgb(0, 4, 75)';
+        valorApellido.style.border = '1px solid red';
 
     }
 }/*
@@ -239,9 +237,9 @@ function validarDni2(){
     }else{
 
         valorDni.value="";
-        valorDni.placeholder='el dni es incorrecto';
+        valorDni.placeholder='Debe contener 7/8 numeros';
         valorDni.style.fontSize='20px';
-        valorDni.style.border='1px solid rgb(0, 4, 75)';
+        valorDni.style.border='1px solid red';
         
     }
 }
@@ -255,9 +253,9 @@ function validarUsuario1(){
     }else{
 
         valorUsuario.value="";
-        valorUsuario.placeholder='el usuario es incorrecto';
+        valorUsuario.placeholder='El usuario es incorrecto';
         valorUsuario.style.fontSize='20px';
-        valorUsuario.style.border='1px solid rgb(0, 4, 75)';
+        valorUsuario.style.border='1px solid red';
         
     }
 }
@@ -270,9 +268,9 @@ function validarPassword1(){
             nuevaContasenhia.pop();
     }else{
         valorConstrasenhia.value="";
-        valorConstrasenhia.placeholder='contraseña incorrecta';
+        valorConstrasenhia.placeholder='Contraseña incorrecta';
         valorConstrasenhia.style.fontSize='20px';
-        valorConstrasenhia.style.border='1px solid rgb(0, 4, 75)';
+        valorConstrasenhia.style.border='1px solid red';
         
     }
 }
@@ -283,7 +281,7 @@ function validarPassword1(){
         valorConstrasenhia2.value="";
         valorConstrasenhia2.placeholder='La contraseña no coincide';
         valorConstrasenhia2.style.fontSize='20px';
-        valorConstrasenhia2.style.border='1px solid rgb(0, 4, 75)';
+        valorConstrasenhia2.style.border='1px solid red';
         
     }
 }
