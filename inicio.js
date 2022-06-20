@@ -50,8 +50,8 @@ function validarDni(){
             return codigo1 = true;
         }else{
         documento.value="";
-        documento.placeholder= 'Debe contener 8 caracteres';
-        documento.style.border='1px solid red'
+        documento.placeholder= 'dni incorrecto';
+        documento.style.border='1px solid rgb(0, 4, 75)'
         documento.style.fontSize='15px';
         return codigo1 = false;
         }
@@ -63,8 +63,8 @@ function validarDni(){
 function validarUser(){
     if(usuario.value.length<8){
        userInput.value="";
-       userInput.placeholder='Debe contener 8 caracteres';
-       userInput.style.border='1px solid red'
+       userInput.placeholder='el usuario no es correcto';
+       userInput.style.border='1px solid rgb(0, 4, 75)'
        userInput.style.fontSize='15px';
        console.log("usuario incorrecto")
         return codigo2= false;
@@ -85,8 +85,8 @@ function validarPassword(){
     for(var i = 0; i < password.length;i++){
     if(contrasenhia.value.length<5){
        contrasenhia.value="";
-       contrasenhia.placeholder='Debe contener +5 caracteres';
-       contrasenhia.style.border='1px solid red'
+       contrasenhia.placeholder='contraseña incorrecta';
+       contrasenhia.style.border='1px solid rgb(0, 4, 75)'
        contrasenhia.style.fontSize='15px';
        console.log("usuario incorrecto")
        return codigo3 = false;
@@ -158,9 +158,9 @@ function validarNombre(){
                nombre.pop();
         }else{
             nameUsuario.value="";
-            nameUsuario.placeholder='El nombre es incorrecto';
+            nameUsuario.placeholder='el nombre es incorrecto';
             nameUsuario.style.fontSize='20px';
-            nameUsuario.style.border='1px solid red';
+            nameUsuario.style.border='1px solid rgb(0, 4, 75)';
             return f1=false;
         }
         return f1;
@@ -180,9 +180,9 @@ function validarApellido(){
     } else {
 
        valorApellido.value = "";
-       valorApellido.placeholder = 'El apellido es incorrecto';
+       valorApellido.placeholder = 'el apellido es incorrecto';
        valorApellido.style.fontSize = '20px';
-       valorApellido.style.border = '1px solid red';
+       valorApellido.style.border = '1px solid rgb(0, 4, 75)';
        return f2=false;
     }
     return f2;
@@ -202,9 +202,9 @@ function validarDni2(){
     }else{
 
         valorDni.value="";
-        valorDni.placeholder='El dni es incorrecto';
+        valorDni.placeholder='el dni es incorrecto';
         valorDni.style.fontSize='20px';
-        valorDni.style.border='1px solid red';
+        valorDni.style.border='1px solid rgb(0, 4, 75)';
         return f3=false;
     }
     return f3;
@@ -220,9 +220,9 @@ function validarUsuario1(){
     }else{
 
         valorUsuario.value="";
-        valorUsuario.placeholder='El usuario es incorrecto';
+        valorUsuario.placeholder='el usuario es incorrecto';
         valorUsuario.style.fontSize='20px';
-        valorUsuario.style.border='1px solid red';
+        valorUsuario.style.border='1px solid rgb(0, 4, 75)';
         return f4=false;
     }
     return f4;
@@ -238,9 +238,9 @@ function validarPassword1(){
            nuevaContasenhia.pop();
     }else{
         valorConstrasenhia.value="";
-        valorConstrasenhia.placeholder='Contraseña incorrecta';
+        valorConstrasenhia.placeholder='contraseña incorrecta';
         valorConstrasenhia.style.fontSize='20px';
-        valorConstrasenhia.style.border='1px solid red';
+        valorConstrasenhia.style.border='1px solid rgb(0, 4, 75)';
         return f5=false;
     }
     return f5;
@@ -253,7 +253,7 @@ function validarPassword2(){
         valorConstrasenhia2.value="";
         valorConstrasenhia2.placeholder='La contraseña no coincide';
         valorConstrasenhia2.style.fontSize='20px';
-        valorConstrasenhia2.style.border='1px solid red';
+        valorConstrasenhia2.style.border='1px solid rgb(0, 4, 75)';
         return f6 = false;
         
     }
