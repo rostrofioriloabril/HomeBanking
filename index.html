@@ -41,12 +41,8 @@
                         <!----------SELECTOR DE IDIOMA------------->
                         <form action="" class="selector-form">
                             <div class="select" id="select" style="background-image: url(imagenes/esp.jpg); background-repeat:no-repeat;background-size:100% 100%; background-origin: border-box;">
-                                <div class="contenido-select">
-            
-                                </div>
-                                
+                                <div class="contenido-select"></div>
                             </div>
-            
                             <div class="opciones" id="opciones">
                                 <a href="#" class="opcion">
                                     <div class="contenido-opcion">
@@ -61,30 +57,16 @@
                                 <a href="#" class="opcion">
                                     <div class="contenido-opcion">
                                         <img src="imagenes/port.jpg">
-                                        
                                     </div>
                                 </a>
                         </div>
-            
                         <input type="hidden" name="pais" id="inputSelect" value="">
                     </form>
-
-
-
-
-
-
-
                         <a href="home.html" class="salida" id="salida"><i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i></a>
                     </div>
                 </div>
-
             </nav>
-
-
         </header>
-
-
         <div class="buscar-mobile">
             <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
             <input class="lupita" type="search" placeholder="Buscar...">
@@ -104,7 +86,8 @@
                     <li class="iconos_menu"><i class="fa-solid fa-gear"></i><a href="">Preferencias</a></li>
                 </ul>
             </section>
-            <section class="col-lg-6 balance col-sm-6" >
+
+            <section class="col-lg-6 col-sm-6 balance">
                     <div class="col-sm-6 balance_contenido">
                         <div class="balance-fila-1">
                             <h2 class="balance_item">Balance</h2>
@@ -148,12 +131,31 @@
                         </a>
                     </div>
 
-                    <div class="tarjetas">
+                    <div id="carouselExampleControls" class="carousel slide carousel-dark tarjetas" data-bs-ride="carousel">
                         <h5>
                             Mis Tarjetas
                         </h5>
-                        <a href="#"><img src="vectores/Tarjeta1.svg" alt="tarjeta visa"></a>
-                        <a href="#"><img src="vectores/Tarjeta2.svg" alt="tarjeta amex"></a>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="#"><img src="vectores/Tarjeta1.svg" class="d-block w-100" alt="tarjeta visa"></a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="vectores/Tarjeta2.svg" class="d-block w-100" alt="tarjeta amex"></a> 
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
                     </div>
 
             </section>
@@ -217,13 +219,13 @@
                         <h4>
                             Mis Inversiones
                         </h4>
-                        <img src="vectores/olas.svg" alt="gráfico de inversiones">
+                        <img src="vectores/olas.svg" alt="gráfico de inversiones" width="100%" height="100%">
                     </div>
             </section>
         </div>
     </main>
 
-    <section class="container sec-dolar">
+    <section class="container-fluid sec-dolar">
         <h3>Cotización del Dólar</h3>
         <ul id="list-group">
 
@@ -233,12 +235,14 @@
     </section>
 
 
-        <div class="menu-mobile container-fluid">
-            <a href=""><i class="fa-solid fa-credit-card"></i><a href=""></a>
-            <a href=""><i class="fa-solid fa-arrow-right-arrow-left"></i><a href=""></a>
-            <a href=""><i class="fa-solid fa-house"></i><a href=""></a>
-            <a href=""><i class="fa-solid fa-money-bill-wave"></i><a href=""></a>
-            <a href=""><i class="fa-solid fa-bars"></i>
+        <div class="container-fluid" id="fixmenu">
+                <ul class="menu-fixed">
+                    <li><a href=""><i class="fa-solid fa-credit-card"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-arrow-right-arrow-left"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-house"></i><a href=""></a></li>
+                    <li><a href=""><i class="fa-solid fa-money-bill-wave"></i></a></li>
+                    <li><a href=""><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
         </div>
 
 

@@ -6,37 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/43c0c16911.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>App de gastos</title>
 </head>
 <body>
-    <header>
-        <h1>App de Gastos</h1>
-        <h3>Ingresa cuanto pago cada persona</h3>
+    <main class = "container-fluid contenido">
+        <header class="col-sm-12">
+            <nav class="row principal">
+                <div class="col-2 logo-container">
+                    <h2 class="logo">itbank</h2>
+                </div>  
+
+                <div class="col-6 barra_iconos"> <!--agregué la clase para alinearlos a la derecha-->
+                    <h2 class="bienvenida-mobile">itbank</h2>
+
+                    <div class="buscar">
+                    <!---------
+                        <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
+                    -->
+                        <input type="search" placeholder="&#128270;Buscar..." >
+                    </div>
+
+                    <!--acá termina la barra de navegación-->
+
+                    <div class="iconos">
+                        <i class="fa-solid fa-bell iconos_nav"></i>
+                        <i class="fa-solid fa-user iconos_nav"></i>
 
 
-        <a href="/HomeBanking/index.html"><i class="fa-solid fa-backward"></i><h4 class="logo"> itbank </h4></a>
-    </header>
-    <main>
-        <section class="ingresos">
-            <div class="form">
-                <input type="text" id="nombreInput">
-                <label for="">Nombre</label>
-            </div>
-            <div class="form">
-                <input type="number"  min="0" id="dineroInput">
-                <label for="" id="labelDinero">Dinero gastado</label>
-            </div>
-            <input type="button" value="Enviar" id="btn-agregar">
-            
-        </section>
-        <section class="egresos">
-            <ul id="lista"></ul>
-        </section>
-        <div class="resultado" id="resultado">
-            <h4 id="total"></h4>
-            <h4 id="totalDividido"></h4>
+                        <!----------SELECTOR DE IDIOMA------------->
+                        <form action="" class="selector-form">
+                            <div class="select" id="select" style="background-image: url(imagenes/esp.jpg); background-repeat:no-repeat;background-size:100% 100%; background-origin: border-box;">
+                                <div class="contenido-select"></div>
+                            </div>
+                            <div class="opciones" id="opciones">
+                                <a href="#" class="opcion">
+                                    <div class="contenido-opcion">
+                                        <img src="/imagenes/english.jpeg">
+                                    </div>
+                                </a>
+                                <a href="#" class="opcion">
+                                    <div class="contenido-opcion">
+                                        <img src="/imagenes/esp.jpg">
+                                    </div>
+                                </a>
+                                <a href="#" class="opcion">
+                                    <div class="contenido-opcion">
+                                        <img src="/imagenes/port.jpg">
+                                    </div>
+                                </a>
+                        </div>
+                        <input type="hidden" name="pais" id="inputSelect" value="">
+                    </form>
+                        <a href="home.html" class="salida" id="salida"><i class="fa-solid fa-arrow-right-from-bracket iconos_nav"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="buscar-mobile">
+            <i class="fa-solid fa-magnifying-glass iconos_nav"></i>
+            <input class="lupita" type="search" placeholder="Buscar...">
         </div>
+
+        <div class="row primera-sec">
+            <!--nombre a la clase para llamar a todos los h2 que hay dentro--> 
+            <section class="col-2 contenedor_menu">
+                <ul class="menu">
+                    <!--<li><i class="fa-solid fa-house"></i><a href="">Menu</a></li>-->
+                    <li class="iconos_menu"><i class="fa-solid fa-house"></i><a href="">Inicio</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-arrow-right-arrow-left "></i><a href="">Transacciones</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-money-bill-wave "></i><a href="">Pagos</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-credit-card "></i><a href="">Tarjetas</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-arrow-up-right-dots "></i><a href="">Inversiones</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-headset"></i><a href="">Ayuda</a></li>
+                    <li class="iconos_menu"><i class="fa-solid fa-gear"></i><a href="">Preferencias</a></li>
+                </ul>
+            </section>
+            <section class="col-10 balance">
+                <div class="col-sm-6 balance_contenido">
+                    <div class="balance-fila-1">
+                        <h2 class="balance_item">App de gastos</h2>
+                        <h4>Ingrea cuanto pago cada persona</h4>
+                    </div>
+                    <div class="ingresos">
+                        <div class="form">
+                            <input type="text" id="nombreInput">
+                            <label for="">Nombre</label>
+                        </div>
+                        <div class="form">
+                            <input type="number"  min="0" id="dineroInput">
+                            <label for="" id="labelDinero">Dinero gastado</label>
+                        </div>
+                        <input type="button" value="Enviar" id="btn-agregar">
+                        
+                    </div>
+                    <div class="egresos">
+                        <ul id="lista"></ul>
+                    </div>
+                    <div class="resultado" id="resultado">
+                        <h4 id="total"></h4>
+                        <h4 id="totalDividido"></h4>
+                    </div>
+            </section>
     </main>
+    
+    <div class="menu-mobile container-fluid">
+        <a><i class="fa-solid fa-credit-card"></i><a href=""></a>
+        <a><i class="fa-solid fa-arrow-right-arrow-left"></i><a href=""></a>
+        <a href="/index.html"><i class="fa-solid fa-house"></i><a href=""></a>
+        <a><i class="fa-solid fa-money-bill-wave"></i><a href=""></a>
+        <a><i class="fa-solid fa-bars"></i>
+    </div>
     <footer>
         <div class="row pies">
             <div class="col-12 border pie">

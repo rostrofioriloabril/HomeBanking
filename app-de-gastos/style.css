@@ -1,70 +1,272 @@
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
+    font-weight: 900;
+  } 
+  
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Bold.ttf) format("truetype");
+    font-weight: bold;
+  } 
+
 *{
     padding: 0;
     margin: 0;
-    font-family: Helvetica;
+    font-family: Brandon;
+    font-weight: bold;
 }
-/*HEADER*/
-main {
+body, html{
     height: 100%;
+}
+/* MENU + NAV */
+/*--------- logo, bienvenida e íconos ------------*/
+main {
+    min-height: 100%;
     background: linear-gradient(180deg, rgba(5, 13, 202, 0) 0%, rgba(5, 13, 202, 0.05) 53.96%, rgba(120, 192, 224, 0.2) 100%);
-    
+}
+.principal{
+    justify-content:space-between;
+}
+.logo-container{
+    height: 100px;
+    padding-top: 35px;
+    min-width: 176px;
+    display: inline-block;
+    padding-top: 0;
 }
 
-header{
-    width: 100%;
-    height: 190px;
-    background: rgba(5, 13, 202, 0.75);
+.logo-container .logo {
+    font-size: 55px;
+    font-weight: 900;
+    color: #050DCA;
+    position: fixed;
+    padding-left: 3px;
+}
+
+.bienvenida{
+    padding-left: 6% !important;
+    font-size: 1.5rem;
+    color: #0E0E52;
+    margin-top: 56px !important;
+}
+.bienvenida-mobile{
+    display: none;
+}
+
+/*Aplicando Flexbox a la barra de iconos de arriba, para separa la barra de navegación de los otros íconos*/
+
+.buscar input{
+    padding: 0 20px 0 35px;
+    font-size: 18px;
+    color: #000;
+    background-color: #0035541A;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+}
+.buscar{
+    margin-right: 2em;
+}
+.buscar i {
+    margin: 0 50%;
+    margin-left: 54%;
+    margin-top: 7px;
+}
+.buscar-mobile{
+    display: none;
+}
+.barra_iconos{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 25px !important;
+    justify-content: right;
+    margin-right: 20px;
+}
+.iconos_nav{
+    color: #000;
+}
+
+
+/*         ESTILOS DEL SELECT             */
+
+a {
+	text-decoration: none;
+}
+
+.select {
+	width: 35px;
+    height: 27px;
+    margin: -9px 50px 0 5px;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
+	border-radius: 6px;
+    border: 2px solid transparent;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	transition: .2s ease all;
+	position: relative;
+	z-index: 200;
+}
+
+.select.active,
+.select:hover {
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+	border: 2px solid #213f8f;
+}
+
+.select.active:before {
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	position: relative;
+}
+
+.opciones {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
+	max-height: 400px;
+	width: 37px;
+    display: none;
+}
+
+.opciones.active {
+	display:flex;
+	animation: fadeIn .3s forwards;
+    margin-left: 5px;
+    margin-top: 2px;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: absolute;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: translateX(0) scale(.5);
+	}
+	to {
+		transform: translateX(-200) scale(1);
+	}
+}
+
+.contenido-opcion {
+	width: 100%;
+	transition: .2s ease all;
+}
+
+.opciones .contenido-opcion {
+	padding: 2px 1px;
+}
+
+.contenido-opcion img {
+	width: 100%;
+	height: 27px;
+    border-radius: 6px;
+}
+
+.opciones .contenido-opcion:hover {
+	background: #213F8F;
+}
+
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion {
+	color: #fff;
+}
+
+
+.iconos{
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 22%;
+    margin-top: 7px;
+}
+.iconos i {
+    margin: 0px 10px;
+}
+.iconos i:last-child{
+    margin: 0px;
+}
+.salida {
+    margin-top: -2px;
+}
+
+.selector-form {
+    width: 60px;
+}
+.primera-sec{
+    min-height: calc(100% - 100px);
+}
+
+/*--------MENU---------*/
+.menu{
+    position: fixed;
+    padding-left: 0.5%;
+}
+.contenedor_menu {
+    padding-top: 20px;  
+    height: 100%;
+}
+
+.contenedor_menu .menu li{
+    list-style: none;
+    padding: .7em 0 25px .5em;
+    color: #777777;
+}
+
+.contenedor_menu .menu li a{
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #777777;
+}
+
+.contenedor_menu .iconos_menu :hover{
+    color: #050DCA;
+}
+.menu-mobile{
+    display: none;
+}
+/* BALANCE */
+.balance{
+    padding-top: 20px;
+}
+.balance_contenido{
+    width: 100% !important;
+    margin: 0 !important;
+}
+.balance-fila-1{
+    margin: 1em 8em 4em 0;
     text-align: center;
-   
 }
-
-h1, h3{
-    color: white;
-    padding-top: 15px;
-    font-size: 350%;
+.balance h2{
+    color: #150578;
+    font-size: 24px;
+    font-weight: 900;
 }
-h1 {
-    padding-top: 50px;
+.balance h4{
+    color: #150578;
+    font-size: 18px;
 }
-h3{
-    padding-top: 30px;
-    font-size: 150%;
-}
-header i{
-    left: 0px;
-    padding-left: 20px;
-    position: absolute;
-    color:white;
-    top: 25px;
-    font-size: 20px;
-
-
-}
-header h4{
-    padding-left: 50px;
-    position: absolute;
-    color:white;
-    top: 25px;
-    font-size: 20px;
-
-}
-
 /*INGRESOS*/
 .ingresos{
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    margin-left: 3em;
 }
 .form{
     width: 300px;
     height: 50px;
     position: relative;
     margin-bottom: 20px;
+    padding-right: 4em;
 }
 .form input{
-    width: 260px;
+    width: 17em;
     height: 100%;
     background: transparent;
     border: 2px solid grey;
@@ -79,7 +281,7 @@ header h4{
     position: absolute;
     top: -9px;
     left: 15px;
-    color: grey;
+    color: #150578;
     text-transform: capitalize;
     font-size: 15px;
     transition: top .3s;
@@ -89,10 +291,9 @@ header h4{
 }
 #btn-agregar{
     padding: 0;
-    width: 180px;
+    width: 190px;
     height: 42px;
     background: rgba(5, 13, 202, 0.1);
-    
     font-weight: 700;
     font-size: 21px;
     line-height: 46px;
@@ -108,27 +309,28 @@ header h4{
     justify-content: center;
 }
 
-ul{
+#lista{
     margin-top: 20px;
     display: inline-block;
     width: 300px;
     list-style: none;
+    padding-left: 0;
 }
-li{
+#lista li{
     margin-top: 4%;
     padding-left: 1%;
-    border: solid 1px black;
     height: 35px;
-    padding-top: 15px;
-    padding-left: 15px;
-    border-radius: 10px;
+    padding-top: 10px;
+    margin-left: 5px;
+    border-bottom: 1px solid #150578;
+    width: 245px;
 }
-li i{
+#lista li i{
     float: right;
     position: relative;
-    right: 15px;
+    right: 5px;
 }
-li i:hover{
+#lista li i:hover{
     cursor: pointer;
 }
 .resultado{
@@ -139,9 +341,15 @@ li i:hover{
     align-items: center;
 }
 .resultado h4{
-    width: 300px;
+    width: 250px;
     color: black;
     margin-bottom: 2%;
+    margin-right: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+.fa-xmark:hover{
+    color: red;
 }
 
 /* FOOTER */
@@ -150,13 +358,10 @@ footer{
     background: linear-gradient(95.71deg, rgba(68, 157, 209, 0.2) 75.57%, rgba(68, 157, 209, 0.3) 93.75%), linear-gradient(264.29deg, rgba(120, 192, 224, 0.2) 40.12%, rgba(120, 192, 224, 0.3) 58.3%);
     mix-blend-mode: normal;
     width:100%;
-    height:54px;
-    position: absolute;
-    bottom: 0px;
+    color: #0E0E52;
 }
-.pie{
-    padding: 0 !important;
-    margin-left: 50px;
+.pies{
+    margin-right: 0 !important;
 }
 .pie p, .pie div{
     padding-top: 1.2%;
@@ -178,4 +383,139 @@ footer{
 }
 .historico-mobile{
     display: none;
+}
+.logo-container .logo{
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 900px){
+    .contenedor_menu{
+        width: 30% !important;
+    }
+    .balance{
+        width:70% !important;
+    }
+    .buscar{
+        margin-right: 0;
+    }
+    .buscar input{
+        width: 200px;
+        padding-left: 15px;
+    }
+}
+@media screen and (max-width: 700px){
+    .barra_iconos{
+        margin-right: 75px;
+    }
+    .pie-1{
+        width: 150px !important;
+    }
+    .pie-2{
+        width: 350px !important;
+    }
+}
+@media screen and (max-width: 600px){
+    main{
+        min-height: 0;
+        height: calc(100% - 55px);
+        overflow: scroll;
+    }
+    .balance{
+        height: 100%;
+    }
+    .primera-sec{
+        min-height: 0;
+        width: 100%;
+    }
+    .principal{
+        color: #FFFFFF;
+        height: 7em;
+        background: rgba(5, 13, 202, 0.75);
+        clip-path: ellipse(61% 92% at 49% 0%);
+        margin-right: 0 !important;
+    }
+    .contenido{
+        width: 100%;
+        padding: 0 !important;
+    }
+/*---nav---*/
+    .bienvenida-mobile{
+        display: inline;
+        text-align: left;
+        margin-left: 0;
+        padding-left: 1em !important;
+        font-size: 21px; 
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+    .selector-form {
+        display: none;
+    }
+    .iconos{
+        display: flex;
+        justify-content: space-evenly;
+        width: 35% !important;
+    }
+    .iconos i {
+        float: right;
+        color: white;
+    }
+    .barra_iconos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px !important;
+        width: 100% !important;
+        padding: 0 1em 0 1em !important;
+    }
+    .iconos_nav{
+        color: #0E0E52;
+    }
+    .buscar-mobile{
+        display: inline-block;
+        padding-top: 2em;
+        width: 90%;
+        padding: 2em 3% 0 15% !important;
+        margin: 0 !important;
+    }
+    .buscar-mobile input{
+        width: 85%;
+        padding: 0 20px 0 35px;
+        font-size: 18px;
+        color: #000;
+        background-color: #0035541A;
+        outline: none;
+        border-radius: 30px;
+    }
+    .lupita{
+        width: 5em;
+        height: 1.8em;
+        color: #051923;
+        border: none;
+    }
+    .buscar, .bandera, .contenedor_menu, .logo-container, .bienvenida, .balance_contenido img, footer, .historico{
+        display: none;
+    }
+    .balance{
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+    .menu-mobile{
+        height: 55px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: #050DCABF 75%;
+        position: fixed;
+    }
+    .menu-mobile i{
+        color: #FFFFFF;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .balance-fila-1{
+        margin: 1em 0 4em 0;
+        text-align: center;
+    }
 }

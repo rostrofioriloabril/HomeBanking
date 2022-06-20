@@ -16,6 +16,9 @@
             dinero=''
             dineroInput.style.border=('1px solid red');
         }
+        else if(dinero=='-0'){
+            dinero=0
+        }
 
         let nuevaPersona = document.createElement('li'),
             contenido = document.createTextNode(nombre+': $'+dinero),
@@ -26,10 +29,12 @@
         if(dinero===''  && nombre!=''){
             nuevaPersona='';
             dineroInput.style.border=('1px solid red');
+            nombreInput.style.border=('1px solid black');
         }
         else if(dinero!=''  && nombre===''){
             nuevaPersona='';
             nombreInput.style.border=('1px solid red');
+            dineroInput.style.border=('1px solid black');
         }
         else if(dinero===''  && nombre===''){
             nuevaPersona='';
@@ -78,6 +83,26 @@
 }())
 
 
+const select = document.querySelector('#select');
+const opciones = document.querySelector('#opciones');
+const salida = document.querySelector('.salida');
+const contenidoSelect = document.querySelector('#select .contenido-select');
+
+document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
+	opcion.addEventListener('click', (e) => {
+		e.preventDefault();
+		contenidoSelect.innerHTML = e.currentTarget.innerHTML;
+		select.classList.toggle('active');
+		select.style.background="#fff"
+		opciones.classList.toggle('active');
+	});
+});
+
+select.addEventListener('click', () => {
+	select.classList.toggle('active');
+	opciones.classList.toggle('active');
+
+});
 
 
 
