@@ -1,4 +1,6 @@
 import sys,csv
+import datetime
+
 
 POSICION_ARGUMENTO_NOMBRE_ARCHIVO = 1
 POSICION_ARGUMENTO_DNI = 2
@@ -50,8 +52,28 @@ if __name__ == '__main__':
                         cabecera.index(ETIQUETA_CABECERA_CSV_TIPO),
                         cabecera.index(ETIQUETA_CABECERA_CSV_ESTADO))
 
-    datos_cliente = list(filter(lambda registro: registro[posicion_dni] == sys.argv[POSICION_ARGUMENTO_DNI], datos[1:]))
+valor = input("Elige: Pantalla o CSV")
+if(valor == "Pantalla"):
 
+    datos_cliente = list(filter(
+        lambda registro: registro[posicion_dni] == sys.argv[POSICION_ARGUMENTO_DNI], datos[1:]))
     print(','.join(cabecera))
+
     for dato in datos_cliente:
         print(','.join(dato))
+elif(valor == "csv"):
+        archivoNuevo = open(
+            f"{posicion_dni}{str(datetime.datetime.now()).replace(':','_')}.csv", "x")
+        datos_cliente = list(filter(
+            lambda registro: registro[posicion_dni] == sys.argv[POSICION_ARGUMENTO_DNI], datos[1:]))
+        for item in datos:
+            newitem = item(filter(lambda registro: registro[posicion_dni] == sys.argv[POSICION_ARGUMENTO_DNI], datos[1:]))
+            print(newitem)
+
+        archivoNuevo.write(cabecera)
+        archivoNuevo.close()
+else:
+    print("Error")
+           
+
+       
