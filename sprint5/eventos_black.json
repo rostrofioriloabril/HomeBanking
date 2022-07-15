@@ -1,12 +1,12 @@
 {
 	"numero": 100001,
-	"nombre": "Nicolas",
-	"apellido": "Gaston",
-	"dni": "29494777",
+	"nombre": "Paula",
+	"apellido": "Rodriguez",
+	"dni": "37122592",
 	"tipo": "BLACK",
 	"direccion" : {
-		"calle" : "Rivadavia",
-		"numero" : "7900",
+		"calle" : "Cordoba",
+		"numero" : "6500",
 		"ciudad": "Capital Federal",
 		"provincia" : "Buenos Aires",
 		"pais": "Argentina"

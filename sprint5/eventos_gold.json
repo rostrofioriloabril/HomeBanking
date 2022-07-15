@@ -1,12 +1,12 @@
 {
 	"numero": 100001,
-	"nombre": "Nicolas",
-	"apellido": "Gaston",
-	"dni": "29494777",
+	"nombre": "Federico",
+	"apellido": "Sanchez",
+	"dni": "41766479",
 	"tipo": "GOLD",
 	"direccion" : {
-		"calle" : "Rivadavia",
-		"numero" : "7900",
+		"calle" : "Corrientes",
+		"numero" : "4900",
 		"ciudad": "Capital Federal",
 		"provincia" : "Buenos Aires",
 		"pais": "Argentina"
