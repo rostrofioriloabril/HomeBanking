@@ -1,12 +1,12 @@
 {
 	"numero": 100001,
-	"nombre": "Federico",
-	"apellido": "Sanchez",
-	"dni": "41766479",
+	"nombre": "Nicolas",
+	"apellido": "Gaston",
+	"dni": "29494777",
 	"tipo": "GOLD",
 	"direccion" : {
-		"calle" : "Corrientes",
-		"numero" : "4900",
+		"calle" : "Rivadavia",
+		"numero" : "7900",
 		"ciudad": "Capital Federal",
 		"provincia" : "Buenos Aires",
 		"pais": "Argentina"
@@ -28,7 +28,7 @@
 			"estado": "RECHAZADA",
 			"tipo": "RETIRO_EFECTIVO_CAJERO_AUTOMATICO",
 			"cuentaNumero": 190,
-			"cupoDiarioRestante": 15000,
+			"cupoDiarioRestante": 10000,
 			"monto": 11000,
 			"fecha": "10/06/2022 16:40:55",
 			"numero": 2,

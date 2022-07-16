@@ -29,10 +29,10 @@
 			"tipo": "RETIRO_EFECTIVO_CAJERO_AUTOMATICO",
 			"cuentaNumero": 190,
 			"cupoDiarioRestante": 9000,
-			"monto": 11000,
+			"monto": 1100,
 			"fecha": "20/06/2022 17:00:55",
 			"numero": 2,
-			"saldoEnCuenta": 100000,
+			"saldoEnCuenta": 100,
 			"totalTarjetasDeCreditoActualmente" : 0,
 			"totalChequerasActualmente" : 0
 		},
