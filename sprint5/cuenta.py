@@ -1,3 +1,4 @@
+#acá también creamos restricciones de cuenta, pero a nivel general. Si no encuentra el valor, devuelve 0
 class Cuenta:
     def __init__(self, **kwargs):
         self.tipo = kwargs.get('tipo', 0)

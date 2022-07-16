@@ -11,8 +11,8 @@ t_gold = eventos.transacciones_gold
 
 class RazonRetiroEfectivo(Razon):
     def __init__(self, tipo):
-         super().__init__(self,tipo)
-         pass
+        super().__init__(self,tipo)
+        pass
     def validar(tipo):
         respuesta = ""
         if(tipo =='CLASSIC'):

@@ -3,14 +3,14 @@ from cuenta import Cuenta
 from direccion import Direccion
 # from modulos.classic import ClienteClassic
 
-
+#creamos una clase Cliente que va a tener los atributos generales de todos los clientes del banco
 class Cliente:
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs): #kwargs lo usamos para no tener que escribir todos los atributos entre paréntesis y lo hacemos directamente abajo
         self.cuenta = Cuenta(**kwargs)
         self.numero_de_cuenta = kwargs.get('numero_de_cuenta')  # composicion
         self.direccion = Direccion(**kwargs)  # composicion
 
-
+#ahora vamos a buscar los datos del cliente
     def inicializar(self, datos):
         self.numero = datos['numero']
         self.nombre = datos['nombre']
