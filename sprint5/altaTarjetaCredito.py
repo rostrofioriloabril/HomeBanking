@@ -49,5 +49,4 @@ class RazonAltaTarjetaCredito(Razon):
                             respuesta = print('Los clientes Black no pueden tener mas de 5 tarjetas de credito')
         return respuesta
 
-RazonAltaTarjetaCredito.validar('CLASSIC')
 #este print devuelve del JSON el alta de las tarjetas de credito, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

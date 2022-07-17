@@ -49,5 +49,4 @@ class RazonAltaChequera(Razon):
                             respuesta = print('Los clientes Black no pueden tener mas de 2 chequeras')
         return respuesta
 
-RazonAltaChequera.validar('CLASSIC')
 #este print devuelve del JSON el alta de las chequeras, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

@@ -41,5 +41,4 @@ class RazonTransferenciaEnviada(Razon):
 
         return respuesta
 
-RazonTransferenciaEnviada.validar('CLASSIC')
 #este print devuelve del JSON el alta de la compra de dolares, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

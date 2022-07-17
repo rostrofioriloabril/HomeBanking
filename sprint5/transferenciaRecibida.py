@@ -45,5 +45,4 @@ class RazonTransferenciaRecibida(Razon):
             #Black no tiene limite
         return respuesta
 
-RazonTransferenciaRecibida.validar('GOLD')
 #este print devuelve del JSON el alta de las transferencias recibidas, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.
