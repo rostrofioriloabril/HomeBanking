@@ -62,7 +62,7 @@ def clienteGold():
 def clienteBlack():
     print('')
     print('---Datos del cliente---')
-    print('Nombre: ' , transacciones_black.get('nombre'))
+    print('Nombre: ' , transacciones_black.get('nombre'),transacciones_black.get('apellido'))
     print('Numero: ' , transacciones_black.get('numero'))
     print('Dni: ' , transacciones_black.get('dni'))
     print('Direccion: ', transacciones_black.get('direccion')['ciudad'],',' ,transacciones_black.get('direccion')['calle'],transacciones_black.get('direccion')['numero'])
@@ -72,7 +72,7 @@ def clienteBlack():
     contador=0
     while contador<9:
         print('Transaccion',contador+1)
-        print('Tipo de transaccion: ',transacciones_black.get('transacciones')[contador]['tipo'])
+        print('Tipo de operacion: ',transacciones_black.get('transacciones')[contador]['tipo'])
         print('Monto: ',transacciones_black.get('transacciones')[contador]['monto'])
         print('Fecha: ',transacciones_black.get('transacciones')[contador]['fecha'])
         print('Estado: ',transacciones_black.get('transacciones')[contador]['estado'])
