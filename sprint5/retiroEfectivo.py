@@ -43,6 +43,8 @@ class RazonRetiroEfectivo(Razon):
                             respuesta = print('El monto ingresado supera el límite de extraccion diaria')
                         elif(conseguirItems(archivo,'transacciones',i,'monto')> conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')and conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')> conseguirItems(archivo,'transacciones',i,'monto')):
                             respuesta = print('El máximo de saldo que puede retirar hoy es de: ${}'.format(conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')))
+                        elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') or conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')- conseguirItems(archivo,'transacciones',i,'monto')<0):
+                            respuesta = print('El monto a retirar es mayor que el saldo de su cuenta')
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') and conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')<conseguirItems(archivo,'transacciones',i,'monto')):
                             respuesta = print('NO SUPE QUE PONER EN CASO DE QUE QUIERA USAR EL SALDO DESCUBIERTO')
             #Black
@@ -60,5 +62,5 @@ class RazonRetiroEfectivo(Razon):
 
         return respuesta
 
-RazonRetiroEfectivo.validar('BLACK')
+RazonRetiroEfectivo.validar('GOLD')
 #este print devuelve del JSON las extracciones por cajero, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

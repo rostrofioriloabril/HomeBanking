@@ -3,32 +3,32 @@ class Razon():
         self.tipo = tipo
 #puse Razon sin herencia porque es mucho mas practico, cambiaria lo de abajo por varios modulos y llamarlos acá de ultima para que se impriman las razones. Quedaría que se imprima todo lo del eventos y agregar las validaciones en caso de que el estado sea rechazado
         
-class RazonAltaChequera(Razon):
+class RazonAltaChequera(Razon): #listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Alta chequera'
 
-class RazonAltaTarjetaCredito(Razon):
+class RazonAltaTarjetaCredito(Razon): #listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Alta tarjeta de credito'
 
-class RazonCompraDolar(Razon):
+class RazonCompraDolar(Razon): #listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Compra dolares'
 
-class RazonRetiroefectivo(Razon):
+class RazonRetiroefectivo(Razon): #medio listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Retiro efectivo'
 
-class RazonTransferenciaEnviada(Razon):
+class RazonTransferenciaEnviada(Razon): #listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Transferencia enviada'
 
-class RazonTransferenciaRecibida(Razon):
+class RazonTransferenciaRecibida(Razon): #listo
     def __init__(self,resolver):
         super().__init__(resolver)
         self.resolver= 'Transferencia recibida'
