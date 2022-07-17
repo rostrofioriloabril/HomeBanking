@@ -26,6 +26,7 @@ class RazonRetiroEfectivo(Razon):
             print('No contamos con el servicio')
 
         for i in range(len(archivo.get('transacciones'))):
+            #Classsic
             if(conseguirItems(archivo,'transacciones',i,'tipo')=='RETIRO_EFECTIVO_CAJERO_AUTOMATICO' and tipo =='CLASSIC'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosClassic()["limite_extraccion_diario" ]and conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')>conseguirItems(archivo,'transacciones',i,'monto')):
@@ -35,7 +36,7 @@ class RazonRetiroEfectivo(Razon):
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') or conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')- conseguirItems(archivo,'transacciones',i,'monto')<0):
                             respuesta = print('El monto a retirar es mayor que el saldo de su cuenta')
 
-                #Gold
+            #Gold
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='RETIRO_EFECTIVO_CAJERO_AUTOMATICO' and tipo =='GOLD'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosGold()["limite_extraccion_diario"]):
@@ -44,6 +45,7 @@ class RazonRetiroEfectivo(Razon):
                             respuesta = print('El máximo de saldo que puede retirar hoy es de: ${}'.format(conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')))
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') and conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')<conseguirItems(archivo,'transacciones',i,'monto')):
                             respuesta = print('NO SUPE QUE PONER EN CASO DE QUE QUIERA USAR EL SALDO DESCUBIERTO')
+            #Black
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='RETIRO_EFECTIVO_CAJERO_AUTOMATICO' and tipo =='BLACK'):
                     if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosBlack()["limite_extraccion_diario"]):
@@ -58,5 +60,5 @@ class RazonRetiroEfectivo(Razon):
 
         return respuesta
 
-RazonRetiroEfectivo.validar('GOLD')
-#este print devuelve del JSON las extracciones por cajero, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc. Faltaria hacer la otras validaciones pero esta sirve de guia
+RazonRetiroEfectivo.validar('BLACK')
+#este print devuelve del JSON las extracciones por cajero, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

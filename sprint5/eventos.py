@@ -24,7 +24,7 @@ def clienteClassic():
     print('')
     print('-----Transacciones-----')
     contador=0
-    while contador<10:
+    while contador<9:
         print('Transaccion',contador+1)
         print('Tipo de transaccion: ',transacciones_classic.get('transacciones')[contador]['tipo'])
         print('Monto: ',transacciones_classic.get('transacciones')[contador]['monto'])
@@ -47,7 +47,7 @@ def clienteGold():
     print('')
     print('-----Transacciones-----')
     contador=0
-    while contador<10:
+    while contador<9:
         print('Transaccion',contador+1)
         print('Tipo de transaccion: ',transacciones_gold.get('transacciones')[contador]['tipo'])
         print('Monto: ',transacciones_gold.get('transacciones')[contador]['monto'])
@@ -70,7 +70,7 @@ def clienteBlack():
     print('')
     print('-----Transacciones-----')
     contador=0
-    while contador<10:
+    while contador<9:
         print('Transaccion',contador+1)
         print('Tipo de transaccion: ',transacciones_black.get('transacciones')[contador]['tipo'])
         print('Monto: ',transacciones_black.get('transacciones')[contador]['monto'])
