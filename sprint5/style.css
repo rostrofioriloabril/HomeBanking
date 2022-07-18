@@ -1,0 +1,11 @@
+.contenedorglobal{
+    display: flex;
+    background-color: aqua;
+
+}
+.transacciones{
+    display: flex ;
+    flex-direction: column;
+    width: 25%;
+    height: auto;
+}

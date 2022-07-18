@@ -13,7 +13,7 @@ t_gold = eventos.transacciones_gold
 
 class RazonCompraDolar(Razon):
     def __init__(self, tipo):
-        super().__init__(self,tipo)
+        super().__init__(tipo)
         pass
     def validar(tipo):
         respuesta = ""
@@ -31,16 +31,16 @@ class RazonCompraDolar(Razon):
             #Classsic
             if(conseguirItems(archivo,'transacciones',i,'tipo')=='COMPRA_DOLAR' and tipo =='CLASSIC'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                    respuesta = print('Los clientes Classic no pueden comprar dolares')
+                    respuesta = 'Los clientes Classic no pueden comprar dolares'
 
             #Gold
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='COMPRA_DOLAR' and tipo =='GOLD'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                    respuesta = print('Cliente Gold: No puede comprar esa cantidad de dolares por fondos insuficientes')
+                    respuesta = 'Cliente Gold: No puede comprar esa cantidad de dolares por fondos insuficientes'
             #Black
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='COMPRA_DOLAR' and tipo =='BLACK'):
                     if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                        respuesta = print('Cliente Black: No puede comprar esa cantidad de dolares por fondos insuficientes')
+                        respuesta = 'Cliente Black: No puede comprar esa cantidad de dolares por fondos insuficientes'
 
         return respuesta
 

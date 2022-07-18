@@ -15,7 +15,7 @@ t_gold = eventos.transacciones_gold
 
 class RazonAltaChequera(Razon):
     def __init__(self, tipo):
-        super().__init__(self,tipo)
+        super().__init__(tipo)
         pass
     def validar(tipo):
         respuesta = ""
@@ -34,19 +34,19 @@ class RazonAltaChequera(Razon):
             if(conseguirItems(archivo,'transacciones',i,'tipo')=='ALTA_CHEQUERA' and tipo =='CLASSIC'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'totalChequerasActualmente')>=NuevoCliente.getDatosClassic()['total_chequeras']):
-                            respuesta = print('Los clientes Classic no pueden tener chequeras')
+                            respuesta = 'Los clientes Classic no pueden tener chequeras'
 
             #Gold
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='ALTA_CHEQUERA' and tipo =='GOLD'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'totalChequerasActualmente')>=NuevoCliente.getDatosGold()['total_chequeras']):
-                            respuesta = print('Los clientes Gold no pueden tener mas de 1 chequeras')
+                            respuesta = 'Los clientes Gold no pueden tener mas de 1 chequeras'
 
             #Black
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='ALTA_CHEQUERA' and tipo =='BLACK'):
                     if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'totalChequerasActualmente')>=NuevoCliente.getDatosBlack()['total_chequeras']):
-                            respuesta = print('Los clientes Black no pueden tener mas de 2 chequeras')
+                            respuesta = 'Los clientes Black no pueden tener mas de 2 chequeras'
         return respuesta
 
 #este print devuelve del JSON el alta de las chequeras, si le pasan gold lee el archivo gold, si le pasan classic lo mismo, etc.

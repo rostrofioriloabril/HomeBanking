@@ -15,7 +15,7 @@ t_gold = eventos.transacciones_gold
 
 class RazonTransferenciaRecibida(Razon):
     def __init__(self, tipo):
-        super().__init__(self,tipo)
+        super().__init__(tipo)
         pass
     def validar(tipo):
         respuesta = ""
@@ -27,20 +27,20 @@ class RazonTransferenciaRecibida(Razon):
         elif(tipo == 'BLACK'):
             archivo = t_black
         else:
-            print('No contamos con el servicio')
+            return 'No contamos con el servicio'
 
         for i in range(len(archivo.get('transacciones'))):
             #Classsic
             if(conseguirItems(archivo,'transacciones',i,'tipo')=='TRANSFERENCIA_RECIBIDA' and tipo =='CLASSIC'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosClassic()['limite_transferencia_recibida']):
-                            respuesta = print('Los clientes Classic no pueden recibir mas de $150.000')
+                            respuesta = 'Los clientes Classic no pueden recibir mas de $150.000'
 
             #Gold
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='TRANSFERENCIA_RECIBIDA' and tipo =='GOLD'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosGold()['limite_transferencia_recibida']):
-                            respuesta = print('Los clientes Gold no pueden recibir mas de $500.000')
+                            respuesta = 'Los clientes Gold no pueden recibir mas de $500.000'
 
             #Black no tiene limite
         return respuesta

@@ -10,7 +10,7 @@ t_gold = eventos.transacciones_gold
 
 class RazonTransferenciaEnviada(Razon):
     def __init__(self, tipo):
-        super().__init__(self,tipo)
+        super().__init__(tipo)
         pass
     def validar(tipo):
         respuesta = ""
@@ -22,22 +22,22 @@ class RazonTransferenciaEnviada(Razon):
         elif(tipo == 'BLACK'):
             archivo = t_black
         else:
-            print('No contamos con el servicio')
+            return 'No contamos con el servicio'
 
         for i in range(len(archivo.get('transacciones'))):
             #Classsic
             if(conseguirItems(archivo,'transacciones',i,'tipo')=='TRANSFERENCIA_ENVIADA' and tipo =='CLASSIC'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                    respuesta = print('Clientes Classic: Fondos insuficientes para realizar la transferencia')
+                    respuesta = 'Clientes Classic: Fondos insuficientes para realizar la transferencia'
 
             #Gold
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='TRANSFERENCIA_ENVIADA' and tipo =='GOLD'):
                 if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                    respuesta = print('Cliente Gold: Fondos insuficientes para realizar la transferencia')
+                    respuesta = 'Cliente Gold: Fondos insuficientes para realizar la transferencia'
             #Black
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='TRANSFERENCIA_ENVIADA' and tipo =='BLACK'):
                     if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
-                        respuesta = print('Cliente Black: Fondos insuficientes para realizar la transferencia')
+                        respuesta = 'Cliente Black: Fondos insuficientes para realizar la transferencia'
 
         return respuesta
 

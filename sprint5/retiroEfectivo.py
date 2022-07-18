@@ -23,7 +23,7 @@ class RazonRetiroEfectivo(Razon):
         elif(tipo == 'BLACK'):
             archivo = t_black
         else:
-            print('No contamos con el servicio')
+            return 'No contamos con el servicio'
 
         for i in range(len(archivo.get('transacciones'))):
             #Classsic
@@ -32,7 +32,7 @@ class RazonRetiroEfectivo(Razon):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosClassic()["limite_extraccion_diario" ]and conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')>conseguirItems(archivo,'transacciones',i,'monto')):
                             respuesta = "El monto ingresado supera el límite de extraccion diaria"
                         elif(conseguirItems(archivo,'transacciones',i,'monto') > conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')):
-                            respuesta = "El monto supera su cupo diario restante. Su cupo diaro ahora es de: ${}'.format(conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante))"
+                            respuesta = "El monto supera su cupo diario restante."
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') or conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')- conseguirItems(archivo,'transacciones',i,'monto')<0):
                             respuesta = "El monto a retirar es mayor que el saldo de su cuenta"
 
@@ -42,7 +42,7 @@ class RazonRetiroEfectivo(Razon):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosGold()["limite_extraccion_diario"]):
                             respuesta = "El monto ingresado supera el límite de extraccion diaria"
                         elif(conseguirItems(archivo,'transacciones',i,'monto')> conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')):
-                            respuesta = print('El máximo de saldo que puede retirar hoy es de: ${}'.format(conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')))
+                            respuesta = "El monto ingresado supera su cupo diario"
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') or conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')- conseguirItems(archivo,'transacciones',i,'monto')<0):
                             respuesta = "El monto a retirar es mayor que el saldo de su cuenta"
 
@@ -50,9 +50,9 @@ class RazonRetiroEfectivo(Razon):
             elif(conseguirItems(archivo,'transacciones',i,'tipo')=='RETIRO_EFECTIVO_CAJERO_AUTOMATICO' and tipo =='BLACK'):
                     if(conseguirItems(archivo, 'transacciones',i,'estado')== 'RECHAZADA'):
                         if(conseguirItems(archivo,'transacciones',i,'monto')>NuevoCliente.getDatosBlack()["limite_extraccion_diario"]):
-                            respuesta = print('El monto ingresado supera el límite de extraccion diaria')
+                            respuesta = 'El monto ingresado supera el límite de extraccion diaria'
                         elif(conseguirItems(archivo,'transacciones',i,'monto')> conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante')):
-                            respuesta = "El máximo de saldo que puede retirar hoy es de: ${}".format(conseguirItems(archivo,'transacciones',i,'cupoDiarioRestante'))
+                            respuesta = "El monto ingresado supera su cupo diario"
                         elif(conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')<conseguirItems(archivo,'transacciones',i,'monto') or conseguirItems(archivo,'transacciones',i,'saldoEnCuenta')- conseguirItems(archivo,'transacciones',i,'monto')<0):
                             respuesta = "El monto a retirar es mayor que el saldo de su cuenta"
 
