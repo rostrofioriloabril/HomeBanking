@@ -1,11 +1,16 @@
-.contenedorglobal{
-    display: flex;
-    background-color: aqua;
-
+h1 {
+    text-align: center;
+}
+.contenedor-nombre{
+    text-align: center;
+    width: calc(100%-0.2em);
+    padding: 0.2em;
+    background-color: antiquewhite;
 }
 .transacciones{
-    display: flex ;
-    flex-direction: column;
-    width: 25%;
-    height: auto;
+    width: calc(100%-0.2em);
+    text-align: center;
+    background-color: rgba(252, 168, 168, 0.712);
+    padding: 0.2em 0.2em;
+    border: 1px solid rgb(53, 36, 36);
 }

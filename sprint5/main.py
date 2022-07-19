@@ -1,3 +1,4 @@
+from cgitb import html
 import json
 #en este archivo pasamos archivos JSON (con datos de clientes y transacciones realizadas) a diccionarios de Python para poder utilizarlos
 
@@ -162,23 +163,21 @@ with open('sprint5/eventos_black.json', 'r') as eventos_black:
 # clienteGold()
 # clienteBlack()
 f = open('sprint5/transacciones.html', 'w')
+f.write("<html>\n<head>\n\t<link rel='stylesheet' href='style.css'>\n\t<title>Transacciones</title>\n</head>\n<body>\n\t<h1>Transacciones Cliente Itbank</h1>")
 def mostrarClases(tipo):
-     if(tipo =='CLASSIC'):
+    if(tipo =='CLASSIC'):
             archivo = t_classic
-
-     elif(tipo == 'GOLD'):
+    elif(tipo == 'GOLD'):
         archivo = t_gold
-     elif(tipo == 'BLACK'):
+    elif(tipo == 'BLACK'):
         archivo = t_black
     # to open/create a new html file in the write mode
-     
-
-     html_template = "<html>\n<head>\n<title>Transacciones</title>\n</head>\n<body>\n\t<h1>Transacciones Cliente Itbank</h1>\n\t<h2>Nombre: {} {}</h2>\n\t<h4>Cliente tipo: {}</h4>\n\t<h4>Numero de cuenta: {}</h4>\n\t<h4>dni: {}</h4>\n\t<h4>Direccion: {} {}, {}</h4>\n\t".format(archivo['nombre'], archivo['apellido'], archivo ['tipo'], archivo['numero'], archivo['dni'], archivo['direccion']['calle'], archivo['direccion']['numero'], archivo['direccion']['ciudad'])
-     html_template+="<div class='contenedorglobal'>\n\t\t<div class='transacciones'>"
-     contador = 1
-     for i in range(len(archivo['transacciones'])):
+    html_template = "\n\t<div class='contenedorglobal'>\n\t\t<div class='contenedor-nombre'>\n\t\t\t<h2>Nombre: {} {}</h2>\n\t\t\t<h3>Cliente tipo: {}</h3>\n\t\t\t<h3>Numero de cuenta: {}</h3>\n\t\t\t<h3>dni: {}</h3>\n\t\t\t<h3>Direccion: {} {}, {}</h3>\n\t\t</div>\n".format(archivo['nombre'], archivo['apellido'], archivo ['tipo'], archivo['numero'], archivo['dni'], archivo['direccion']['calle'], archivo['direccion']['numero'], archivo['direccion']['ciudad'])
+    html_template+="\n\t\t"
+    contador = 1
+    for i in range(len(archivo['transacciones'])):
             
-            html_template += "\n\t\t<h3>Transaccion: {}</h3> \n\t\t <h4>Fecha: {}</h4>\n\t\t <h4>Tipo: {}</h4> \n\t\t <h4>Estado: {}</h4> \n\t\t <h4>Monto: {}</h4>".format(contador, archivo['transacciones'][i]['fecha'], archivo['transacciones'][i]['tipo'], archivo['transacciones'][i]['estado'], archivo['transacciones'][i]['monto'])
+            html_template += "<div class='transacciones'>\n\t\t\t<h3>Transaccion: {}</h3>\n\t\t\t<h4>Fecha: {}</h4>\n\t\t\t<h4>Tipo: {}</h4>\n\t\t\t<h4>Estado: {}</h4> \n\t\t\t<h4>Monto: {}</h4>".format(contador, archivo['transacciones'][i]['fecha'], archivo['transacciones'][i]['tipo'], archivo['transacciones'][i]['estado'], archivo['transacciones'][i]['monto'])
             if archivo['transacciones'][i]['estado'] == 'RECHAZADA':
                 if archivo['transacciones'][i]['tipo'] == 'RETIRO_EFECTIVO_CAJERO_AUTOMATICO': 
                     html_template += '<h4 style="color: red;">Razon: {}</h4>'.format(RazonRetiroEfectivo.validar(tipo)) 
@@ -194,30 +193,30 @@ def mostrarClases(tipo):
                     html_template += '<h4 style="color: red;">Razon: {}</h4>'.format(RazonTransferenciaEnviada.validar(tipo)) 
                 if archivo['transacciones'][i]['tipo'] == 'TRANSFERENCIA_RECIBIDA': 
                     html_template += '<h4 style="color: red;">Razon: {}</h4>'.format(RazonTransferenciaRecibida.validar(tipo)) 
-            
+                html_template +="\n\t\t</div>\n\t\t"
             contador += 1
-     html_template+="\n\t\t</div>\n\t</div>\n</body>\n</html>"
             # if archivo['transacciones'][i]['tipo'] == 'RETIRO_EFECTIVO_CAJERO_AUTOMATICO': 
             #     html_template += '<h4 style="color: red;">Razon: {}</h4>'.format(RazonAltaChequera(tipo)) 
-        
+    html_template+="\n\t</div>"   
+    html_template+="\n"
         
 
     
     # writing the code into the file
-     f.write(html_template)
+    f.write(html_template)
     # close the file
     # viewing html files
     # below code creates a
     # codecs.StreamReaderWriter objec
     # using .read method to view the html
     # code from our object
-     
 
 mostrarClases('CLASSIC')
 f.write("")
 mostrarClases('GOLD')
 f.write("")
 mostrarClases('BLACK')
+f.write("\n</body>\n</html>\n")
 f.close()
 file = codecs.open("sprint5/transacciones.html", 'r', "utf-8")
 # print(mostrarClases('GOLD'))

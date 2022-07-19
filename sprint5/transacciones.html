@@ -1,184 +1,220 @@
 <html>
 <head>
-<title>Transacciones</title>
+	<link rel='stylesheet' href='style.css'>
+	<title>Transacciones</title>
 </head>
 <body>
 	<h1>Transacciones Cliente Itbank</h1>
-	<h2>Nombre: Nicolas Torres</h2>
-	<h4>Cliente tipo: CLASSIC</h4>
-	<h4>Numero de cuenta: 100001</h4>
-	<h4>dni: 29494777</h4>
-	<h4>Direccion: Rivadavia 7900, Capital Federal</h4>
-	<div class='contenedorglobal'style='display:flex ;'>
-		<div class='transacciones'style='display:flex;flex-direction:column;width:25%'>
-		<h3>Transaccion: 1</h3> 
-		 <h4>Fecha: 20/06/2022 16:00:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 1000</h4>
-		<h3>Transaccion: 2</h3> 
-		 <h4>Fecha: 20/06/2022 17:00:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto supera su cupo diario restante.</h4>
-		<h3>Transaccion: 3</h3> 
-		 <h4>Fecha: 20/06/2022 18:00:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto supera su cupo diario restante.</h4>
-		<h3>Transaccion: 4</h3> 
-		 <h4>Fecha: 22/06/2022 16:00:55</h4>
-		 <h4>Tipo: ALTA_TARJETA_CREDITO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden tener tarjetas de credito</h4>
-		<h3>Transaccion: 5</h3> 
-		 <h4>Fecha: 23/06/2022 16:00:55</h4>
-		 <h4>Tipo: ALTA_CHEQUERA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden tener chequeras</h4>
-		<h3>Transaccion: 6</h3> 
-		 <h4>Fecha: 24/06/2022 16:00:55</h4>
-		 <h4>Tipo: COMPRA_DOLAR</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden comprar dolares</h4>
-		<h3>Transaccion: 7</h3> 
-		 <h4>Fecha: 25/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_ENVIADA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 100000</h4><h4 style="color: red;">Razon: Clientes Classic: Fondos insuficientes para realizar la transferencia</h4>
-		<h3>Transaccion: 8</h3> 
-		 <h4>Fecha: 24/06/2022 17:00:00</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 9000</h4>
-		<h3>Transaccion: 9</h3> 
-		 <h4>Fecha: 25/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 200000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden recibir mas de $150.000</h4>
+	<div class='contenedorglobal'>
+		<div class='contenedor-nombre'>
+			<h2>Nombre: Nicolas Torres</h2>
+			<h3>Cliente tipo: CLASSIC</h3>
+			<h3>Numero de cuenta: 100001</h3>
+			<h3>dni: 29494777</h3>
+			<h3>Direccion: Rivadavia 7900, Capital Federal</h3>
 		</div>
-	</div>
-</body>
-</html><html>
-<head>
-<title>Transacciones</title>
-</head>
-<body>
-	<h1>Transacciones Cliente Itbank</h1>
-	<h2>Nombre: Federico Sanchez</h2>
-	<h4>Cliente tipo: GOLD</h4>
-	<h4>Numero de cuenta: 100001</h4>
-	<h4>dni: 41766479</h4>
-	<h4>Direccion: Corrientes 4900, Capital Federal</h4>
-	<div class='contenedorglobal'style='display:flex ;'>
-		<div class='transacciones'style='display:flex ;flex-direction:column;width:25%'>
-		<h3>Transaccion: 1</h3> 
-		 <h4>Fecha: 10/06/2022 16:00:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 1000</h4>
-		<h3>Transaccion: 2</h3> 
-		 <h4>Fecha: 10/06/2022 16:40:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
-		<h3>Transaccion: 3</h3> 
-		 <h4>Fecha: 10/06/2022 16:55:45</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
-		<h3>Transaccion: 4</h3> 
-		 <h4>Fecha: 11/06/2022 16:00:55</h4>
-		 <h4>Tipo: ALTA_TARJETA_CREDITO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden tener mas de 1 tarjeta de credito</h4>
-		<h3>Transaccion: 5</h3> 
-		 <h4>Fecha: 12/06/2022 16:00:55</h4>
-		 <h4>Tipo: ALTA_CHEQUERA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden tener mas de 1 chequeras</h4>
-		<h3>Transaccion: 6</h3> 
-		 <h4>Fecha: 13/06/2022 10:00:00</h4>
-		 <h4>Tipo: COMPRA_DOLAR</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Cliente Gold: No puede comprar esa cantidad de dolares por fondos insuficientes</h4>
-		<h3>Transaccion: 7</h3> 
-		 <h4>Fecha: 14/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_ENVIADA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 100000</h4><h4 style="color: red;">Razon: Cliente Gold: Fondos insuficientes para realizar la transferencia</h4>
-		<h3>Transaccion: 8</h3> 
-		 <h4>Fecha: 20/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 9000</h4>
-		<h3>Transaccion: 9</h3> 
-		 <h4>Fecha: 21/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 600000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden recibir mas de $500.000</h4>
+
+		<div class='transacciones'>
+			<h3>Transaccion: 1</h3>
+			<h4>Fecha: 20/06/2022 16:00:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 1000</h4><div class='transacciones'>
+			<h3>Transaccion: 2</h3>
+			<h4>Fecha: 20/06/2022 17:00:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto supera su cupo diario restante.</h4>
 		</div>
-	</div>
-</body>
-</html><html>
-<head>
-<title>Transacciones</title>
-</head>
-<body>
-	<h1>Transacciones Cliente Itbank</h1>
-	<h2>Nombre: Paula Rodriguez</h2>
-	<h4>Cliente tipo: BLACK</h4>
-	<h4>Numero de cuenta: 100001</h4>
-	<h4>dni: 37122592</h4>
-	<h4>Direccion: Cordoba 6500, Capital Federal</h4>
-	<div class='contenedorglobal'style='display:flex ;'>
-		<div class='transacciones'style='display:flex ;flex-direction:column;width:25%'>
-		<h3>Transaccion: 1</h3> 
-		 <h4>Fecha: 06/06/2022 10:00:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 1000</h4>
-		<h3>Transaccion: 2</h3> 
-		 <h4>Fecha: 06/06/2022 10:10:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
-		<h3>Transaccion: 3</h3> 
-		 <h4>Fecha: 06/06/2022 10:22:55</h4>
-		 <h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
-		<h3>Transaccion: 4</h3> 
-		 <h4>Fecha: 06/06/2022 12:00:00</h4>
-		 <h4>Tipo: ALTA_TARJETA_CREDITO</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Black no pueden tener mas de 5 tarjetas de credito</h4>
-		<h3>Transaccion: 5</h3> 
-		 <h4>Fecha: 06/06/2022 12:30:55</h4>
-		 <h4>Tipo: ALTA_CHEQUERA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Black no pueden tener mas de 2 chequeras</h4>
-		<h3>Transaccion: 6</h3> 
-		 <h4>Fecha: 06/06/2022 12:45:33</h4>
-		 <h4>Tipo: COMPRA_DOLAR</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 9000</h4><h4 style="color: red;">Razon: Cliente Black: No puede comprar esa cantidad de dolares por fondos insuficientes</h4>
-		<h3>Transaccion: 7</h3> 
-		 <h4>Fecha: 06/06/2022 13:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_ENVIADA</h4> 
-		 <h4>Estado: RECHAZADA</h4> 
-		 <h4>Monto: 1000000</h4><h4 style="color: red;">Razon: Cliente Black: Fondos insuficientes para realizar la transferencia</h4>
-		<h3>Transaccion: 8</h3> 
-		 <h4>Fecha: 06/06/2022 13:11:15</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 9000</h4>
-		<h3>Transaccion: 9</h3> 
-		 <h4>Fecha: 06/06/2022 16:00:55</h4>
-		 <h4>Tipo: TRANSFERENCIA_RECIBIDA</h4> 
-		 <h4>Estado: ACEPTADA</h4> 
-		 <h4>Monto: 200000</h4>
+		<div class='transacciones'>
+			<h3>Transaccion: 3</h3>
+			<h4>Fecha: 20/06/2022 18:00:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto supera su cupo diario restante.</h4>
 		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 4</h3>
+			<h4>Fecha: 22/06/2022 16:00:55</h4>
+			<h4>Tipo: ALTA_TARJETA_CREDITO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden tener tarjetas de credito</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 5</h3>
+			<h4>Fecha: 23/06/2022 16:00:55</h4>
+			<h4>Tipo: ALTA_CHEQUERA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden tener chequeras</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 6</h3>
+			<h4>Fecha: 24/06/2022 16:00:55</h4>
+			<h4>Tipo: COMPRA_DOLAR</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden comprar dolares</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 7</h3>
+			<h4>Fecha: 25/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_ENVIADA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 100000</h4><h4 style="color: red;">Razon: Clientes Classic: Fondos insuficientes para realizar la transferencia</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 8</h3>
+			<h4>Fecha: 24/06/2022 17:00:00</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 9000</h4><div class='transacciones'>
+			<h3>Transaccion: 9</h3>
+			<h4>Fecha: 25/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 200000</h4><h4 style="color: red;">Razon: Los clientes Classic no pueden recibir mas de $150.000</h4>
+		</div>
+		
 	</div>
+
+	<div class='contenedorglobal'>
+		<div class='contenedor-nombre'>
+			<h2>Nombre: Federico Sanchez</h2>
+			<h3>Cliente tipo: GOLD</h3>
+			<h3>Numero de cuenta: 100001</h3>
+			<h3>dni: 41766479</h3>
+			<h3>Direccion: Corrientes 4900, Capital Federal</h3>
+		</div>
+
+		<div class='transacciones'>
+			<h3>Transaccion: 1</h3>
+			<h4>Fecha: 10/06/2022 16:00:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 1000</h4><div class='transacciones'>
+			<h3>Transaccion: 2</h3>
+			<h4>Fecha: 10/06/2022 16:40:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 3</h3>
+			<h4>Fecha: 10/06/2022 16:55:45</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 4</h3>
+			<h4>Fecha: 11/06/2022 16:00:55</h4>
+			<h4>Tipo: ALTA_TARJETA_CREDITO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden tener mas de 1 tarjeta de credito</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 5</h3>
+			<h4>Fecha: 12/06/2022 16:00:55</h4>
+			<h4>Tipo: ALTA_CHEQUERA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden tener mas de 1 chequeras</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 6</h3>
+			<h4>Fecha: 13/06/2022 10:00:00</h4>
+			<h4>Tipo: COMPRA_DOLAR</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Cliente Gold: No puede comprar esa cantidad de dolares por fondos insuficientes</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 7</h3>
+			<h4>Fecha: 14/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_ENVIADA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 100000</h4><h4 style="color: red;">Razon: Cliente Gold: Fondos insuficientes para realizar la transferencia</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 8</h3>
+			<h4>Fecha: 20/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 9000</h4><div class='transacciones'>
+			<h3>Transaccion: 9</h3>
+			<h4>Fecha: 21/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 600000</h4><h4 style="color: red;">Razon: Los clientes Gold no pueden recibir mas de $500.000</h4>
+		</div>
+		
+	</div>
+
+	<div class='contenedorglobal'>
+		<div class='contenedor-nombre'>
+			<h2>Nombre: Paula Rodriguez</h2>
+			<h3>Cliente tipo: BLACK</h3>
+			<h3>Numero de cuenta: 100001</h3>
+			<h3>dni: 37122592</h3>
+			<h3>Direccion: Cordoba 6500, Capital Federal</h3>
+		</div>
+
+		<div class='transacciones'>
+			<h3>Transaccion: 1</h3>
+			<h4>Fecha: 06/06/2022 10:00:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 1000</h4><div class='transacciones'>
+			<h3>Transaccion: 2</h3>
+			<h4>Fecha: 06/06/2022 10:10:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 11000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 3</h3>
+			<h4>Fecha: 06/06/2022 10:22:55</h4>
+			<h4>Tipo: RETIRO_EFECTIVO_CAJERO_AUTOMATICO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: El monto ingresado supera su cupo diario</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 4</h3>
+			<h4>Fecha: 06/06/2022 12:00:00</h4>
+			<h4>Tipo: ALTA_TARJETA_CREDITO</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Black no pueden tener mas de 5 tarjetas de credito</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 5</h3>
+			<h4>Fecha: 06/06/2022 12:30:55</h4>
+			<h4>Tipo: ALTA_CHEQUERA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Los clientes Black no pueden tener mas de 2 chequeras</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 6</h3>
+			<h4>Fecha: 06/06/2022 12:45:33</h4>
+			<h4>Tipo: COMPRA_DOLAR</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 9000</h4><h4 style="color: red;">Razon: Cliente Black: No puede comprar esa cantidad de dolares por fondos insuficientes</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 7</h3>
+			<h4>Fecha: 06/06/2022 13:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_ENVIADA</h4>
+			<h4>Estado: RECHAZADA</h4> 
+			<h4>Monto: 1000000</h4><h4 style="color: red;">Razon: Cliente Black: Fondos insuficientes para realizar la transferencia</h4>
+		</div>
+		<div class='transacciones'>
+			<h3>Transaccion: 8</h3>
+			<h4>Fecha: 06/06/2022 13:11:15</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 9000</h4><div class='transacciones'>
+			<h3>Transaccion: 9</h3>
+			<h4>Fecha: 06/06/2022 16:00:55</h4>
+			<h4>Tipo: TRANSFERENCIA_RECIBIDA</h4>
+			<h4>Estado: ACEPTADA</h4> 
+			<h4>Monto: 200000</h4>
+	</div>
+
 </body>
 </html>
