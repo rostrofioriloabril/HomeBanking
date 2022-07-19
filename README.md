@@ -5,15 +5,10 @@ Este repositorio pertenece al grupo 5 de la comisión 2 del curso "Full Stack De
 ## Integrantes
 
 Ivan Krawchik
-
 Federico Czerwiak
-
 Abril Rostro Fiorilo
-
 Camila Mazzaro
-
 Valentina Camacho
-
 Nicolas Caliari
 
 ## Contenidos
