@@ -14,9 +14,12 @@ ORDER BY edad
 
 /* 3 */
 
-
-/* 4 */ REVISAR
+/* 4 */ LISTO
 DELETE FROM cliente
 WHERE customer_name='Noel' AND customer_surname='David';
 
 /* 5 */
+SELECT * LISTO
+FROM prestamo
+ORDER BY 4 DESC
+LIMIT 1
