@@ -34,9 +34,10 @@ WHERE loan_total > (SELECT AVG(loan_total)
 					
 
 /* 6 */ LISTO
-SELECT count((strftime('%Y', 'now') - strftime('%Y', cliente.dob )) - (strftime('%m-%d', 'now') < strftime('%m-%d', cliente.dob))) AS menores_de_50
-FROM cliente
-WHERE dob<50 
+SELECT count(*)
+FROM (SELECT((strftime('%Y', 'now') - strftime('%Y', cliente.dob )) - (strftime('%m-%d', 'now') < strftime('%m-%d', cliente.dob))) AS edad
+		FROM cliente
+		WHERE edad<50 )
 
 /* 7 */ LISTO
 SELECT *
@@ -48,7 +49,7 @@ LIMIT 5
 SELECT *
 FROM prestamo
 WHERE loan_date LIKE '%-04-%' OR loan_date LIKE '%-06-%' OR loan_date LIKE '%-08-%'
-ORDER BY loan_total
+ORDER BY loan_total DESC
 
 /* 9 */ LISTO
 SELECT SUM(loan_total) loan_total_accu
