@@ -13,7 +13,7 @@ ORDER BY edad
 /* 2 */ LISTO
 INSERT INTO cliente(customer_name, customer_surname, customer_DNI, dob, branch_id)
 VALUES	
-	('Lois', 'Stout', 47730534, '1984-07-07', 80), 
+	('Lois', 'Stout', 47730534, '1984-07-07', 80), /*id 503*/
 	('Hall', 'Mcconnell', 52055464, '1968-04-30', 45),
 	('Hilel', 'Mclean', 43625213, '1993-03-28', 77),
 	('Jin', 'Cooley', 21207908, '1959-08-24', 96),
@@ -22,7 +22,7 @@ VALUES
 /* 3 */ LISTO
 UPDATE cliente
 SET branch_id = 10
-WHERE customer_id >= 503
+WHERE customer_DNI = 47730534 OR 52055464 OR 43625213 OR 21207908 OR 57063950
 
 /* 4 */ LISTO
 DELETE FROM cliente
