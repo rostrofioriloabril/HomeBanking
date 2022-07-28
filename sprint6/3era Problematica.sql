@@ -4,23 +4,23 @@ SELECT *
 FROM cuenta 
 WHERE balance<0
 
-/* 2 */ FALTA PONER LA EDAD
-SELECT customer_name AS Nombre,customer_surname AS Apellido, dob AS edad
+/* 2 */ LISTO
+SELECT customer_name AS Nombre,customer_surname AS Apellido, (strftime('%Y', 'now') - strftime('%Y', cliente.dob )) - (strftime('%m-%d', 'now') < strftime('%m-%d', cliente.dob )) AS Edad
 FROM cliente
 WHERE Apellido LIKE '%z%'
 
-/* 3 */ FALTA PONER LA EDAD
-SELECT customer_name AS Nombre,customer_surname AS Apellido, dob AS edad,sucursal.branch_name as Nombre_sucursal
+/* 3 */ LISTO
+SELECT customer_name AS Nombre,customer_surname AS Apellido, (strftime('%Y', 'now') - strftime('%Y', cliente.dob )) - (strftime('%m-%d', 'now') < strftime('%m-%d', cliente.dob )) AS Edad,sucursal.branch_name as Nombre_sucursal
 FROM cliente
 INNER JOIN sucursal
 ON sucursal.branch_id=cliente.branch_id
 WHERE Nombre LIKE 'Brendan'
 ORDER BY 4
 
-/* 4 */ REVISAR
+/* 4 */ LISTO
 SELECT *
 FROM prestamo
-WHERE (loan_total)>80000
+WHERE (loan_total)>80000 AND (loan_type)='PRENDARIO'
 UNION
 SELECT *
 FROM prestamo
@@ -32,10 +32,11 @@ FROM prestamo
 WHERE loan_total > (SELECT AVG(loan_total) 
 					FROM prestamo)
 					
-/* 6 */ FALTA PONER LA EDAD
-SELECT count(dob)
+
+/* 6 */ LISTO
+SELECT count((strftime('%Y', 'now') - strftime('%Y', cliente.dob )) - (strftime('%m-%d', 'now') < strftime('%m-%d', cliente.dob))) AS menores_de_50
 FROM cliente
-WHERE dob<50
+WHERE dob<50 
 
 /* 7 */ LISTO
 SELECT *
