@@ -22,7 +22,6 @@ CREATE TABLE Marca_tarjeta (
 INSERT INTO Marca_tarjeta(brand_card_id,brand_card_name)
 VALUES(1,'Visa'),(2,'American Express'),(3,'MasterCard')
 
-
 /* 2 */ LISTO
 CREATE TABLE Tarjeta (
 	card_id INTEGER PRIMARY KEY ,
@@ -800,6 +799,18 @@ ON cuenta.type_account_id=Tipo_cuenta.type_account_id
 INNER JOIN cliente
 ON cliente.customer_id=cuenta.customer_id
 ORDER BY 2
+
 /* 9 */
+
+UPDATE cuenta
+SET type_account_id = NULL
+
+UPDATE cuenta
+SET type_account_id = random()
+
+
+SELECT * 
+FROM cuenta
+limit 100
 
 /* 10 */
