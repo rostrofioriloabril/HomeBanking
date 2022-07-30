@@ -662,17 +662,12 @@ INNER JOIN cliente
 ON cliente.customer_id=cuenta.customer_id
 ORDER BY 2
 
-/* 9 */
-
+/* 9 */ LISTO
 UPDATE cuenta
-SET type_account_id = NULL
+SET type_account_id = abs(random()) % (4 - 1) + 1
 
-UPDATE cuenta
-SET type_account_id = random()
-
-
-SELECT * 
-FROM cuenta
-limit 100
-
-/* 10 */
+/* 10 */ LISTO 
+UPDATE empleado
+  SET employee_hire_date = SUBSTR(employee_hire_date, 7, 4)
+     || '-' || SUBSTR(employee_hire_date, 4, 2)
+     || '-' || SUBSTR(employee_hire_date, 1, 2)
