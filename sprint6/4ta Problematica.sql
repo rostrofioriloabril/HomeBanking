@@ -77,8 +77,34 @@ INDEXED BY IND_dni
 
 /* 7 */
 CREATE TABLE Movimientos(
-	numero_cuenta INTEGER NOT NULL,
+	movimiento_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	account_id INTEGER NOT NULL,
+	signo TEXT NOT NULL,
 	monto INTEGER NOT NULL,
 	tipo_operacion TEXT NOT NULL,
-	hora,TEXT NOT NULL
+	hora TEXT NOT NULL
 )
+
+END TRANSACTION;
+BEGIN TRANSACTION;
+
+UPDATE cuenta
+	SET balance = balance - 1000
+WHERE account_id = 200;
+
+UPDATE cuenta 
+	SET balance = balance + 1000
+WHERE account_id = 400;
+
+INSERT INTO Movimientos (account_id, signo, monto, tipo_operacion, hora)
+VALUES (200, '-', 1000, 'Envio Transferencia', datetime('now'));
+
+INSERT INTO Movimientos (account_id, signo, monto, tipo_operacion, hora)
+VALUES (400, '+', 1000, 'Recibo Transferencia', datetime('now'));
+
+COMMIT;
+
+ROLLBACK;
+
+SELECT *
+FROM Movimientos
