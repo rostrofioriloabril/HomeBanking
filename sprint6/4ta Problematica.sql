@@ -7,8 +7,8 @@ ON sucursal.branch_id=cliente.branch_id
 GROUP BY Nombre_sucursal
 ORDER BY 1 DESC
 
-/* 2 */ (FALTA DIVIDIR CANTIDAD DE CLIENTES POR EMPLEADO, EN CADA SUCURSAL)
-SELECT COUNT(employee_id) AS Cantidad_empleados,sucursal.branch_name as Nombre_sucursal, customer_id as Cantidad_clientes
+/* 2 */ LISTO
+SELECT COUNT(employee_id) AS Cantidad_empleados,sucursal.branch_name as Nombre_sucursal, customer_id as Cantidad_clientes,round(CAST(count(employee_id) AS FLOAT)/customer_id,2) as Clientes_X_Empleados
 FROM empleado
 INNER JOIN sucursal
 ON sucursal.branch_id=empleado.branch_id
@@ -39,6 +39,46 @@ INNER JOIN sucursal
 ON sucursal.branch_id = cliente.branch_id
 GROUP BY sucursal.branch_name
 
-/* 5 */
-/* 6 */
+/* 5 */ LISTO
+CREATE TABLE Auditoria_cuenta(
+	old_id INTEGER NOT NULL,
+	new_id INTEGER NOT NULL,
+	old_balance INTEGER NOT NULL,
+	new_balance INTEGER NOT NULL,
+	old_iban TEXT NOT NULL,
+	new_iban TEXT NOT NULL,
+	old_type INTEGER NOT NULL,
+	new_type INTEGER NOT NULL,
+	user_action TEXT NOT NULL,
+	created_at TEXT NOT NULL
+)
+
+CREATE TRIGGER insert_auditoria_cuenta
+AFTER UPDATE OF balance,iban,type_account_id ON cuenta
+BEGIN
+	INSERT INTO Auditoria_cuenta(old_id,new_id,old_balance,new_balance,old_iban,new_iban,old_type,new_type,user_action,created_at)
+	VALUES (OLD.account_id,NEW.account_id,OLD.balance,NEW.balance,OLD.iban,NEW.iban,OLD.type_account_id,NEW.type_account_id,'UPDATE',datetime('NOW'));
+END;
+
+UPDATE cuenta
+SET balance = balance-100
+WHERE account_id=10 OR account_id=11 OR account_id=12 OR account_id=13 OR account_id=14
+
+SELECT *
+FROM Auditoria_cuenta
+
+/* 6 */ LISTO
+CREATE UNIQUE INDEX IND_dni
+on cliente (customer_DNI)
+
+SELECT * 
+FROM cliente
+INDEXED BY IND_dni
+
 /* 7 */
+CREATE TABLE Movimientos(
+	numero_cuenta INTEGER NOT NULL,
+	monto INTEGER NOT NULL,
+	tipo_operacion TEXT NOT NULL,
+	hora,TEXT NOT NULL
+)
