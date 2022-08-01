@@ -26,7 +26,7 @@ ON cliente.customer_id = Tarjeta.customer_id
 INNER JOIN sucursal
 ON sucursal.branch_id = cliente.branch_id
 WHERE card_type = 'Credito'
-GROUP BY sucursal.branch_id,
+GROUP BY sucursal.branch_name,
 		Marca_tarjeta.brand_card_name
 
 

@@ -30,7 +30,7 @@ CREATE TABLE Tarjeta (
 	card_id INTEGER PRIMARY KEY ,
 	card_number TEXT CHECK (length(card_number >= 20)),
 	card_cvv TEXT NOT NULL,
-	card_valid_date INTEGER NOT N0000ULL,
+	card_valid_date INTEGER NOT NULL,
 	card_expired_date INTEGER NOT NULL,
 	card_type TEXT NOT NULL,
 	customer_id INTEGER NOT NULL,
