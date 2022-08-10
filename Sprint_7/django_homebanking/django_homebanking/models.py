@@ -18,7 +18,7 @@ class Cuenta(models.Model):
     iban = models.CharField
     type_account_id = models.IntegerField
 
-class Empleado(models.Model):
+class Empleado(models.Model): #falta agregarlo a la BD
     employee_id = models.IntegerField
     employee_name = models.CharField
     employee_surname = models.CharField
@@ -26,7 +26,7 @@ class Empleado(models.Model):
     employee_dni = models.CharField
     branch_id = models.IntegerField
 
-class Movimientos(models.Model):
+class Movimientos(models.Model): #falta agregarlo a la BD
     transaction_id = models.IntegerField
     transaction_type = models.CharField
     transaction_date = models.CharField
