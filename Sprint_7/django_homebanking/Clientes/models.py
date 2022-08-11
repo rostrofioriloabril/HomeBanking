@@ -11,5 +11,5 @@ class Cliente(models.Model):
     customer_surname = models.CharField(max_length=255)
     customer_dni = models.CharField(max_length=9)
     dob = models.CharField(max_length=10)
-    branch_id = models.ForeignKey()
-    type_customer_id = models.ForeignKey()
+    #branch_id = models.ForeignKey()
+    #type_customer_id = models.ForeignKey()
