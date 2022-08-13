@@ -13,11 +13,11 @@
                 </div>
                 <input type="button" value="Enviar" class="btn-ingresar">
                 <div class="ayuda">
-                    <a href="" id="olvidar">
+                    <a href="{% url 'recuperar' %}" id="olvidar">
                         <h4>Olvide mi clave/usuario</h4>
                     </a>
                     <h4>¿No sos cliente?</h4>
-                    <h5>Asociate <a href="" id="nuevo1">aqui</a></h5>
+                    <h5>Asociate <a href="{% url 'registrarse' %}" id="nuevo1">aqui</a></h5>
                 </div>
             </form>
         </section>

@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% block style %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock%}
-        <title>boceto</title>
+        <link rel="stylesheet" href="{% static 'Login/css/home.css' %}">
+        {% block style %}{% endblock %}
+        <title>Homebanking</title>
     </head>
     <body>
         <main>
@@ -15,7 +16,7 @@
                 <h4>Gracias por elegir nuestro homebanking :)</h4>
                 <a href=""><h6>Conoce mas sobre nuestro homebanking</h6></a>
                 <div class="background">
-                    <img class="montañas" src="{% static 'vectores/montañas.svg' %}" alt="gráfico montañas">
+                    <img class="montañas" src="{% static 'Login/vectores/montañas.svg' %}" alt="gráfico montañas">
                 </div>
             </section>
                 {% block content %}{% endblock %}
