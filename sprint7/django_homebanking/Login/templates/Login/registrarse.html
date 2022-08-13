@@ -1,0 +1,26 @@
+{% extends 'Login/base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'css/registro.css' %}">{% endblock %}
+{% block content %}
+    <div class="form-container2 asociate">
+        <h2 class="logo2">itbank</h2>
+        <section class="form">
+            <h2>Asociate aqui</h2>
+            <form action="" class="form-registro">
+                <input type="text" name="name" class="name" placeholder="Ingresa tu Nombre" required="">
+                <input type="text" name="lastName" class="lastName" placeholder="Ingresa tu Apellido" required="">
+                <input type="text" name="dni" class="dni" placeholder="Ingresa tu DNI" required="">
+                <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required="">
+                <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required="">
+                <input type="text" name="passwordRepeat" class="passwordRepeat" placeholder="Ingresa tu clave nuevamente" required="">
+                <div class="container-btn">
+                    <input type="button" value="Enviar" class="btn-registrarse">
+                </div>
+                <div class="ayuda">
+                    <h4>¿Ya sos cliente?</h4>
+                    <h5>Ingresa <a href="" id="inicia">aqui</a></h5>
+                </div>
+            </form>
+        </section>
+    </div>
+{% endblock %}

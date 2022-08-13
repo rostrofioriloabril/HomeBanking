@@ -1,0 +1,24 @@
+{% extends 'Login/base.html' %}
+
+{% block style %}<link rel="stylesheet" href="{% static 'css/recuperar.css' %}">{% endblock %}
+{% block content %}
+    <div class="form-container3 recupera" id="container_3">
+        <h2 class="logo2">itbank</h2>
+        <section class="form">
+            <h2>Recupera tus datos</h2>
+            <form action="" method="post">
+                <input type="text" name="dni" class="dni" placeholder="Ingresa tu DNI" required="">
+                <input type="text" name="user" class="user" placeholder="Ingresa tu nuevo usuario" required="">
+                <input type="password" name="password" class="password" placeholder="Ingresa tu nueva clave" required="">
+                <div class="check">
+                    <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
+                </div>
+                <input type="button" value="Enviar" class="btn-recuperar">
+                <div class="ayuda">
+                    <h4>¿No sos cliente?</h4>
+                    <h5>Asociate <a href="" id="nuevo2">aqui</a></h5>
+                </div>
+            </form>
+        </section>
+    </div>
+{% endblock %}

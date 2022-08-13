@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block style %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock%}
+        <title>boceto</title>
+    </head>
+    <body>
+        <main>
+            <section class="inicio">
+                <h2 class="logo">itbank</h2>
+                <h2>¡Hola!</h2>
+                <h4>Gracias por elegir nuestro homebanking :)</h4>
+                <a href=""><h6>Conoce mas sobre nuestro homebanking</h6></a>
+                <div class="background">
+                    <img class="montañas" src="{% static 'vectores/montañas.svg' %}" alt="gráfico montañas">
+                </div>
+            </section>
+                {% block content %}{% endblock %}
+
+</main>
+<!-- <script src="main2.js"></script> -->
+</body>
+</html>

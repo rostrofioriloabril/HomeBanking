@@ -10,5 +10,7 @@ class Tarjeta(models.Model):
     card_valid_date = models.IntegerField()
     card_expire_date = models.IntegerField()
     card_type = models.CharField(max_length=7)
-    # customer_id = models.ForeignKey(Cliente,on_delete= models.CASCADE,related_name="customer_id")
+    customer_id = models.ForeignKey(
+        Cliente,
+        on_delete=models.CASCADE)
     #branch_card_id = models.ForeignKey()

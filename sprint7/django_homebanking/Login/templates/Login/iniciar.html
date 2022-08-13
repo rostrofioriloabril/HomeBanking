@@ -1,0 +1,25 @@
+{% extends 'Login/base.html' %}
+{% block content %}
+    <div class="form-container" id="container_1">
+        <h2 class="logo2">itbank</h2>
+        <section class="form">
+            <h2>Ingresa aqui</h2>
+            <form action="" method="post" class="formulario-ingreso">
+                <input type="number" name="dni" class="dni" placeholder="Ingresa tu DNI" required="">
+                <input type="text" name="user" class="user" placeholder="Ingresa tu usuario" required="">
+                <input type="password" name="password" class="password" placeholder="Ingresa tu clave" required="">
+                <div class="check">
+                    <input type="checkbox"><label for="checkbox">¿Recordar datos?</label>
+                </div>
+                <input type="button" value="Enviar" class="btn-ingresar">
+                <div class="ayuda">
+                    <a href="" id="olvidar">
+                        <h4>Olvide mi clave/usuario</h4>
+                    </a>
+                    <h4>¿No sos cliente?</h4>
+                    <h5>Asociate <a href="" id="nuevo1">aqui</a></h5>
+                </div>
+            </form>
+        </section>
+    </div>
+{% endblock %}
