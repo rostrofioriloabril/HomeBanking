@@ -1,6 +1,6 @@
 {% extends 'Login/base.html' %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'Login/css/registro.css' %}">{% endblock %}
+{#{% block style %}<link rel="stylesheet" href="{% static 'Login/css/registro.css' %}">{% endblock %}#}
 {% block content %}
     <div class="form-container2 asociate">
         <h2 class="logo2">itbank</h2>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="ayuda">
                     <h4>¿Ya sos cliente?</h4>
-                    <h5>Ingresa <a href="" id="inicia">aqui</a></h5>
+                    <h5>Ingresa <a href="{% url 'login' %}" id="inicia">aqui</a></h5>
                 </div>
             </form>
         </section>

@@ -1,7 +1,9 @@
 {% extends 'Login/base.html' %}
 
-{% block style %}<link rel="stylesheet" href="{% static 'Login/css/recuperar.css' %}">{% endblock %}
-{% block content %}
+{#{% block link %} <link rel="stylesheet" href="{% static 'Login/css/recuperar.css' %}"> {% endblock %}#}
+
+
+{% block content %} 
     <div class="form-container3 recupera" id="container_3">
         <h2 class="logo2">itbank</h2>
         <section class="form">
@@ -16,7 +18,7 @@
                 <input type="button" value="Enviar" class="btn-recuperar">
                 <div class="ayuda">
                     <h4>¿No sos cliente?</h4>
-                    <h5>Asociate <a href="" id="nuevo2">aqui</a></h5>
+                    <h5>Asociate <a href="{% url 'registrarse' %}" id="nuevo2">aqui</a></h5>
                 </div>
             </form>
         </section>

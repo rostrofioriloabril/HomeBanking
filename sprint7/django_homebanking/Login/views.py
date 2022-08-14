@@ -5,7 +5,7 @@ def iniciar(request):
     return render(request,'Login/iniciar.html')
 
 def registrarse(request):
-    return render(request, 'Login/registrarse.html')
+    return render(request,'Login/registrarse.html')
 
 def recuperar(request):
-    return render(request, 'Login/recuperar.html')
+    return render(request,'Login/recuperar.html')

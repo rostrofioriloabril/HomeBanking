@@ -5,7 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'Login/css/home.css' %}">
-        {% block style %}{% endblock %}
         <title>Homebanking</title>
     </head>
     <body>
@@ -22,6 +21,6 @@
                 {% block content %}{% endblock %}
 
 </main>
-<!-- <script src="main2.js"></script> -->
+    <script src="{% static 'Login/js/main2.js' %}"></script>
 </body>
 </html>
