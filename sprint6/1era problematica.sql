@@ -13,10 +13,28 @@ CREATE TABLE Tipo_cuenta(
 	type_account_id INTEGER PRIMARY KEY,
 	type_account_name TEXT NOT NULL
 );
+/*DROP TABLE cuenta
+CREATE TABLE cuenta ( 
+		account_id INTEGER PRIMARY KEY AUTOINCREMENT, 
+		customer_id INTEGER NOT NULL, 
+		balance INTEGER NOT NULL, 
+		iban TEXT NOT NULL,
+		type_account TEXT,
+		
+		FOREIGN KEY (customer_id)
+		REFERENCES cliente(customer_id)
+);*/
 INSERT INTO Tipo_cuenta(type_account_id,type_account_name)
 VALUES(1,'Caja de ahorro en pesos'),
 			(2,'Caja de ahorro en dolares'),
 					(3,'Cuenta corriente');
+					
+CREATE TABLE Tipo_tarjeta (
+	type_card_id INTEGER PRIMARY KEY,
+	type_card_name TEXT NOT NULL
+);
+INSERT INTO Tipo_tarjeta(type_card_id,type_card_name)
+VALUES(1,'Debito'),(2,'Credito');
 
 CREATE TABLE Marca_tarjeta (
 	brand_card_id INTEGER PRIMARY KEY,
@@ -25,33 +43,30 @@ CREATE TABLE Marca_tarjeta (
 INSERT INTO Marca_tarjeta(brand_card_id,brand_card_name)
 VALUES(1,'Visa'),(2,'American Express'),(3,'MasterCard'),(4,'Cabal');
 
+DROP TABLE Tarjeta
 /* 2 */ LISTO
 CREATE TABLE Tarjeta (
 	card_id INTEGER PRIMARY KEY ,
-	card_number TEXT CHECK (length(card_number >= 20)),
+	card_number TEXT CHECK (length(card_number <= 20)),
 	card_cvv TEXT NOT NULL,
-	card_valid_date INTEGER NOT NULL,
-	card_expired_date INTEGER NOT NULL,
-	card_type TEXT NOT NULL,
+	card_valid_date DATE NOT NULL,
+	card_expired_date DATE NOT NULL,
+	type_card_name TEXT NOT NULL,
 	customer_id INTEGER NOT NULL,
-	brand_card_id TEXT NOT NULL,
+	brand_card_id INTEGER NOT NULL,
 	
 /* 3  LISTO*/
 	FOREIGN KEY (brand_card_id)
 	REFERENCES Marca_tarjeta(brand_card_id)
-	ON UPDATE SET NULL
-	ON DELETE SET NULL
 /* 4 LISTO*/
 	FOREIGN KEY (customer_id) 
 	REFERENCES cliente(customer_id)
-	ON UPDATE SET NULL
-	ON DELETE SET NULL
 	/**/
 	
 );
 
-/* 5 */ LISTO
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+/* 5 LISTO*/ 
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (1,'3715 322987 57515','425','10/2020','2/2027','Credito',466,2),
   (2,'547775 138246 3117','598','9/2017','4/2028','Credito',460,3),
@@ -63,7 +78,7 @@ VALUES
   (8,'491 64556 28144 759','536','4/2018','2/2026','Credito',499,2),
   (9,'3423 561222 72251','707','4/2019','2/2028','Credito',468,2),
   (10,'342785238357186','264','6/2021','2/2026','Credito',480,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (11,'5248417473593919','473','10/2019','8/2026','Credito',406,2),
   (12,'5385586533843424','481','7/2022','7/2028','Credito',481,3),
@@ -75,7 +90,7 @@ VALUES
   (18,'377723787581565','711','12/2018','11/2027','Credito',440,2),
   (19,'373411275247782','409','1/2020','6/2028','Credito',442,2),
   (20,'536 96315 62751 658','497','8/2019','9/2026','Credito',366,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (21,'533544 865363 3559','850','3/2018','4/2028','Credito',429,3),
   (22,'5247452847677461','874','5/2019','5/2026','Credito',259,3),
@@ -87,7 +102,7 @@ VALUES
   (28,'537864 4655134327','252','4/2020','8/2024','Credito',465,1),
   (29,'4556174479757552','468','6/2018','1/2026','Credito',441,2),
   (30,'4748 625 69 6962','947','7/2018','9/2026','Credito',454,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (31,'3454 275178 33523','603','9/2017','2/2028','Credito',399,3),
   (32,'345587164371497','193','7/2021','5/2028','Credito',473,3),
@@ -99,7 +114,7 @@ VALUES
   (38,'3468 483136 33149','696','7/2019','6/2026','Credito',416,1),
   (39,'4716867287311','326','12/2018','10/2025','Credito',422,1),
   (40,'4716874766836','561','5/2022','8/2026','Credito',456,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (41,'374175463549627','467','4/2020','4/2028','Credito',495,2),
   (42,'555663 592557 3132','920','10/2017','9/2025','Credito',412,2),
@@ -111,7 +126,7 @@ VALUES
   (48,'491646 8393828662','970','12/2021','12/2027','Credito',443,3),
   (49,'453223 7559683540','450','11/2019','6/2028','Credito',442,1),
   (50,'522424 4384777359','558','7/2022','8/2025','Credito',308,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (51,'346668572622470','902','10/2021','6/2027','Credito',425,3),
   (52,'372773659745835','655','5/2018','4/2028','Credito',418,3),
@@ -123,7 +138,7 @@ VALUES
   (58,'542 16412 34468 736','865','5/2020','9/2027','Credito',382,3),
   (59,'344237764453243','799','9/2017','9/2024','Credito',266,3),
   (60,'528752 633636 9770','715','8/2020','11/2027','Credito',447,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (61,'455662 447531 5813','323','1/2019','1/2026','Credito',424,1),
   (62,'554 43287 56588 735','520','1/2020','3/2027','Credito',446,1),
@@ -135,7 +150,7 @@ VALUES
   (68,'453952 7423414483','656','5/2020','6/2026','Credito',407,1),
   (69,'491619 5846526136','767','6/2022','11/2026','Credito',463,1),
   (70,'453 25129 62648 540','377','1/2021','8/2025','Credito',457,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (71,'516786 154442 5550','789','6/2021','7/2025','Credito',430,3),
   (72,'511899 818448 4479','367','6/2020','7/2025','Credito',319,3),
@@ -147,7 +162,7 @@ VALUES
   (78,'402400 716355 1127','826','11/2018','7/2027','Credito',418,3),
   (79,'5587445248748731','297','2/2019','6/2028','Credito',429,2),
   (80,'5166485778639370','739','9/2020','4/2025','Credito',396,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (81,'3435 272647 42561','836','3/2019','1/2028','Credito',485,2),
   (82,'3473 924843 73887','876','10/2017','3/2027','Credito',441,2),
@@ -159,7 +174,7 @@ VALUES
   (88,'554453 5522737954','717','1/2022','5/2027','Credito',437,1),
   (89,'4024 007 12 8416','592','9/2020','2/2028','Credito',292,2),
   (90,'375571376254751','190','6/2019','1/2027','Credito',472,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (91,'3761 847944 42682','451','12/2020','7/2026','Credito',487,3),
   (92,'3453 548877 55872','290','9/2020','10/2027','Credito',370,2),
@@ -171,7 +186,7 @@ VALUES
   (98,'343522533384261','166','3/2019','2/2027','Credito',413,2),
   (99,'3411 546729 94742','735','2/2021','3/2026','Credito',420,3),
   (100,'5232 1877 1337 4226','239','11/2021','11/2024','Credito',428,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (101,'376855257633871','389','11/2018','11/2025','Credito',477,3),
   (102,'4656145669324683','884','7/2022','8/2027','Credito',491,1),
@@ -183,7 +198,7 @@ VALUES
   (108,'4539212377649','246','5/2020','10/2026','Credito',453,2),
   (109,'453922 821717 3613','794','12/2017','1/2028','Credito',500,3),
   (110,'3443 615961 59438','562','6/2022','4/2027','Credito',278,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (111,'5548444862879375','812','3/2019','9/2026','Credito',347,3),
   (112,'374339328368322','260','2/2020','11/2024','Credito',467,3),
@@ -195,7 +210,7 @@ VALUES
   (118,'343823822292441','584','4/2022','11/2026','Credito',433,2),
   (119,'4024007128556','601','2/2022','5/2026','Credito',471,2),
   (120,'453953 343215 9861','824','11/2017','6/2025','Credito',451,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (121,'378897938481351','667','8/2020','9/2027','Credito',380,1),
   (122,'491 65689 12776 399','975','10/2018','8/2027','Credito',256,1),
@@ -207,7 +222,7 @@ VALUES
   (128,'377898839386740','294','1/2020','4/2028','Credito',406,2),
   (129,'528862 7882732665','181','2/2020','12/2026','Credito',414,2),
   (130,'4024007137755','866','9/2017','9/2026','Credito',489,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (131,'343435652632446','149','8/2018','7/2025','Credito',446,2),
   (132,'517 33695 62448 712','266','4/2019','9/2026','Credito',500,2),
@@ -219,7 +234,7 @@ VALUES
   (138,'377832867951174','245','7/2018','12/2026','Credito',475,2),
   (139,'348221615558323','692','7/2021','7/2027','Credito',417,1),
   (140,'5279 5585 2595 1852','420','8/2021','12/2026','Credito',357,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (141,'4377 4882 8265 4757','328','6/2022','8/2027','Credito',418,2),
   (142,'471634 4542866683','553','1/2019','7/2026','Credito',272,3),
@@ -231,7 +246,7 @@ VALUES
   (148,'372984773955586','784','11/2018','1/2028','Credito',483,2),
   (149,'548391 874484 6378','856','10/2017','3/2026','Credito',419,2),
   (150,'5275 1872 8746 4245','538','12/2017','8/2026','Credito',362,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (151,'534 55463 74166 490','916','11/2020','11/2024','Credito',345,3),
   (152,'3494 425752 19669','369','9/2021','2/2026','Credito',283,2),
@@ -243,7 +258,7 @@ VALUES
   (158,'455 62792 56838 820','675','3/2022','10/2024','Credito',365,3),
   (159,'3494 734543 53865','213','9/2021','10/2024','Credito',406,3),
   (160,'372711785752994','743','1/2021','7/2027','Credito',456,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (161,'4916 665 76 6793','691','12/2018','1/2028','Credito',496,1),
   (162,'341963773916440','638','5/2019','9/2027','Credito',479,3),
@@ -255,7 +270,7 @@ VALUES
   (168,'4716168548379','140','12/2020','3/2025','Credito',335,3),
   (169,'3459 544472 39430','577','4/2021','6/2026','Credito',424,1),
   (170,'453231 449637 2394','815','7/2017','2/2027','Credito',421,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (171,'4916768688761','963','8/2020','9/2027','Credito',478,3),
   (172,'5222896748685529','317','12/2017','9/2027','Credito',465,1),
@@ -267,7 +282,7 @@ VALUES
   (178,'342463935233874','897','10/2018','9/2025','Credito',402,1),
   (179,'5517 2394 5623 7270','299','6/2019','10/2024','Credito',427,1),
   (180,'528 71635 33953 873','525','4/2019','2/2025','Credito',450,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (181,'547467 6331741748','480','5/2019','12/2027','Credito',488,1),
   (182,'3776 652584 36185','200','12/2017','11/2024','Credito',411,1),
@@ -279,7 +294,7 @@ VALUES
   (188,'5132924359563857','866','1/2021','7/2025','Credito',438,1),
   (189,'4916673587165','945','9/2021','8/2024','Credito',285,2),
   (190,'3774 466455 83462','611','2/2022','5/2025','Credito',480,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (191,'345596889527721','932','5/2018','11/2024','Credito',404,1),
   (192,'3784 498761 39425','775','4/2021','6/2028','Credito',337,1),
@@ -291,7 +306,7 @@ VALUES
   (198,'373731767698253','973','3/2019','5/2025','Credito',353,2),
   (199,'535678 3453665227','367','2/2018','9/2025','Credito',400,1),
   (200,'4024 0071 4648 4230','866','4/2022','6/2025','Credito',342,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (201,'453 92754 18115 273','666','11/2017','8/2025','Credito',415,3),
   (202,'3426 616725 23866','901','9/2018','10/2026','Credito',424,1),
@@ -303,7 +318,7 @@ VALUES
   (208,'4556287876123','680','8/2020','11/2027','Credito',400,3),
   (209,'532 75497 36243 629','822','5/2018','3/2027','Credito',482,2),
   (210,'3735 196738 53447','919','12/2019','12/2026','Credito',484,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (211,'4716 633 48 7443','406','12/2017','7/2025','Credito',452,3),
   (212,'373714248836270','649','6/2019','10/2024','Credito',431,3),
@@ -315,7 +330,7 @@ VALUES
   (218,'3459 714575 62972','147','4/2020','10/2025','Credito',450,2),
   (219,'346468324674741','379','7/2018','5/2027','Credito',448,3),
   (220,'3427 783444 35525','404','3/2022','12/2024','Credito',374,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (221,'3447 521398 66531','629','12/2020','8/2027','Credito',330,1),
   (222,'377874741318139','401','12/2018','3/2026','Credito',433,1),
@@ -327,7 +342,7 @@ VALUES
   (228,'5544 4562 7177 3258','319','11/2019','2/2025','Credito',407,2),
   (229,'471672 4345555130','114','2/2019','1/2027','Credito',373,3),
   (230,'342274516249787','646','6/2021','6/2027','Credito',486,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (231,'547741 325826 8357','694','5/2022','4/2026','Credito',467,1),
   (232,'4555 7462 2247 2828','492','7/2020','3/2028','Credito',352,3),
@@ -339,7 +354,7 @@ VALUES
   (238,'346592648775338','614','11/2019','2/2026','Credito',419,1),
   (239,'4916 7774 3113 2758','461','7/2018','8/2027','Credito',407,1),
   (240,'3458 246935 85325','304','6/2021','2/2027','Credito',280,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (241,'373543464372573','696','4/2018','5/2025','Credito',395,1),
   (242,'5548 3375 6237 2552','535','1/2019','12/2026','Credito',434,2),
@@ -351,7 +366,7 @@ VALUES
   (248,'377742864515536','839','1/2022','1/2028','Credito',431,2),
   (249,'5566854156676757','759','7/2022','2/2027','Credito',446,3),
   (250,'4929589929686','875','6/2021','9/2027','Credito',416,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (251,'524183 4713573476','963','10/2021','11/2027','Credito',444,1),
   (252,'343823563439136','658','8/2020','3/2026','Credito',450,3),
@@ -363,7 +378,7 @@ VALUES
   (258,'3754 655396 89773','440','11/2017','8/2027','Credito',288,3),
   (259,'5392 2663 5918 6155','740','12/2018','2/2027','Credito',493,1),
   (260,'514 54165 25691 956','170','2/2022','2/2028','Credito',427,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (261,'4539544798124','479','10/2018','12/2026','Credito',452,3),
   (262,'5264 5789 3312 8221','747','4/2021','2/2027','Credito',497,3),
@@ -375,7 +390,7 @@ VALUES
   (268,'5247268466536238','414','7/2018','4/2026','Credito',419,1),
   (269,'3728 782384 76321','426','3/2019','5/2028','Credito',439,2),
   (270,'3734 228212 81571','643','1/2021','8/2024','Credito',449,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (271,'4716 6211 3754 8341','194','10/2018','11/2024','Credito',499,3),
   (272,'349685985643338','421','11/2018','5/2027','Credito',425,2),
@@ -387,7 +402,7 @@ VALUES
   (278,'5562 2377 3578 4280','574','7/2018','3/2027','Credito',262,2),
   (279,'4532 1889 2556 5426','262','5/2022','9/2026','Credito',258,3),
   (280,'342823775159952','122','2/2021','11/2024','Credito',269,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (281,'534 87312 59737 220','213','4/2018','3/2025','Credito',409,1),
   (282,'528687 935746 9784','851','9/2020','9/2027','Credito',468,3),
@@ -399,7 +414,7 @@ VALUES
   (288,'375937157587323','709','12/2017','8/2024','Credito',435,2),
   (289,'345268455322727','642','11/2021','1/2027','Credito',306,3),
   (290,'402 40071 73238 228','863','2/2021','6/2027','Credito',465,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (291,'558473 446698 3267','535','7/2018','5/2027','Credito',418,1),
   (292,'347571428651280','850','3/2019','10/2026','Credito',431,1),
@@ -411,7 +426,7 @@ VALUES
   (298,'526877 2577632699','747','11/2019','12/2027','Credito',499,2),
   (299,'3487 764389 57325','587','11/2020','7/2027','Credito',474,2),
   (300,'514854 761884 2853','478','12/2022','4/2025','Credito',412,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (301,'549752 8357927672','811','10/2020','3/2025','Credito',489,1),
   (302,'4532397338297283','591','3/2021','5/2026','Credito',305,1),
@@ -423,7 +438,7 @@ VALUES
   (308,'3787 483417 52740','518','4/2022','2/2026','Credito',479,1),
   (309,'4929 254 94 4440','729','6/2019','12/2026','Credito',492,3),
   (310,'343923218444323','736','10/2021','12/2027','Credito',435,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (311,'348966545228286','542','12/2022','12/2026','Credito',329,2),
   (312,'513614 882961 8374','557','11/2019','9/2026','Credito',470,3),
@@ -435,7 +450,7 @@ VALUES
   (318,'4556 1354 2689 6223','417','5/2021','5/2026','Credito',484,2),
   (319,'3725 374316 12237','704','3/2021','3/2025','Credito',447,2),
   (320,'4024007163327478','447','5/2019','10/2027','Credito',487,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (321,'4024007146622334','154','6/2022','12/2028','Credito',480,3),
   (322,'3757 349895 83491','336','5/2021','6/2026','Credito',488,3),
@@ -447,7 +462,7 @@ VALUES
   (328,'3795 876773 45896','924','1/2019','2/2028','Credito',438,2),
   (329,'4539 4836 3623 5176','863','8/2018','8/2026','Credito',473,3),
   (330,'4024 007 13 9272','865','8/2019','12/2024','Credito',407,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (331,'3791 788578 27489','551','6/2018','8/2026','Credito',477,1),
   (332,'348325367551558','956','7/2022','1/2026','Credito',405,3),
@@ -459,7 +474,7 @@ VALUES
   (338,'4929 7774 5581 5416','683','3/2018','12/2025','Credito',462,1),
   (339,'513623 6694229383','402','6/2022','2/2027','Credito',476,1),
   (340,'3722 276853 65761','572','8/2020','3/2026','Credito',409,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (341,'4383834646739','695','2/2022','1/2028','Credito',349,2),
   (342,'4623833212755','868','2/2021','5/2026','Credito',390,1),
@@ -471,7 +486,7 @@ VALUES
   (348,'4532 5872 7457 8866','660','12/2019','1/2025','Credito',392,2),
   (349,'3762 462175 83135','988','3/2022','1/2026','Credito',451,1),
   (350,'3446 614456 88614','214','3/2022','8/2024','Credito',470,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (351,'4424564517274646','703','2/2021','12/2024','Credito',403,3),
   (352,'4716728484359212','137','11/2019','10/2027','Credito',443,2),
@@ -483,7 +498,7 @@ VALUES
   (358,'549442 857665 1661','849','3/2020','5/2025','Credito',268,2),
   (359,'4866837743456350','499','10/2020','5/2027','Credito',404,2),
   (360,'4916642373721','886','3/2020','2/2027','Credito',498,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (361,'553483 739488 6758','680','3/2020','12/2025','Credito',421,1),
   (362,'4716847541431','365','4/2021','6/2027','Credito',451,1),
@@ -495,7 +510,7 @@ VALUES
   (368,'5443 6337 5687 4833','977','3/2019','5/2025','Credito',439,3),
   (369,'453 98243 47545 355','710','1/2021','6/2026','Credito',415,2),
   (370,'4716 566 13 6884','268','4/2020','10/2027','Credito',490,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (371,'453258 4532465523','932','7/2017','3/2026','Credito',377,1),
   (372,'4929512864737624','544','10/2020','3/2025','Credito',408,3),
@@ -507,7 +522,7 @@ VALUES
   (378,'523 85747 86341 170','276','9/2020','1/2026','Credito',435,1),
   (379,'4539 6487 6933 4422','125','4/2020','3/2027','Credito',409,3),
   (380,'3767 485243 53623','252','1/2021','6/2026','Credito',445,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (381,'544184 6464289282','518','1/2022','8/2025','Credito',462,2),
   (382,'5567945683762885','565','10/2017','8/2027','Credito',486,3),
@@ -519,7 +534,7 @@ VALUES
   (388,'3724 263135 88345','672','11/2018','4/2025','Credito',495,2),
   (389,'3722 623762 59775','331','7/2018','6/2028','Credito',412,3),
   (390,'373515476215230','563','9/2019','10/2025','Credito',408,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (391,'402 40071 65395 945','500','8/2017','2/2026','Credito',495,1),
   (392,'4916 417 11 5141','662','2/2022','3/2025','Credito',344,3),
@@ -531,7 +546,7 @@ VALUES
   (398,'402400 7175699757','543','7/2020','8/2024','Credito',381,2),
   (399,'345547886176921','329','6/2022','9/2026','Credito',484,1),
   (400,'4916 556 25 7639','377','2/2020','3/2025','Credito',426,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (401,'4716358213859','137','1/2022','1/2026','Credito',467,1),
   (402,'343513865998190','146','3/2022','11/2024','Credito',460,1),
@@ -543,7 +558,7 @@ VALUES
   (408,'515 96218 58878 723','640','5/2022','1/2026','Credito',459,3),
   (409,'471 62575 71933 622','598','9/2019','1/2025','Credito',403,2),
   (410,'491618 3222982644','576','1/2020','10/2024','Credito',472,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (411,'3762 742467 24892','312','2/2020','2/2028','Credito',400,3),
   (412,'344782564534635','867','11/2020','2/2025','Credito',402,2),
@@ -555,7 +570,7 @@ VALUES
   (418,'4916328766475881','397','9/2020','1/2027','Credito',387,1),
   (419,'5452842787949690','598','7/2019','5/2027','Credito',414,2),
   (420,'5261983466889368','841','6/2021','7/2025','Credito',449,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (421,'521382 7738363646','323','11/2020','4/2028','Credito',453,3),
   (422,'342787278168648','633','10/2018','3/2028','Credito',454,3),
@@ -567,7 +582,7 @@ VALUES
   (428,'5445343239798181','145','8/2019','6/2025','Credito',471,1),
   (429,'5567945292461556','560','12/2021','2/2025','Credito',454,1),
   (430,'3725 243313 73714','524','9/2020','6/2027','Credito',302,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (431,'373686456748241','606','8/2018','2/2025','Credito',368,3),
   (432,'4716 118 39 3587','575','11/2018','11/2027','Credito',486,1),
@@ -579,7 +594,7 @@ VALUES
   (438,'371986577755329','717','8/2018','6/2025','Credito',410,1),
   (439,'5567 4488 8846 7764','265','9/2018','8/2024','Credito',332,2),
   (440,'345193557486545','583','3/2022','11/2027','Credito',282,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (441,'4485271583774881','386','5/2021','6/2027','Credito',499,3),
   (442,'5452323466352381','835','5/2021','11/2025','Credito',457,3),
@@ -591,7 +606,7 @@ VALUES
   (448,'534 32716 58437 531','632','3/2018','10/2025','Credito',488,3),
   (449,'542814 748879 9589','560','3/2022','11/2026','Credito',429,2),
   (450,'552 19269 63272 485','208','8/2019','5/2025','Credito',468,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (451,'346737581366369','124','10/2018','9/2026','Credito',445,1),
   (452,'4916644286855','332','2/2022','4/2025','Credito',494,3),
@@ -603,7 +618,7 @@ VALUES
   (458,'3475 824495 12369','901','7/2022','6/2026','Credito',483,3),
   (459,'341254864843192','705','1/2021','5/2026','Credito',251,1),
   (460,'346737296817466','762','8/2019','12/2024','Credito',490,1);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (461,'4539623436349','565','8/2020','11/2025','Credito',492,2),
   (462,'402400 7147787458','746','11/2021','3/2026','Credito',489,3),
@@ -615,7 +630,7 @@ VALUES
   (468,'3787 668261 43862','269','2/2021','7/2026','Credito',388,1),
   (469,'548 24674 38881 466','549','1/2018','9/2024','Credito',458,3),
   (470,'455631 944995 8786','928','12/2018','1/2026','Credito',437,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (471,'4539956774593753','208','4/2018','1/2026','Credito',496,3),
   (472,'374291792388866','478','8/2020','5/2027','Credito',267,3),
@@ -627,7 +642,7 @@ VALUES
   (478,'5272 6488 7934 1995','290','12/2020','2/2027','Credito',440,1),
   (479,'378478399173371','731','4/2022','12/2025','Credito',333,3),
   (480,'513378 8837791532','827','7/2020','7/2026','Credito',491,2);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (481,'3429 222577 56762','804','12/2017','1/2028','Credito',419,1),
   (482,'522355 1972616828','595','6/2020','4/2025','Credito',299,3),
@@ -639,7 +654,7 @@ VALUES
   (488,'536826 383937 7744','135','11/2020','3/2028','Credito',359,2),
   (489,'376544673844524','684','3/2020','2/2025','Credito',497,1),
   (490,'526 54323 76443 383','250','6/2022','12/2025','Credito',442,3);
-INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,card_type,customer_id,brand_card_id)
+INSERT INTO Tarjeta (card_id,card_number,card_cvv,card_valid_date,card_expired_date,type_card_name,customer_id,brand_card_id)
 VALUES
   (491,'376514568549876','156','11/2018','2/2026','Credito',492,3),
   (492,'545983 2535935243','937','4/2020','1/2026','Credito',450,3),

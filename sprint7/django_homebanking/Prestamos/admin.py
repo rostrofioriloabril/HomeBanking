@@ -1,4 +1,3 @@
 from django.contrib import admin
-from .models import Prestamos
 
-admin.site.register(Prestamos)
+# Register your models here.

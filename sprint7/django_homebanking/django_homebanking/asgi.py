@@ -1,5 +1,5 @@
 """
-ASGI config for django_homebanking project.
+ASGI config for DJANGO_homebanking project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_homebanking.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DJANGO_homebanking.settings')
 
 application = get_asgi_application()
