@@ -1,0 +1,314 @@
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
+    font-weight: 900;
+  } 
+  
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Bold.ttf) format("truetype");
+    font-weight: bold;
+  } 
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Brandon', sans-serif;
+    font-weight: bold;
+}
+html{
+    overflow: hidden;
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+/* MAIN */
+main{
+    display: flex;
+    height: 100%;
+}
+.inicio img{
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 20%;
+}
+.inicio{
+    background: linear-gradient(#fff 50%,#bde0f0);
+    width: 65%;
+    height: 100%;
+    
+}
+.inicio h2 {
+    margin: 6% 0% 2% 10%;
+    font-size: 45px;
+    color: rgb(0, 4, 75);
+    font-weight: 500;
+
+}
+.inicio .logo{
+    margin-top: 5%;
+    color: #050DCA;
+    font-weight: 900;
+    font-size: 64px;
+}
+.inicio h4 {
+    margin: 0% 5% 2% 10%;
+    font-size: 29px;
+    color: rgb(0, 4, 75)
+}
+.inicio a{
+    color: #8686a8;
+}
+.inicio h6 {
+    margin-left: 10%;
+    color: #8686a8;
+    font-size: 18px;
+}
+
+/* FORMULARIO */
+
+.form-container{
+    height: 100%;
+    width: 35%;
+    display: none;
+    
+}
+.form-container .logo2 {
+    display: none;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
+}
+.form h2{
+    margin-bottom: 5%;
+    color: #0e0e52;
+    font-size: 30px;
+}
+.form input {
+    font-size: 20px;
+    text-align: center;
+}
+.form input::placeholder{
+    color: #bdc2d0;
+}
+.form input[type = "text"], .form input[type = "password"], .form input[type = "number"]{
+    width: 70%;
+    height: 35px;
+    border-radius: 15px;
+    margin-bottom:5%;
+    border: none;
+    background-color: #ECEFFB;
+    padding: 0 15px;
+}
+.form input[type = "text"]:first-child{
+    margin-top: 10px;
+}
+.check{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.check input{
+    position: relative;
+    top: 4px;
+    height: 18px;
+    width: 18px;
+}
+.form label{
+    margin-left: 5px;
+    color: rgb(0, 4, 75);  
+}
+form input[type = "button"]{
+    padding: 5px 15px;
+    width: 125px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: #ECEFFB;
+    color: rgb(0, 4, 75);
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+form input[type = "button"]:hover{
+    box-sizing: 1px 1px 3px #000;
+}
+
+.ayuda {
+    margin-top: 30px;
+}
+.ayuda a{
+    color: rgb(0, 4, 75);
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.ayuda h4{
+    font-weight: lighter;
+    margin-top: 30px;
+    color: rgb(0, 4, 75);
+    font-size: 18px;
+  
+}
+.ayuda h5{
+    font-weight: lighter;
+    font-size: 17px;
+    color: #0e0e52;
+}
+.ayuda a{
+    font-weight: 100;
+    font-size: 17px;
+}
+
+/*-----------------CONTAINER 2 ----------------------------*/
+.asociate{
+    height: 100%;
+    width: 35%;
+    display: none;
+}
+.asociate .logo2{
+    display: none;
+}
+.asociate .form{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
+}
+.asociate .form h2{
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.asociate .ayuda{
+    margin-top: -5px;
+}
+.asociate .container-btn{
+    display: block;
+    text-align: center;
+}
+/*-------------CONTAINER 3-----------------*/
+.recupera {
+    height: 100%;
+    width: 35%;
+}
+.recupera .logo2{
+    display: none;
+}
+.recupera .form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    justify-content: center;
+    box-shadow: 1px -19px 20px black;
+    margin-top: -15px;
+    padding: 0;
+}
+
+footer{
+    background-color: aqua;
+}
+
+/* BACKGROUND */
+.background{
+    position: absolute;
+    bottom: 0px;
+    height: 50%;
+    width: 65%;
+}
+
+.background .montañas{
+    position: absolute;
+    bottom: 0px;
+    height: 85%;
+    width: 50%;
+}
+
+@media screen and (min-width:490px) and (max-width:582px){
+    .inicio {
+        width: 50%;
+    }
+    .form-container, .form-container2, .form-container3{
+        width: 50%;
+
+    }
+    .background{
+        margin-top: 1%;
+        width: 100%;
+        margin-left: -78px;
+    }
+    .form input {
+        font-size: 16px;
+    }
+    .info {
+        display: none;
+    }
+}
+@media screen and (min-width:100px) and (max-width:489px){
+    .inicio{
+        display: none;
+    }
+    .form-container, .form-container2, .form-container3{
+        
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(180deg, rgba(5, 13, 202, 0) 0%, rgba(5, 13, 202, 0.05) 53.96%, rgba(120, 192, 224, 0.2) 100%);
+        mix-blend-mode: normal;
+        
+    }
+    .form-container .logo2, .asociate .logo2, .recupera .logo2{
+        display: flex;
+        margin-top: 8%;
+        margin-bottom: 2%;
+        width: 100%;
+        height: 50px;
+        color: #050DCA;
+        text-align: center;
+        background-color: #fff;
+        justify-content: center;
+        position: absolute;
+        font-size: 50px;
+    }
+    .form {
+        width: 100%;
+        box-shadow: none;
+    }
+    .form h2 {
+        display: none;
+    }
+    .form input::placeholder{
+        color: #bdc2d0;
+        font-size: 17px;
+    }
+    .form input[type = "button"] {
+        margin-top: 15px;
+        width: auto;
+        padding: 0;
+        padding: 6px 43px;
+        background: rgba(5, 13, 202, 0.1);
+        margin-top: 5%;
+    }
+    .check {
+        margin-top: 2.5%;
+    }
+    .asociate .check, .asociate .ayuda h4{
+        margin-top: 0;
+    }
+    .asociate .ayuda{
+        margin-top: 2.5%;
+    }
+    .asociate .check{
+        margin-bottom: 10px;
+    }
+}
