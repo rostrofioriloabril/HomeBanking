@@ -1,7 +1,6 @@
 /*Direccion*/
-DROP TABLE Direccion
 CREATE TABLE Direccion(
-	direccion_id INTEGER PRIMARY KEY,
+	direccion_id INTEGER NOT NULL,
 	calle TEXT NOT NULL,
 	numero TEXT NOT NULL,
 	ciudad TEXT NOT NULL,
