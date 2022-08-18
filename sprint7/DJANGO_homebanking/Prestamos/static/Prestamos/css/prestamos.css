@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Black.ttf) format("truetype");
+    font-weight: 900;
+  } 
+  
+@font-face {
+    font-family: "Brandon";
+    src: url(fonts/BrandonGrotesque-Bold.ttf) format("truetype");
+    font-weight: bold;
+  } 
+
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Brandon', sans-serif;
+    font-weight: bold;
+}
+
+.form-containerp{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.form-containerp h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formp{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    text-align: center;
+}
+
+textarea{
+    max-width: 300px;
+    max-height: 30px;
+}
+p{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
