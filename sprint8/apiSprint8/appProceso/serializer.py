@@ -30,3 +30,9 @@ class PrestamoSerializer(serializers.ModelSerializer):
         fields ="__all__"
         read_only_fields = ['loan_id','loan_date']
 
+# Serializer para modificar las direcciones
+class DireccionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Cliente
+        fields ="__all__"
+        read_only_fields = ['customer_id','customer_name','customer_surname','customer_dni','dob','type_customer','saldo','branch_id']

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Cliente, Prestamo,Sucursal,Prestamo, Tarjeta, Tarjeta
-from .serializer import ClienteSerializer, SucursalSerializer,PrestamoSerializer, TarjetaSerializer
+from .serializer import ClienteSerializer, SucursalSerializer,PrestamoSerializer, TarjetaSerializer,DireccionSerializer
 from rest_framework import generics,permissions,status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -28,6 +28,13 @@ class ClienteDetails(APIView):
         serializer=ClienteSerializer(clientes,many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    def put(self, request, pk): 
+        direccion = Cliente.objects.filter(pk=pk).first()
+        serializer = DireccionSerializer(direccion, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #clase para manejar multiples instancias (sucursal)
 class SucursalList(generics.ListAPIView): 
@@ -38,7 +45,7 @@ class SucursalList(generics.ListAPIView):
 
 
 #clase para manejar multiples instancias (sucursal)
-class TarjetaList(APIView): 
+class TarjetaDetail(APIView): 
     def get(self,request,customer_id):
         tarjeta=Tarjeta.objects.filter(customer_id=customer_id).first()
         serializer= TarjetaSerializer(tarjeta)
@@ -48,7 +55,7 @@ class TarjetaList(APIView):
 
 
 #clase para manejar multiples instancias (prestamos)
-class PrestamoList(generics.ListAPIView): 
+class PrestamoDetail(generics.ListAPIView): 
     def get(self,request,branch_id=None):
         if branch_id:
             prestamo=Prestamo.objects.filter(branch_id=branch_id).first()
@@ -59,3 +66,12 @@ class PrestamoList(generics.ListAPIView):
         prestamos=Prestamo.objects.all().order_by("loan_id")
         serializer=PrestamoSerializer(prestamos,many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
+
+#clase para agregar prestamos y que se modifique el saldo del cliente
+class PrestamoList(APIView):
+    def post(self,request,format=None):
+        serializer= PrestamoSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
