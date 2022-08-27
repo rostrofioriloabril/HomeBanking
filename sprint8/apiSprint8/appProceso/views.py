@@ -4,6 +4,7 @@ from .serializer import ClienteSerializer, SucursalSerializer,PrestamoSerializer
 from rest_framework import generics,permissions,status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -47,31 +48,52 @@ class SucursalList(generics.ListAPIView):
 #clase para manejar multiples instancias (sucursal)
 class TarjetaDetail(APIView): 
     def get(self,request,customer_id):
-        tarjeta=Tarjeta.objects.filter(customer_id=customer_id).first()
-        serializer= TarjetaSerializer(tarjeta)
-        if tarjeta:
-            return Response(serializer.data, status=status.HTTP_200_OK)
-        return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND)
-
+        usuario = User.objects.get(username=request.user)
+        if usuario.is_staff:
+            tarjeta=Tarjeta.objects.filter(customer_id=customer_id).first()
+            serializer= TarjetaSerializer(tarjeta)
+            if tarjeta:
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #clase para manejar multiples instancias (prestamos)
 class PrestamoDetail(generics.ListAPIView): 
     def get(self,request,branch_id=None):
-        if branch_id:
-            prestamo=Prestamo.objects.filter(branch_id=branch_id).first()
-            serializer= PrestamoSerializer(prestamo)
-            if prestamo:
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND)
-        prestamos=Prestamo.objects.all().order_by("loan_id")
-        serializer=PrestamoSerializer(prestamos,many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+        usuario = User.objects.get(username=request.user)
+        if usuario.is_staff:
+            if branch_id:
+                prestamo=Prestamo.objects.filter(branch_id=branch_id).first()
+                serializer= PrestamoSerializer(prestamo)
+                if prestamo:
+                    return Response(serializer.data, status=status.HTTP_200_OK)
+                return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND)
+            prestamos=Prestamo.objects.all().order_by("loan_id")
+            serializer=PrestamoSerializer(prestamos,many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 #clase para agregar prestamos y que se modifique el saldo del cliente
-class PrestamoList(APIView):
+class PrestamoAdd(APIView):
     def post(self,request,format=None):
-        serializer= PrestamoSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        usuario = User.objects.get(username=request.user)
+        if usuario.is_staff:
+            serializer= PrestamoSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class PrestamoRemove(APIView):
+    #borra un prestamo con un id determinado
+    def delete(self, request, loan_id): 
+        usuario = User.objects.get(username=request.user)
+        if usuario.is_staff:
+            prestamo = Prestamo.objects.filter(loan_id=loan_id).first()
+            if prestamo:
+                serializer = PrestamoSerializer(prestamo)
+                prestamo.delete()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

@@ -20,7 +20,10 @@ class Empleado(models.Model):
     employee_name = models.TextField()
     employee_surname = models.TextField()
     employee_hire_date = models.TextField()
-    employee_dni = models.TextField()  # Field name made lowercase.
+    employee_dni = models.TextField()
+    permisos=models.ForeignKey(
+        'auth.User',related_name="apiSprint8",on_delete=models.CASCADE
+        )
 '''
 
 class Sucursal(models.Model):
