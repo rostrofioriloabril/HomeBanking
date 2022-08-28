@@ -3,8 +3,7 @@ from .views import ClienteDetails,ClienteList, PrestamoAdd,PrestamoRemove,Sucurs
 
 urlpatterns=[
     path("api/clientes/<int:pk>",ClienteDetails.as_view()), #Cliente especifico
-    path("api/clientes",ClienteDetails.as_view()), #Lista de clientes
-    path("api/clientespost",ClienteList.as_view()), #Agregar un cliente 
+    path("api/clientes",ClienteList.as_view()), #Lista de clientes y/o Agregar un cliente 
     path("api/prestamo/<int:branch_id>",PrestamoDetail.as_view()), #Prestamos de una sucursal
     path("api/prestamo",PrestamoDetail.as_view()), #Lista de prestamos (get)
     path("api/prestamo",PrestamoAdd.as_view()), #Agregar prestamos (post)
