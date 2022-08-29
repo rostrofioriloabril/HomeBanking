@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Cliente, Prestamo,Sucursal,Prestamo, Tarjeta, Tarjeta
-from .serializer import ClienteSerializer, SucursalSerializer,PrestamoSerializer, TarjetaSerializer,DireccionSerializer
+from .serializer import ClienteSerializer, SucursalSerializer,PrestamoSerializer, TarjetaSerializer,DireccionSerializer, SaldoSerializer
 from rest_framework import generics,permissions,status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -38,6 +38,15 @@ class ClienteDetails(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class SaldoDetail(APIView):
+    permission_classes = [permissions.IsAuthenticated]
+    def get(self,request,pk=None):
+        saldo= Cliente.objects.filter(pk=pk).first()
+        serializer= SaldoSerializer(saldo)
+        if saldo:
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_404_NOT_FOUND)
 
 #clase para manejar multiples instancias (sucursal)
 class SucursalList(generics.ListAPIView): 

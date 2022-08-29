@@ -9,6 +9,13 @@ class ClienteSerializer(serializers.ModelSerializer):
         fields = "__all__"
         read_only_fields=['customer_id']
 
+# Serializer de saldo
+class SaldoSerializer(serializers.ModelSerializer):
+    class Meta:
+            model=Cliente
+            fields = ['customer_id', 'type_customer', 'balance']
+            read_only_fields=['customer_id']
+
 #Serializer de sucursal
 class SucursalSerializer(serializers.ModelSerializer):
     class Meta:

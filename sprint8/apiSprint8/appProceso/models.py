@@ -10,7 +10,7 @@ class Cliente(models.Model):
     dob = models.TextField()
     address = models.TextField()
     type_customer = models.TextField()
-    saldo = models.IntegerField()
+    balance = models.IntegerField()
     branch_id = models.IntegerField()
 
 

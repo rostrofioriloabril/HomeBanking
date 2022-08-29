@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import ClienteDetails,ClienteList, PrestamoAdd,PrestamoRemove,SucursalList,PrestamoDetail,TarjetaDetail
+from .views import ClienteDetails,ClienteList, PrestamoAdd,PrestamoRemove,SucursalList,PrestamoDetail,TarjetaDetail, SaldoDetail
 
 urlpatterns=[
     path("api/clientes/<int:pk>",ClienteDetails.as_view()), #Cliente especifico
+    path("api/clientes/saldos/<int:pk>",SaldoDetail.as_view()), #Tipo de cuenta y saldo
     path("api/clientes",ClienteList.as_view()), #Lista de clientes y/o Agregar un cliente 
     path("api/prestamo/<int:branch_id>",PrestamoDetail.as_view()), #Prestamos de una sucursal
     path("api/prestamo",PrestamoDetail.as_view()), #Lista de prestamos (get)
